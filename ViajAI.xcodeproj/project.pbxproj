@@ -16,6 +16,8 @@
 		570276AA2A859ADE0097840C /* ViajAITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570276A92A859ADE0097840C /* ViajAITests.swift */; };
 		570276B42A859ADE0097840C /* ViajAIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570276B32A859ADE0097840C /* ViajAIUITests.swift */; };
 		570276B62A859ADE0097840C /* ViajAIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570276B52A859ADE0097840C /* ViajAIUITestsLaunchTests.swift */; };
+		64BB5F712AAFDD8200082423 /* SplashScreenStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64BB5F702AAFDD8200082423 /* SplashScreenStoryboard.storyboard */; };
+		64BB5F732AAFDDB000082423 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB5F722AAFDDB000082423 /* SplashScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		570276AF2A859ADE0097840C /* ViajAIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViajAIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		570276B32A859ADE0097840C /* ViajAIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViajAIUITests.swift; sourceTree = "<group>"; };
 		570276B52A859ADE0097840C /* ViajAIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViajAIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		64BB5F702AAFDD8200082423 /* SplashScreenStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashScreenStoryboard.storyboard; sourceTree = "<group>"; };
+		64BB5F722AAFDDB000082423 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 		570276912A859ADB0097840C /* ViajAI */ = {
 			isa = PBXGroup;
 			children = (
+				64C337E12AB153A3005278B5 /* SplashScreen */,
 				570276922A859ADB0097840C /* AppDelegate.swift */,
 				570276942A859ADB0097840C /* SceneDelegate.swift */,
 				570276962A859ADB0097840C /* ViewController.swift */,
@@ -125,6 +130,15 @@
 				570276B52A859ADE0097840C /* ViajAIUITestsLaunchTests.swift */,
 			);
 			path = ViajAIUITests;
+			sourceTree = "<group>";
+		};
+		64C337E12AB153A3005278B5 /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				64BB5F722AAFDDB000082423 /* SplashScreenViewController.swift */,
+				64BB5F702AAFDD8200082423 /* SplashScreenStoryboard.storyboard */,
+			);
+			path = SplashScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +245,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64BB5F712AAFDD8200082423 /* SplashScreenStoryboard.storyboard in Resources */,
 				5702769F2A859ADE0097840C /* LaunchScreen.storyboard in Resources */,
 				5702769C2A859ADE0097840C /* Assets.xcassets in Resources */,
 				5702769A2A859ADB0097840C /* Main.storyboard in Resources */,
@@ -260,6 +275,7 @@
 			files = (
 				570276972A859ADB0097840C /* ViewController.swift in Sources */,
 				570276932A859ADB0097840C /* AppDelegate.swift in Sources */,
+				64BB5F732AAFDDB000082423 /* SplashScreenViewController.swift in Sources */,
 				570276952A859ADB0097840C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
