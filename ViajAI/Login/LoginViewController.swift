@@ -37,7 +37,16 @@ class LoginViewController: UIViewController {
     
     @IBAction func tappedRecoverPasswordButton(_ sender: UIButton) {
     }
+    
     @IBAction func tappedLoginButton(_ sender: UIButton) {
+        
+//        if emailTextField.text == "meu.email@gmail.com" && passwordTextField.text == "123" {
+//            let home = UIStoryboard(name: "HomeViewController", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController
+//
+//            navigationController?.pushViewController(home ?? UIViewController(), animated: true)
+//            title = ""
+//        }
+        
     }
     @IBAction func tappedGoogleButton(_ sender: UIButton) {
     }
@@ -63,6 +72,8 @@ class LoginViewController: UIViewController {
         emailTextField.placeholder = "Digite seu e-mail"
         passwordTextField.placeholder = "Digite sua senha"
         emailTextField.layer.borderWidth = 1.0
+        
+        passwordTextField.isSecureTextEntry = true
         passwordTextField.layer.borderWidth = 1.0
         emailTextField.layer.borderColor = UIColor.lightGray.cgColor
         passwordTextField.layer.borderColor = UIColor.lightGray.cgColor
