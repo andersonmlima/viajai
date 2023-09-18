@@ -14,6 +14,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func tappedNavigation(_ sender: UIButton) {
+        let viewController = UIStoryboard(name: "VerificationViewStoryboard", bundle: nil).instantiateViewController(withIdentifier: "VerificationViewController") as? VerificationViewController
+                self.navigationController?.pushViewController(viewController ?? UIViewController(), animated: false)
+    }
+    
 }
 
