@@ -18,7 +18,9 @@ class VerificationViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var verificationFiveTextField: UITextField!
     @IBOutlet weak var verificationButton: UIButton!
     @IBOutlet weak var resendCodeLabel: UILabel!
-
+    @IBOutlet weak var resendCodeButton: UIButton!
+    @IBOutlet weak var errorMessageLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,78 +29,96 @@ class VerificationViewController: UIViewController, UITextFieldDelegate {
         verificationThreeTextField.delegate = self
         verificationFourTextField.delegate = self
         verificationFiveTextField.delegate = self
-        setDefaultTextFieldColor()
+        titleLabel.text = "Verificação da Conta"
+        let titleFont = UIFont.boldSystemFont(ofSize: 24)
+        titleLabel.font = titleFont
+        subTitleLabel.text = "Por favor, incluir o código de verificação enviado ao e-mail:"
+        subTitleLabel.textColor = UIColor.systemGray2
+        subTitleLabel.font = UIFont.systemFont(ofSize: 14)
+        verificationButton.setTitle("Verificar", for: .normal)
+        resendCodeLabel.text = "Não recebeu o código?"
+        configureTextFields()
         verificationButton.addTarget(self, action: #selector(tappedVerificationButton(_:)), for: .touchUpInside)
+        resendCodeButton.addTarget(self, action: #selector(tappedVerificationButton), for: .touchUpInside)
+        errorMessageLabel.isHidden = true
     }
-    
-    func setDefaultTextFieldColor() {
-        verificationOneTextField.backgroundColor = UIColor.gray
-        verificationTwoTextField.backgroundColor = UIColor.gray
-        verificationThreeTextField.backgroundColor = UIColor.gray
-        verificationFourTextField.backgroundColor = UIColor.gray
-        verificationFiveTextField.backgroundColor = UIColor.gray
-        }
     
     @IBAction func tappedVerificationButton(_ sender: UIButton) {
-        let isCodeValid =  isVerificationCodeValid()
-        if isCodeValid {
-        } else {
-            displayError()
+    }
+    
+    func configureTextFields() {
+        let textFields = [verificationOneTextField, verificationTwoTextField, verificationThreeTextField, verificationFourTextField, verificationFiveTextField]
+        
+        for textField in textFields {
+            textField?.borderStyle = .roundedRect
+            textField?.backgroundColor = UIColor.clear
+            textField?.textAlignment = .center
+            textField?.font = UIFont.systemFont(ofSize: 18)
+            textField?.keyboardType = .numberPad
+            textField?.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+            textField?.layer.borderWidth = 2
+            textField?.layer.borderColor = UIColor.gray.cgColor
+            textField?.addTarget(self, action: #selector(textFieldDidBeginEditing(_:)), for: .editingDidBegin)
+            textField?.addTarget(self, action: #selector(textFieldDidEndEditing(_:)), for: .editingDidEnd)
+        }
+        
+        verificationOneTextField?.layer.borderWidth = 2
+        verificationOneTextField?.layer.borderColor = UIColor.blue.cgColor
+    }
+    
+    @objc func textFieldDidChange(_ textField: UITextField) {
+        if let text = textField.text {
+            if text.count == 1 {
+                    // Muda o foco para a próxima caixa de texto quando um caractere é inserido
+                switch textField {
+                case verificationOneTextField:
+                        verificationTwoTextField.becomeFirstResponder()
+                case verificationTwoTextField:
+                        verificationThreeTextField.becomeFirstResponder()
+                case verificationThreeTextField:
+                        verificationFourTextField.becomeFirstResponder()
+                case verificationFourTextField:
+                        verificationFiveTextField.becomeFirstResponder()
+                default:
+                    break
+                }
+            }
         }
     }
     
-    func isVerificationCodeValid() -> Bool{
-        return false
+    @objc func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.layer.borderColor = UIColor.blue.cgColor
     }
     
-    func displayError() {
-        verificationOneTextField.backgroundColor = UIColor.red
-        verificationTwoTextField.backgroundColor = UIColor.red
-        verificationThreeTextField.backgroundColor = UIColor.red
-        verificationFourTextField.backgroundColor = UIColor.red
-        verificationFiveTextField.backgroundColor = UIColor.red
-            
-        let errorMessageLabel = UILabel()
-        errorMessageLabel.text = "Código de verificação inválido"
-        errorMessageLabel.textColor = UIColor.red
-        errorMessageLabel.textAlignment = .center
-        view.addSubview(errorMessageLabel)
-        errorMessageLabel.translatesAutoresizingMaskIntoConstraints = false
-        errorMessageLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        errorMessageLabel.topAnchor.constraint(equalTo: verificationButton.bottomAnchor, constant: 16).isActive = true
-        }
+    @objc func textFieldDidEndEditing(_ textField: UITextField) {
+        textField.layer.borderColor = UIColor.gray.cgColor
+    }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let currentText = textField.text ?? ""
         
-        // Limite o comprimento do texto da caixa de texto a 1 caractere
         let newText = (currentText as NSString).replacingCharacters(in: range, with: string)
         let isSingleCharacter = newText.count <= 1
         
-        // Se for um único caractere, avance para o próximo campo ou mude a cor de fundo
         if isSingleCharacter {
+            textField.text = newText
             switch textField {
             case verificationOneTextField:
                 verificationTwoTextField.becomeFirstResponder()
-                textField.backgroundColor = UIColor.blue
             case verificationTwoTextField:
                 verificationThreeTextField.becomeFirstResponder()
-                textField.backgroundColor = UIColor.blue
             case verificationThreeTextField:
                 verificationFourTextField.becomeFirstResponder()
-                textField.backgroundColor = UIColor.blue
             case verificationFourTextField:
                 verificationFiveTextField.becomeFirstResponder()
-                textField.backgroundColor = UIColor.blue
             case verificationFiveTextField:
                 verificationFiveTextField.resignFirstResponder()
-                textField.backgroundColor = UIColor.blue
             default:
                 break
             }
         }
         
-        return false
+        return true
     }
 
-}
+    }
