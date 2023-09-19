@@ -52,6 +52,9 @@
                                 <rect key="frame" x="50" y="335" width="293" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="tappedVerificationButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ToC-Uf-g0J"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KBP-VM-dP4">
                                 <rect key="frame" x="60" y="390" width="273" height="21"/>
@@ -97,6 +100,17 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="HYd-Yx-4qK" secondAttribute="trailing" constant="50" id="s6d-pN-bjI"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="resendCodeLabel" destination="KBP-VM-dP4" id="0BH-qb-r0p"/>
+                        <outlet property="subTitleLabel" destination="IEg-BW-P1B" id="cjq-KF-kj7"/>
+                        <outlet property="titleLabel" destination="Mm5-1J-oJ7" id="C0y-ma-qBL"/>
+                        <outlet property="verificationButton" destination="QrX-bB-Bgc" id="mFb-7V-9il"/>
+                        <outlet property="verificationFiveTextField" destination="HYd-Yx-4qK" id="mmf-zj-Phz"/>
+                        <outlet property="verificationFourTextField" destination="1xF-Ud-rbL" id="YUB-Au-0Cq"/>
+                        <outlet property="verificationOneTextField" destination="ona-Ro-fvZ" id="2oD-AM-JpY"/>
+                        <outlet property="verificationThreeTextField" destination="Jf1-ca-Hsb" id="5T2-wk-zLY"/>
+                        <outlet property="verificationTwoTextField" destination="3Du-Is-g1q" id="RLl-8K-tQd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
