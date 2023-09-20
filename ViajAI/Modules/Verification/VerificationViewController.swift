@@ -9,6 +9,8 @@ import UIKit
 
 class VerificationViewController: UIViewController, UITextFieldDelegate {
     
+    var codeVerification = "12345"
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subTitleLabel: UILabel!
     @IBOutlet weak var verificationOneTextField: UITextField!
@@ -57,7 +59,6 @@ class VerificationViewController: UIViewController, UITextFieldDelegate {
             textField?.textAlignment = .center
             textField?.font = UIFont.systemFont(ofSize: 18)
             textField?.keyboardType = .numberPad
-            textField?.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
             textField?.layer.borderWidth = 2
             textField?.layer.cornerRadius = 5
             textField?.layer.borderColor = UIColor.gray.cgColor
@@ -76,24 +77,7 @@ class VerificationViewController: UIViewController, UITextFieldDelegate {
         verificationButton.layer.cornerRadius = 5
     }
     
-    @objc func textFieldDidChange(_ textField: UITextField) {
-        if let text = textField.text {
-            if text.count == 1 {
-                switch textField {
-                case verificationOneTextField:
-                        verificationTwoTextField.becomeFirstResponder()
-                case verificationTwoTextField:
-                        verificationThreeTextField.becomeFirstResponder()
-                case verificationThreeTextField:
-                        verificationFourTextField.becomeFirstResponder()
-                case verificationFourTextField:
-                        verificationFiveTextField.becomeFirstResponder()
-                default:
-                    break
-                }
-            }
-        }
-    }
+
     
     func configureResendCode() {
         resendCodeLabel.font = UIFont.systemFont(ofSize: 14)
