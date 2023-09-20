@@ -38,6 +38,8 @@ class VerificationViewController: UIViewController, UITextFieldDelegate {
         verificationButton.setTitle("Verificar", for: .normal)
         resendCodeLabel.text = "Não recebeu o código?"
         configureTextFields()
+        configureVerificationButtom()
+        configureResendCode()
         verificationButton.addTarget(self, action: #selector(tappedVerificationButton(_:)), for: .touchUpInside)
         resendCodeButton.addTarget(self, action: #selector(tappedVerificationButton), for: .touchUpInside)
         errorMessageLabel.isHidden = true
@@ -57,6 +59,7 @@ class VerificationViewController: UIViewController, UITextFieldDelegate {
             textField?.keyboardType = .numberPad
             textField?.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
             textField?.layer.borderWidth = 2
+            textField?.layer.cornerRadius = 5
             textField?.layer.borderColor = UIColor.gray.cgColor
             textField?.addTarget(self, action: #selector(textFieldDidBeginEditing(_:)), for: .editingDidBegin)
             textField?.addTarget(self, action: #selector(textFieldDidEndEditing(_:)), for: .editingDidEnd)
@@ -66,10 +69,16 @@ class VerificationViewController: UIViewController, UITextFieldDelegate {
         verificationOneTextField?.layer.borderColor = UIColor.blue.cgColor
     }
     
+    func configureVerificationButtom() {
+        verificationButton.backgroundColor = UIColor.systemBlue
+        verificationButton.setTitleColor(UIColor.white, for: .normal)
+        verificationButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+        verificationButton.layer.cornerRadius = 5
+    }
+    
     @objc func textFieldDidChange(_ textField: UITextField) {
         if let text = textField.text {
             if text.count == 1 {
-                    // Muda o foco para a próxima caixa de texto quando um caractere é inserido
                 switch textField {
                 case verificationOneTextField:
                         verificationTwoTextField.becomeFirstResponder()
@@ -84,6 +93,15 @@ class VerificationViewController: UIViewController, UITextFieldDelegate {
                 }
             }
         }
+    }
+    
+    func configureResendCode() {
+        resendCodeLabel.font = UIFont.systemFont(ofSize: 14)
+        resendCodeLabel.textColor = UIColor.systemGray2
+
+        resendCodeButton.setTitle("Reenviar código", for: .normal)
+        resendCodeButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 12)
+        resendCodeButton.setTitleColor(UIColor.blue, for: .normal)
     }
     
     @objc func textFieldDidBeginEditing(_ textField: UITextField) {
