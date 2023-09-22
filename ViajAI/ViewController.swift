@@ -8,12 +8,29 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
 
+    
+    @IBAction func tappedButton(_ sender: Any) {
+
+        let viewController = UIStoryboard(name: "RegisterViewController", bundle: nil).instantiateViewController(withIdentifier: "RegisterViewController") as? RegisterViewController
+        navigationController?.pushViewController(viewController ?? UIViewController(), animated: true)
+
+
+        
+
+
+    }
+    
+    
+    
+    
+    
+    
 
 }
 
