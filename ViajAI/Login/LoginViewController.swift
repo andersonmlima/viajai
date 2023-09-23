@@ -10,25 +10,17 @@ import UIKit
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var wellcomeAppLabel: UILabel!
-    
     @IBOutlet weak var textWellcomeAppLabel: UILabel!
-    
     @IBOutlet weak var emailTextField: UITextField!
-    
     @IBOutlet weak var passwordTextField: UITextField!
-    
     @IBOutlet weak var recoverPasswordChangeButton: UIButton!
-    
     @IBOutlet weak var loginChangeButton: UIButton!
-    
     @IBOutlet weak var orLabel: UILabel!
-    
-    
     @IBOutlet weak var loginGoogleChangeButton: UIButton!
-    
     @IBOutlet weak var loginFacebookChangeButton: UIButton!
-    
     @IBOutlet weak var registerChangeButton: UIButton!
+    @IBOutlet weak var invalidEmailLabel: UILabel!
+    @IBOutlet weak var invalidPasswordLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -124,6 +116,11 @@ class LoginViewController: UIViewController {
         textRegisterLabel.text = "Não tem cadastro?"
         textRegisterLabel.font = UIFont.systemFont(ofSize: 15)
         textRegisterLabel.textColor = UIColor.gray
+        
+        invalidEmailLabel.text = ""
+        invalidPasswordLabel.text = ""
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
     }
     
     func corHexadecimal(hex: String) -> UIColor? {
@@ -140,4 +137,55 @@ class LoginViewController: UIViewController {
 
             return UIColor(red: vermelho, green: verde, blue: azul, alpha: 1.0)
         }
+}
+
+extension LoginViewController: UITextFieldDelegate {
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.layer.borderWidth = 1.0
+        textField.layer.borderColor = UIColor.blue.cgColor
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
+        
+        textField.layer.borderWidth = 1.0
+        if textField.hasText {
+            textField.layer.borderColor = UIColor.lightGray.cgColor
+            
+        } else {
+            textField.layer.borderColor = UIColor.red.cgColor
+            
+        }
+        
+        // Verifique se o campo de email está vazio e não está em foco
+            if textField == emailTextField && !textField.isFirstResponder {
+                if textField.text == "" {
+                    textField.layer.borderColor = UIColor.red.cgColor
+                    invalidEmailLabel.font = UIFont.systemFont(ofSize: 15)
+                    invalidEmailLabel.textColor = UIColor.red
+                    invalidEmailLabel.text = "E-mail inválido"
+                } else {
+                    textField.layer.borderColor = UIColor.lightGray.cgColor
+                    invalidEmailLabel.text = ""
+                }
+            }
+
+            // Verifique se o campo de senha está vazio e não está em foco
+            if textField == passwordTextField && !textField.isFirstResponder {
+                if textField.text == "" {
+                    textField.layer.borderColor = UIColor.red.cgColor
+                    invalidPasswordLabel.font = UIFont.systemFont(ofSize: 15)
+                    invalidPasswordLabel.textColor = UIColor.red
+                    invalidPasswordLabel.text = "Senha inválida"
+                } else {
+                    textField.layer.borderColor = UIColor.lightGray.cgColor
+                    invalidPasswordLabel.text = ""
+                }
+            }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }
