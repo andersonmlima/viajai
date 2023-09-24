@@ -18,6 +18,7 @@
 		570276B62A859ADE0097840C /* ViajAIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570276B52A859ADE0097840C /* ViajAIUITestsLaunchTests.swift */; };
 		5716C22A2AB2B9780043C5B6 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5716C2292AB2B9780043C5B6 /* SearchViewController.swift */; };
 		5716C22C2AB2B98E0043C5B6 /* SearchViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5716C22B2AB2B98E0043C5B6 /* SearchViewController.storyboard */; };
+		57B9E6A72AC0D46A0084DE19 /* AddDoneButtonToTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B9E6A62AC0D46A0084DE19 /* AddDoneButtonToTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		570276B52A859ADE0097840C /* ViajAIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViajAIUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5716C2292AB2B9780043C5B6 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		5716C22B2AB2B98E0043C5B6 /* SearchViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchViewController.storyboard; sourceTree = "<group>"; };
+		57B9E6A62AC0D46A0084DE19 /* AddDoneButtonToTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDoneButtonToTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		570276912A859ADB0097840C /* ViajAI */ = {
 			isa = PBXGroup;
 			children = (
+				57B9E6A52AC0D3FF0084DE19 /* Utilities */,
 				5740A8CF2AB25ED600815218 /* Modules */,
 				570276922A859ADB0097840C /* AppDelegate.swift */,
 				570276942A859ADB0097840C /* SceneDelegate.swift */,
@@ -147,6 +150,14 @@
 				5740A8CE2AB2592000815218 /* Search */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		57B9E6A52AC0D3FF0084DE19 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				57B9E6A62AC0D46A0084DE19 /* AddDoneButtonToTextField.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,6 +292,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57B9E6A72AC0D46A0084DE19 /* AddDoneButtonToTextField.swift in Sources */,
 				5716C22A2AB2B9780043C5B6 /* SearchViewController.swift in Sources */,
 				570276972A859ADB0097840C /* ViewController.swift in Sources */,
 				570276932A859ADB0097840C /* AppDelegate.swift in Sources */,
