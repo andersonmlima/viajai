@@ -18,6 +18,8 @@
 		570276B62A859ADE0097840C /* ViajAIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570276B52A859ADE0097840C /* ViajAIUITestsLaunchTests.swift */; };
 		646365EE2AB3912700A8A2CC /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646365ED2AB3912700A8A2CC /* VerificationViewController.swift */; };
 		646365F02AB3915B00A8A2CC /* VerificationViewStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 646365EF2AB3915B00A8A2CC /* VerificationViewStoryboard.storyboard */; };
+		64C0D79F2AC3174700CD4335 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C0D79E2AC3174700CD4335 /* FavoritesViewController.swift */; };
+		64C0D7A12AC3176300CD4335 /* FavoritesStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64C0D7A02AC3176300CD4335 /* FavoritesStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		570276B52A859ADE0097840C /* ViajAIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViajAIUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		646365ED2AB3912700A8A2CC /* VerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
 		646365EF2AB3915B00A8A2CC /* VerificationViewStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VerificationViewStoryboard.storyboard; sourceTree = "<group>"; };
+		64C0D79E2AC3174700CD4335 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		64C0D7A02AC3176300CD4335 /* FavoritesStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FavoritesStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +139,7 @@
 		646365EB2AB3906100A8A2CC /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				64C0D79D2AC3171600CD4335 /* Favorites */,
 				646365EC2AB3908400A8A2CC /* Verification */,
 			);
 			path = Modules;
@@ -147,6 +152,15 @@
 				646365EF2AB3915B00A8A2CC /* VerificationViewStoryboard.storyboard */,
 			);
 			path = Verification;
+			sourceTree = "<group>";
+		};
+		64C0D79D2AC3171600CD4335 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				64C0D79E2AC3174700CD4335 /* FavoritesViewController.swift */,
+				64C0D7A02AC3176300CD4335 /* FavoritesStoryboard.storyboard */,
+			);
+			path = Favorites;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,6 +267,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64C0D7A12AC3176300CD4335 /* FavoritesStoryboard.storyboard in Resources */,
 				5702769F2A859ADE0097840C /* LaunchScreen.storyboard in Resources */,
 				5702769C2A859ADE0097840C /* Assets.xcassets in Resources */,
 				5702769A2A859ADB0097840C /* Main.storyboard in Resources */,
@@ -284,6 +299,7 @@
 				570276972A859ADB0097840C /* ViewController.swift in Sources */,
 				570276932A859ADB0097840C /* AppDelegate.swift in Sources */,
 				646365EE2AB3912700A8A2CC /* VerificationViewController.swift in Sources */,
+				64C0D79F2AC3174700CD4335 /* FavoritesViewController.swift in Sources */,
 				570276952A859ADB0097840C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
