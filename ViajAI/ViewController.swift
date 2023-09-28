@@ -8,12 +8,23 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var irTelaDetalhesChangeButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        irTelaDetalhesChangeButton.setTitle("Ir Tela de Detalhes", for: .normal)
     }
-
-
+    
+    
+    @IBAction func tappedIrTelaDetalhesButton(_ sender: UIButton) {
+        
+        let telaDetalhes = UIStoryboard(name: "DetailsViewController", bundle: nil).instantiateViewController(withIdentifier: "DetailsViewController") as? DetailsViewController
+        title = ""
+        navigationController?.pushViewController(telaDetalhes ?? UIViewController(), animated: true)
+    }
+    
 }
 

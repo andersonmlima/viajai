@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Details View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="DetailsViewController" id="Y6W-OH-hqX" customClass="DetailsViewController" customModule="ViajAI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fgc-Jh-iz6">
+                                <rect key="frame" x="0.0" y="337" width="393" height="515"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="515" id="AkM-m9-S6R"/>
+                                    <constraint firstAttribute="width" constant="393" id="RC7-wQ-OHH"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CAS-i3-mCc">
+                                <rect key="frame" x="0.0" y="128" width="393" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="393" id="qMT-H1-tgj"/>
+                                    <constraint firstAttribute="height" constant="240" id="y6q-Be-wXH"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CAS-i3-mCc" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="9TU-gP-qBe"/>
+                            <constraint firstItem="Fgc-Jh-iz6" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="F82-gj-Chd"/>
+                            <constraint firstItem="Fgc-Jh-iz6" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="278" id="HG7-gi-TB8"/>
+                            <constraint firstItem="CAS-i3-mCc" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="70" id="RIp-Z0-WeM"/>
+                            <constraint firstItem="CAS-i3-mCc" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="S1v-Ff-l0u"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="CAS-i3-mCc" secondAttribute="bottom" constant="450" id="dXF-bj-nu5"/>
+                            <constraint firstAttribute="bottom" secondItem="Fgc-Jh-iz6" secondAttribute="bottom" id="hrz-0z-ZQM"/>
+                            <constraint firstItem="Fgc-Jh-iz6" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="lOY-dK-5mV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageLocalImageView" destination="CAS-i3-mCc" id="SdK-x6-EIC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="112.21374045801527" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
