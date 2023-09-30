@@ -216,6 +216,31 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uk2-i7-N1B">
+                                                        <rect key="frame" x="0.0" y="530.66666666666663" width="329" height="148"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categorias" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eyg-Mo-GZM">
+                                                                <rect key="frame" x="20.000000000000004" y="12" width="61.333333333333343" height="14.333333333333336"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                <color key="textColor" red="0.55700099469999997" green="0.55656558280000001" blue="0.57647556069999994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstItem="eyg-Mo-GZM" firstAttribute="top" secondItem="Uk2-i7-N1B" secondAttribute="top" constant="12" id="2b0-E3-aTc"/>
+                                                            <constraint firstItem="eyg-Mo-GZM" firstAttribute="leading" secondItem="Uk2-i7-N1B" secondAttribute="leading" constant="20" id="b4t-KK-Ihu"/>
+                                                            <constraint firstAttribute="height" constant="148" id="uhU-qr-Whv"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="8"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstItem="fLu-b0-M6T" firstAttribute="top" secondItem="wWa-39-h4Z" secondAttribute="bottom" constant="4" id="1dy-Wu-nIS"/>
@@ -229,14 +254,17 @@
                                                     <constraint firstItem="Lu1-Yz-st5" firstAttribute="top" secondItem="yjC-Ni-buD" secondAttribute="top" constant="32" id="IQt-H2-FFG"/>
                                                     <constraint firstItem="fLu-b0-M6T" firstAttribute="leading" secondItem="yjC-Ni-buD" secondAttribute="leading" id="IYH-Pq-NPg"/>
                                                     <constraint firstItem="wWa-39-h4Z" firstAttribute="top" secondItem="Lu1-Yz-st5" secondAttribute="bottom" constant="32" id="J24-k4-6Sf"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Uk2-i7-N1B" secondAttribute="trailing" id="LS4-gi-9q4"/>
                                                     <constraint firstItem="wWa-39-h4Z" firstAttribute="leading" secondItem="yjC-Ni-buD" secondAttribute="leading" id="P04-TK-nv1"/>
                                                     <constraint firstItem="QwJ-HP-Gh2" firstAttribute="leading" secondItem="yjC-Ni-buD" secondAttribute="leading" id="TJ3-Gk-9Eh"/>
+                                                    <constraint firstItem="Uk2-i7-N1B" firstAttribute="top" secondItem="Tts-sr-Kin" secondAttribute="bottom" constant="12" id="UaI-MM-M8u"/>
                                                     <constraint firstItem="fq3-p0-pJW" firstAttribute="leading" secondItem="yjC-Ni-buD" secondAttribute="leading" id="cFs-1Z-Ruk"/>
                                                     <constraint firstAttribute="trailing" secondItem="fq3-p0-pJW" secondAttribute="trailing" id="h1z-1U-jOX"/>
                                                     <constraint firstItem="Tts-sr-Kin" firstAttribute="top" secondItem="fq3-p0-pJW" secondAttribute="bottom" constant="16" id="jTu-vZ-0Jf"/>
                                                     <constraint firstAttribute="trailing" secondItem="fLu-b0-M6T" secondAttribute="trailing" id="mZE-6h-FPF"/>
                                                     <constraint firstAttribute="height" constant="1400" id="n1V-Zj-P8X"/>
                                                     <constraint firstItem="Fgl-d5-ORy" firstAttribute="leading" secondItem="yjC-Ni-buD" secondAttribute="leading" id="p2x-Nc-dwo"/>
+                                                    <constraint firstItem="Uk2-i7-N1B" firstAttribute="leading" secondItem="yjC-Ni-buD" secondAttribute="leading" id="sCU-1n-cgy"/>
                                                     <constraint firstItem="fq3-p0-pJW" firstAttribute="top" secondItem="QwJ-HP-Gh2" secondAttribute="bottom" constant="16" id="uIP-5l-X2j"/>
                                                     <constraint firstItem="ekJ-5e-3W9" firstAttribute="top" secondItem="Fgl-d5-ORy" secondAttribute="bottom" constant="16" id="vId-Kv-5tG"/>
                                                     <constraint firstAttribute="trailing" secondItem="Fgl-d5-ORy" secondAttribute="trailing" id="wnu-Nl-1LK"/>
@@ -278,6 +306,7 @@
                         <outlet property="arriveDateView" destination="QwJ-HP-Gh2" id="jhd-Yz-yjJ"/>
                         <outlet property="budgetTextField" destination="DIt-lw-yho" id="Itg-Bb-J0N"/>
                         <outlet property="budgetView" destination="Tts-sr-Kin" id="nrF-ZR-mFS"/>
+                        <outlet property="categoriesView" destination="Uk2-i7-N1B" id="nRd-Zd-sBA"/>
                         <outlet property="cityTextField" destination="hlQ-C7-Pln" id="MOb-AX-dkH"/>
                         <outlet property="cityView" destination="Fgl-d5-ORy" id="eNW-5Z-XKG"/>
                         <outlet property="countryTextField" destination="IIr-lj-YSz" id="37E-tV-XxV"/>

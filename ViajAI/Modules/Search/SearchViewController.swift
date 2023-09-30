@@ -19,15 +19,36 @@ class SearchViewController: UIViewController {
     @IBOutlet var exitDateTextField: UITextField!
     @IBOutlet weak var budgetView: UIView!
     @IBOutlet var budgetTextField: UITextField!
-
+    @IBOutlet weak var categoriesView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        configElements()
+        configTextFields()
+        configKeyboardPadding()
+        configCateogryView()
+    }
+    
+    func configKeyboardPadding() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
-    func configElements() {
+    @objc func keyboardWillShow(notification: NSNotification) {
+        guard let userInfo = notification.userInfo else { return }
+        var keyboardFrame: CGRect = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
+        keyboardFrame = view.convert(keyboardFrame, from: nil)
+
+        var contentInset: UIEdgeInsets = scrollView.contentInset
+        contentInset.bottom = keyboardFrame.size.height + 20
+        scrollView.contentInset = contentInset
+    }
+
+    @objc func keyboardWillHide(notification: NSNotification) {
+        let contentInset: UIEdgeInsets = UIEdgeInsets.zero
+        scrollView.contentInset = contentInset
+    }
+    
+    func configTextFields() {
         countryTextField.delegate = self
         cityTextField.delegate = self
         arriveDateTextField.delegate = self
@@ -55,21 +76,16 @@ class SearchViewController: UIViewController {
     @objc func exitDateDoneAction() {
         self.budgetTextField.becomeFirstResponder()
     }
-
-    @objc func keyboardWillShow(notification: NSNotification) {
-        guard let userInfo = notification.userInfo else { return }
-        var keyboardFrame: CGRect = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
-        keyboardFrame = view.convert(keyboardFrame, from: nil)
-
-        var contentInset: UIEdgeInsets = scrollView.contentInset
-        contentInset.bottom = keyboardFrame.size.height + 20
-        scrollView.contentInset = contentInset
+    
+    func configCateogryView() {
+        let gesture = UITapGestureRecognizer(target: self, action: #selector (self.openModalCategories))
+        self.categoriesView.addGestureRecognizer(gesture)
+    }
+    
+    @objc func openModalCategories() {
+        print("openModalCategories")
     }
 
-    @objc func keyboardWillHide(notification: NSNotification) {
-        let contentInset: UIEdgeInsets = UIEdgeInsets.zero
-        scrollView.contentInset = contentInset
-    }
 }
 
 
@@ -114,8 +130,6 @@ extension SearchViewController: UITextFieldDelegate {
             self.countryTextField.becomeFirstResponder()
         case countryTextField:
             self.arriveDateTextField.becomeFirstResponder()
-//        case budgetTextField:
-            // Open the category selection
         default:
             textField.resignFirstResponder()
         }
