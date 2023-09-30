@@ -18,14 +18,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="389" height="306"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUs-oQ-hkK">
-                        <rect key="frame" x="20" y="10" width="42" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="bja-5e-aJr">
-                        <rect key="frame" x="0.0" y="51" width="389" height="255"/>
+                        <rect key="frame" x="0.0" y="41" width="389" height="265"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dF8-Oq-0R8">
                             <size key="itemSize" width="128" height="128"/>
@@ -34,22 +28,28 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                     </collectionView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3dr-nP-S8x">
+                        <rect key="frame" x="20" y="10" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="bja-5e-aJr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="CyG-Nb-qDe"/>
+                    <constraint firstItem="bja-5e-aJr" firstAttribute="top" secondItem="3dr-nP-S8x" secondAttribute="bottom" constant="10" id="HDQ-ek-Bkg"/>
                     <constraint firstAttribute="trailing" secondItem="bja-5e-aJr" secondAttribute="trailing" id="Hqq-ce-sPk"/>
-                    <constraint firstItem="cUs-oQ-hkK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="KZp-U1-40F"/>
-                    <constraint firstItem="bja-5e-aJr" firstAttribute="top" secondItem="cUs-oQ-hkK" secondAttribute="bottom" constant="20" id="OH0-yz-9Nc"/>
                     <constraint firstAttribute="bottom" secondItem="bja-5e-aJr" secondAttribute="bottom" id="cFt-U7-Brh"/>
-                    <constraint firstItem="cUs-oQ-hkK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="q6c-nD-eMC"/>
+                    <constraint firstItem="3dr-nP-S8x" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="g4a-3c-zqf"/>
+                    <constraint firstItem="3dr-nP-S8x" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="kGC-Fr-cFC"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="listDestinationCollectionView" destination="bja-5e-aJr" id="Ukh-C0-nqk"/>
-                <outlet property="titleDestinationLabel" destination="cUs-oQ-hkK" id="Mo2-hO-Zpi"/>
+                <outlet property="titleDestinationLabel" destination="3dr-nP-S8x" id="Gar-Xn-tQA"/>
             </connections>
-            <point key="canvasLocation" x="-366" y="82"/>
+            <point key="canvasLocation" x="-1080" y="109"/>
         </tableViewCell>
     </objects>
     <resources>

@@ -10,7 +10,7 @@ import Foundation
 struct DetailsDestionation {
     
     var photoDestinationName: String
-//    var subDestinationName: String
-//    var descriptionDestination: String
+    var subDestinationName: String
+    var descriptionDestination: String
     
 }

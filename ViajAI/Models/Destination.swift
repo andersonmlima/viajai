@@ -11,7 +11,7 @@ struct Destination {
     var titleDestination: String
     
     var listImages: [String]
-//    var listSubtitles: [String]
-//    var listDescripition: [String]
+    var listSubtitles: [String]
+    var listDescripition: [String]
     
 }

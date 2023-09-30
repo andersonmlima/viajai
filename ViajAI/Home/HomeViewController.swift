@@ -11,16 +11,10 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var principalsExperiencesTableView: UITableView!
     
-//    var destinatiions: [Destination] = [
-//        Destination(titleDestination: "Rio de Janeiro", listImages: ["rio_praia_copacabana", "rio_ipanema", "rio_urca"], listSubtitles: ["1", "2", "3"], listDescripition: ["12", "23", "45"]),
-//        
-//        Destination(titleDestination: "Ceará", listImages: ["ceara_praia_futuro", "ceara_canoa_quebrada", "ceara_jeriquaquara"], listSubtitles: ["1", "2", "3"], listDescripition: ["12", "23", "45"]),
-//    ]
-    
-    var destinatiions: [Destination] = [
-        Destination(titleDestination: "Rio de Janeiro", listImages: ["car1", "car2", "car3"]),
+    var destinations: [Destination] = [
+        Destination(titleDestination: "Rio de Janeiro", listImages: ["rio_praia_copacabana", "rio_ipanema", "rio_urca"], listSubtitles: ["1", "2", "3"], listDescripition: ["12", "23", "45"]),
         
-        Destination(titleDestination: "Ceará", listImages: ["car1", "car2", "car3"]),
+        Destination(titleDestination: "Ceará", listImages: ["ceara_praia_futuro", "ceara_canoa_quebrada", "ceara_jeriquaquara"], listSubtitles: ["1", "2", "3"], listDescripition: ["12", "23", "45"]),
     ]
     
     override func viewDidLoad() {
@@ -37,14 +31,14 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return destinatiions.count
+        return destinations.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.identifier, for: indexPath) as? HomeTableViewCell else {
             return UITableViewCell()
         }
-        cell.setupCell(destination: destinatiions[indexPath.row])
+        cell.setupCell(destination: destinations[indexPath.row])
         return cell
 
     }

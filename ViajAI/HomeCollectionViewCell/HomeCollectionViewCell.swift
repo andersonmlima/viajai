@@ -24,11 +24,10 @@ class HomeCollectionViewCell: UICollectionViewCell {
         photoDestinationImageView.contentMode = .scaleAspectFill
     }
     
-    func setupCell(photoName: String) {
-//    , subTitles: String, description: String) {
+    func setupCell(photoName: String, subTitles: String, description: String) {
         
         photoDestinationImageView.image = UIImage(named: photoName)
-//        nameSubDestinationLabel.text = subTitles
-//        descriptionDestinationLabel.text = description
+        nameSubDestinationLabel.text = subTitles
+        descriptionDestinationLabel.text = description
     }
 }

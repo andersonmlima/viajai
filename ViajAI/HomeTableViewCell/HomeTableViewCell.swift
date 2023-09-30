@@ -8,7 +8,7 @@
 import UIKit
 
 class HomeTableViewCell: UITableViewCell {
-    
+
     @IBOutlet weak var titleDestinationLabel: UILabel!
     @IBOutlet weak var listDestinationCollectionView: UICollectionView!
 
@@ -18,9 +18,9 @@ class HomeTableViewCell: UITableViewCell {
         return UINib(nibName: identifier, bundle: nil)
     }
     
-//    var detailsList: [DetailsList] = []
+    var detailsList: [DetailsList] = []
     
-    var detailsList: [String] = []
+//    var detailsList: [String] = []
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -38,13 +38,11 @@ class HomeTableViewCell: UITableViewCell {
     }
     
     func setupCell(destination: Destination) {
-        titleDestinationLabel.text = destination.titleDestination
+        self.titleDestinationLabel.text = destination.titleDestination
         
-        self.detailsList = destination.listImages
-        
-//        self.detailsList = [DetailsList(listImages: destination.listImages,
-//                                        listSubtitles: destination.listSubtitles,
-//                                        listDescripition: destination.listDescripition)]
+        self.detailsList = [DetailsList(listImages: destination.listImages,
+                                        listSubtitles: destination.listSubtitles,
+                                        listDescripition: destination.listDescripition)]
     }
 }
 
@@ -55,9 +53,7 @@ extension HomeTableViewCell: UICollectionViewDelegate, UICollectionViewDataSourc
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionViewCell.identifier, for: indexPath) as? HomeCollectionViewCell
-        cell?.setupCell(photoName: detailsList[indexPath.row])
-        
-//        , subTitles: detailsList[indexPath.row].listSubtitles[indexPath.row], description: detailsList[indexPath.row].listDescripition[indexPath.row])
+        cell?.setupCell(photoName: detailsList[indexPath.row].listImages[indexPath.row],subTitles: detailsList[indexPath.row].listSubtitles[indexPath.row], description: detailsList[indexPath.row].listDescripition[indexPath.row])
         
         return cell ?? UICollectionViewCell()
     }

@@ -8,6 +8,7 @@
 import Foundation
 
 struct DetailsList {
+    
     var listImages: [String]
     var listSubtitles: [String]
     var listDescripition: [String]
