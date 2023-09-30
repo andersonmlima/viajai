@@ -217,7 +217,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uk2-i7-N1B">
-                                                        <rect key="frame" x="0.0" y="530.66666666666663" width="329" height="148"/>
+                                                        <rect key="frame" x="0.0" y="534.66666666666663" width="329" height="148"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categorias" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eyg-Mo-GZM">
                                                                 <rect key="frame" x="20.000000000000004" y="12" width="61.333333333333343" height="14.333333333333336"/>
@@ -257,7 +257,7 @@
                                                     <constraint firstAttribute="trailing" secondItem="Uk2-i7-N1B" secondAttribute="trailing" id="LS4-gi-9q4"/>
                                                     <constraint firstItem="wWa-39-h4Z" firstAttribute="leading" secondItem="yjC-Ni-buD" secondAttribute="leading" id="P04-TK-nv1"/>
                                                     <constraint firstItem="QwJ-HP-Gh2" firstAttribute="leading" secondItem="yjC-Ni-buD" secondAttribute="leading" id="TJ3-Gk-9Eh"/>
-                                                    <constraint firstItem="Uk2-i7-N1B" firstAttribute="top" secondItem="Tts-sr-Kin" secondAttribute="bottom" constant="12" id="UaI-MM-M8u"/>
+                                                    <constraint firstItem="Uk2-i7-N1B" firstAttribute="top" secondItem="Tts-sr-Kin" secondAttribute="bottom" constant="16" id="UaI-MM-M8u"/>
                                                     <constraint firstItem="fq3-p0-pJW" firstAttribute="leading" secondItem="yjC-Ni-buD" secondAttribute="leading" id="cFs-1Z-Ruk"/>
                                                     <constraint firstAttribute="trailing" secondItem="fq3-p0-pJW" secondAttribute="trailing" id="h1z-1U-jOX"/>
                                                     <constraint firstItem="Tts-sr-Kin" firstAttribute="top" secondItem="fq3-p0-pJW" secondAttribute="bottom" constant="16" id="jTu-vZ-0Jf"/>

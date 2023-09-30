@@ -9,30 +9,31 @@ import UIKit
 
 class SearchViewController: UIViewController {
     @IBOutlet var scrollView: UIScrollView!
-    @IBOutlet weak var cityView: UIView!
+    @IBOutlet var cityView: UIView!
     @IBOutlet var cityTextField: UITextField!
-    @IBOutlet weak var countryView: UIView!
+    @IBOutlet var countryView: UIView!
     @IBOutlet var countryTextField: UITextField!
-    @IBOutlet weak var arriveDateView: UIView!
+    @IBOutlet var arriveDateView: UIView!
     @IBOutlet var arriveDateTextField: UITextField!
-    @IBOutlet weak var exitDateView: UIView!
+    @IBOutlet var exitDateView: UIView!
     @IBOutlet var exitDateTextField: UITextField!
-    @IBOutlet weak var budgetView: UIView!
+    @IBOutlet var budgetView: UIView!
     @IBOutlet var budgetTextField: UITextField!
-    @IBOutlet weak var categoriesView: UIView!
-    
+    @IBOutlet var categoriesView: UIView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         configTextFields()
         configKeyboardPadding()
         configCateogryView()
     }
-    
+
+    // MARK: - Configuring the observers to Keyboard
     func configKeyboardPadding() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
-    
+
     @objc func keyboardWillShow(notification: NSNotification) {
         guard let userInfo = notification.userInfo else { return }
         var keyboardFrame: CGRect = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
@@ -47,94 +48,96 @@ class SearchViewController: UIViewController {
         let contentInset: UIEdgeInsets = UIEdgeInsets.zero
         scrollView.contentInset = contentInset
     }
-    
+
+    // MARK: - Configuring text field and their objc functions to done button
     func configTextFields() {
         countryTextField.delegate = self
         cityTextField.delegate = self
         arriveDateTextField.delegate = self
         exitDateTextField.delegate = self
         budgetTextField.delegate = self
-        
+
         countryTextField.textContentType = .countryName
         cityTextField.textContentType = .addressCity
         arriveDateTextField.textContentType = .dateTime
         exitDateTextField.textContentType = .dateTime
-        
+
         budgetTextField.keyboardType = .numberPad
         arriveDateTextField.keyboardType = .numberPad
         exitDateTextField.keyboardType = .numberPad
-        
-        budgetTextField.addDoneButtonToKeyboard(myAction: #selector(self.budgetTextField.resignFirstResponder))
+
+        budgetTextField.addDoneButtonToKeyboard(myAction: #selector(budgetTextField.resignFirstResponder))
         arriveDateTextField.addDoneButtonToKeyboard(myAction: #selector(arriveDateDoneAction), target: self)
         exitDateTextField.addDoneButtonToKeyboard(myAction: #selector(exitDateDoneAction), target: self)
     }
-    
+
     @objc func arriveDateDoneAction() {
-        self.exitDateTextField.becomeFirstResponder()
-    }
-    
-    @objc func exitDateDoneAction() {
-        self.budgetTextField.becomeFirstResponder()
-    }
-    
-    func configCateogryView() {
-        let gesture = UITapGestureRecognizer(target: self, action: #selector (self.openModalCategories))
-        self.categoriesView.addGestureRecognizer(gesture)
-    }
-    
-    @objc func openModalCategories() {
-        print("openModalCategories")
+        exitDateTextField.becomeFirstResponder()
     }
 
+    @objc func exitDateDoneAction() {
+        budgetTextField.becomeFirstResponder()
+    }
 }
 
-
+// MARK: - Text field
 extension SearchViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         switch textField {
         case cityTextField:
-            self.cityView.layer.borderColor = UIColor.blue.cgColor
+            cityView.layer.borderColor = UIColor.blue.cgColor
         case countryTextField:
-            self.countryView.layer.borderColor = UIColor.blue.cgColor
+            countryView.layer.borderColor = UIColor.blue.cgColor
         case arriveDateTextField:
-            self.arriveDateView.layer.borderColor = UIColor.blue.cgColor
+            arriveDateView.layer.borderColor = UIColor.blue.cgColor
         case exitDateTextField:
-            self.exitDateView.layer.borderColor = UIColor.blue.cgColor
+            exitDateView.layer.borderColor = UIColor.blue.cgColor
         case budgetTextField:
-            self.budgetView.layer.borderColor = UIColor.blue.cgColor
+            budgetView.layer.borderColor = UIColor.blue.cgColor
         default:
             textField.resignFirstResponder()
         }
     }
-    
+
     func textFieldDidEndEditing(_ textField: UITextField) {
         switch textField {
         case cityTextField:
-            self.cityView.layer.borderColor = UIColor(red: 0.133, green: 0.133, blue: 0.133, alpha: 1).cgColor
+            cityView.layer.borderColor = UIColor(red: 0.133, green: 0.133, blue: 0.133, alpha: 1).cgColor
         case countryTextField:
-            self.countryView.layer.borderColor = UIColor(red: 0.133, green: 0.133, blue: 0.133, alpha: 1).cgColor
+            countryView.layer.borderColor = UIColor(red: 0.133, green: 0.133, blue: 0.133, alpha: 1).cgColor
         case arriveDateTextField:
-            self.arriveDateView.layer.borderColor = UIColor(red: 0.133, green: 0.133, blue: 0.133, alpha: 1).cgColor
+            arriveDateView.layer.borderColor = UIColor(red: 0.133, green: 0.133, blue: 0.133, alpha: 1).cgColor
         case exitDateTextField:
-            self.exitDateView.layer.borderColor = UIColor(red: 0.133, green: 0.133, blue: 0.133, alpha: 1).cgColor
+            exitDateView.layer.borderColor = UIColor(red: 0.133, green: 0.133, blue: 0.133, alpha: 1).cgColor
         case budgetTextField:
-            self.budgetView.layer.borderColor = UIColor(red: 0.133, green: 0.133, blue: 0.133, alpha: 1).cgColor
+            budgetView.layer.borderColor = UIColor(red: 0.133, green: 0.133, blue: 0.133, alpha: 1).cgColor
         default:
             textField.resignFirstResponder()
         }
     }
-    
+
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         switch textField {
         case cityTextField:
-            self.countryTextField.becomeFirstResponder()
+            countryTextField.becomeFirstResponder()
         case countryTextField:
-            self.arriveDateTextField.becomeFirstResponder()
+            arriveDateTextField.becomeFirstResponder()
         default:
             textField.resignFirstResponder()
         }
         return true
     }
-    
-    
+}
+
+
+// MARK: - Configuring the category view to open the modal with the types of category
+extension SearchViewController {
+    func configCateogryView() {
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(openModalCategories))
+        categoriesView.addGestureRecognizer(gesture)
+    }
+
+    @objc func openModalCategories() {
+        print("openModalCategories")
+    }
 }
