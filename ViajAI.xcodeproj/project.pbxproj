@@ -18,6 +18,13 @@
 		570276B62A859ADE0097840C /* ViajAIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570276B52A859ADE0097840C /* ViajAIUITestsLaunchTests.swift */; };
 		DF72CA112AC6E96700840CCF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF72CA102AC6E96700840CCF /* HomeViewController.swift */; };
 		DF72CA132AC6E97600840CCF /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF72CA122AC6E97600840CCF /* HomeViewController.storyboard */; };
+		DF72CA172AC836D200840CCF /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF72CA152AC836D200840CCF /* HomeTableViewCell.swift */; };
+		DF72CA182AC836D200840CCF /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF72CA162AC836D200840CCF /* HomeTableViewCell.xib */; };
+		DF72CA1B2AC83D2900840CCF /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF72CA1A2AC83D2900840CCF /* Destination.swift */; };
+		DF72CA1F2AC8446400840CCF /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF72CA1D2AC8446400840CCF /* HomeCollectionViewCell.swift */; };
+		DF72CA202AC8446400840CCF /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF72CA1E2AC8446400840CCF /* HomeCollectionViewCell.xib */; };
+		DF72CA222AC8470700840CCF /* DetailsDestionation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF72CA212AC8470700840CCF /* DetailsDestionation.swift */; };
+		DF72CA242AC8560C00840CCF /* DetailsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF72CA232AC8560C00840CCF /* DetailsList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +60,13 @@
 		570276B52A859ADE0097840C /* ViajAIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViajAIUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		DF72CA102AC6E96700840CCF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DF72CA122AC6E97600840CCF /* HomeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeViewController.storyboard; sourceTree = "<group>"; };
+		DF72CA152AC836D200840CCF /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		DF72CA162AC836D200840CCF /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
+		DF72CA1A2AC83D2900840CCF /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
+		DF72CA1D2AC8446400840CCF /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		DF72CA1E2AC8446400840CCF /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
+		DF72CA212AC8470700840CCF /* DetailsDestionation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsDestionation.swift; sourceTree = "<group>"; };
+		DF72CA232AC8560C00840CCF /* DetailsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +117,9 @@
 		570276912A859ADB0097840C /* ViajAI */ = {
 			isa = PBXGroup;
 			children = (
+				DF72CA1C2AC8443C00840CCF /* HomeCollectionViewCell */,
+				DF72CA192AC83D1800840CCF /* Models */,
+				DF72CA142AC8369700840CCF /* HomeTableViewCell */,
 				DF72CA0F2AC6E95500840CCF /* Home */,
 				570276922A859ADB0097840C /* AppDelegate.swift */,
 				570276942A859ADB0097840C /* SceneDelegate.swift */,
@@ -139,6 +156,34 @@
 				DF72CA122AC6E97600840CCF /* HomeViewController.storyboard */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		DF72CA142AC8369700840CCF /* HomeTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				DF72CA152AC836D200840CCF /* HomeTableViewCell.swift */,
+				DF72CA162AC836D200840CCF /* HomeTableViewCell.xib */,
+			);
+			path = HomeTableViewCell;
+			sourceTree = "<group>";
+		};
+		DF72CA192AC83D1800840CCF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DF72CA1A2AC83D2900840CCF /* Destination.swift */,
+				DF72CA212AC8470700840CCF /* DetailsDestionation.swift */,
+				DF72CA232AC8560C00840CCF /* DetailsList.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DF72CA1C2AC8443C00840CCF /* HomeCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				DF72CA1D2AC8446400840CCF /* HomeCollectionViewCell.swift */,
+				DF72CA1E2AC8446400840CCF /* HomeCollectionViewCell.xib */,
+			);
+			path = HomeCollectionViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,8 +291,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF72CA132AC6E97600840CCF /* HomeViewController.storyboard in Resources */,
+				DF72CA202AC8446400840CCF /* HomeCollectionViewCell.xib in Resources */,
 				5702769F2A859ADE0097840C /* LaunchScreen.storyboard in Resources */,
 				5702769C2A859ADE0097840C /* Assets.xcassets in Resources */,
+				DF72CA182AC836D200840CCF /* HomeTableViewCell.xib in Resources */,
 				5702769A2A859ADB0097840C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,8 +320,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF72CA1F2AC8446400840CCF /* HomeCollectionViewCell.swift in Sources */,
 				570276972A859ADB0097840C /* ViewController.swift in Sources */,
+				DF72CA172AC836D200840CCF /* HomeTableViewCell.swift in Sources */,
+				DF72CA222AC8470700840CCF /* DetailsDestionation.swift in Sources */,
+				DF72CA1B2AC83D2900840CCF /* Destination.swift in Sources */,
 				570276932A859ADB0097840C /* AppDelegate.swift in Sources */,
+				DF72CA242AC8560C00840CCF /* DetailsList.swift in Sources */,
 				570276952A859ADB0097840C /* SceneDelegate.swift in Sources */,
 				DF72CA112AC6E96700840CCF /* HomeViewController.swift in Sources */,
 			);
