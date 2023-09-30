@@ -22,7 +22,7 @@ class DetailsViewController: UIViewController {
         imageLocalImageView.image = UIImage(named: "rio")
         imageLocalImageView.contentMode = .scaleAspectFill
         titleLocalLabel.font = UIFont.systemFont(ofSize: 20)
-        descriptionLocalLabel.font = UIFont.boldSystemFont(ofSize: 15)
+        descriptionLocalLabel.font = UIFont.boldSystemFont(ofSize: 12)
         
         titleLocalLabel.textColor = UIColor.black
         descriptionLocalLabel.textColor = UIColor.gray
@@ -30,7 +30,7 @@ class DetailsViewController: UIViewController {
         descriptionLocalLabel.numberOfLines = 20
         
         titleLocalLabel.text = "Praia de Copacabana"
-        descriptionLocalLabel.text = "Copacabana é um bairro situado na Zona Sul do município do Rio de Janeiro, no Brasil. É considerado um dos bairros mais famosos e prestigiados do Brasil e um dos mais conhecidos do mundo. Tem o apelido de Princesinha do Mar e Coração da Zona Sul. Faz limites com os bairros da Lagoa, Ipanema, Botafogo, Leme e Humaitá."
+        descriptionLocalLabel.text = "Copacabana é um bairro situado na Zona Sul do município do Rio de Janeiro, no Brasil. É considerado um dos bairros mais famosos e prestigiados do Brasil e um dos mais conhecidos do mundo. Tem o apelido de Princesinha do Mar e Coração da Zona Sul."
         
     }
 }

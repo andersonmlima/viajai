@@ -26,6 +26,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SXA-nu-vBU">
+                                <rect key="frame" x="20" y="743" width="353" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zFV-GD-O3T">
                                 <rect key="frame" x="20" y="450" width="353" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -38,9 +43,12 @@
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="zFV-GD-O3T" secondAttribute="trailing" constant="20" id="1BC-o9-dm4"/>
                             <constraint firstItem="zFV-GD-O3T" firstAttribute="top" secondItem="8Y9-om-meQ" secondAttribute="bottom" constant="10" id="6rf-VW-9Re"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="SXA-nu-vBU" secondAttribute="bottom" constant="40" id="FdP-rP-3vj"/>
                             <constraint firstItem="zFV-GD-O3T" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="PDh-Lw-kMk"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="SXA-nu-vBU" secondAttribute="trailing" constant="20" id="Tjf-Mq-7Iw"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="8Y9-om-meQ" secondAttribute="trailing" constant="20" id="ZXj-Ic-nZA"/>
                             <constraint firstItem="8Y9-om-meQ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="kfp-5P-g8d"/>
+                            <constraint firstItem="SXA-nu-vBU" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="kj9-6s-azy"/>
                             <constraint firstItem="CAS-i3-mCc" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="oSs-of-Ey4"/>
                             <constraint firstItem="8Y9-om-meQ" firstAttribute="top" secondItem="CAS-i3-mCc" secondAttribute="bottom" constant="10" id="xM6-eE-sNt"/>
                         </constraints>
