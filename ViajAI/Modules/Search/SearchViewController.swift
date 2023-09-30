@@ -20,15 +20,20 @@ class SearchViewController: UIViewController {
     @IBOutlet var budgetView: UIView!
     @IBOutlet var budgetTextField: UITextField!
     @IBOutlet var categoriesView: UIView!
+    @IBOutlet var categoriesCollectionView: UICollectionView!
+
+    let categories: [Category] = [Category(id: "1", name: "Museus", slugifiedName: "museus"), Category(id: "2", name: "Praia", slugifiedName: "praia"), Category(id: "3", name: "Esportes Radicais", slugifiedName: "esportes-radicais"), Category(id: "1", name: "Museus", slugifiedName: "museus"), Category(id: "2", name: "Praia", slugifiedName: "praia"), Category(id: "3", name: "Esportes Radicais", slugifiedName: "esportes-radicais"), Category(id: "1", name: "Museus", slugifiedName: "museus"), Category(id: "2", name: "Praia", slugifiedName: "praia"), Category(id: "3", name: "Esportes Radicais", slugifiedName: "esportes-radicais")]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         configTextFields()
         configKeyboardPadding()
-        configCateogryView()
+        configCategoryView()
+        configCollectionView()
     }
 
     // MARK: - Configuring the observers to Keyboard
+
     func configKeyboardPadding() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
@@ -50,6 +55,7 @@ class SearchViewController: UIViewController {
     }
 
     // MARK: - Configuring text field and their objc functions to done button
+
     func configTextFields() {
         countryTextField.delegate = self
         cityTextField.delegate = self
@@ -81,6 +87,7 @@ class SearchViewController: UIViewController {
 }
 
 // MARK: - Text field
+
 extension SearchViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         switch textField {
@@ -129,15 +136,51 @@ extension SearchViewController: UITextFieldDelegate {
     }
 }
 
-
 // MARK: - Configuring the category view to open the modal with the types of category
+
 extension SearchViewController {
-    func configCateogryView() {
+    func configCategoryView() {
         let gesture = UITapGestureRecognizer(target: self, action: #selector(openModalCategories))
         categoriesView.addGestureRecognizer(gesture)
     }
 
     @objc func openModalCategories() {
         print("openModalCategories")
+    }
+}
+
+// MARK: - Config collection view
+
+extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func configCollectionView() {
+        categoriesCollectionView.delegate = self
+        categoriesCollectionView.dataSource = self
+        categoriesCollectionView.register(CategoryCollectionViewCell.nib(), forCellWithReuseIdentifier: CategoryCollectionViewCell.identifier)
+        if let layout = categoriesCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            layout.estimatedItemSize = .zero
+            layout.scrollDirection = .horizontal
+        }
+    }
+
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return categories.endIndex
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = categoriesCollectionView.dequeueReusableCell(withReuseIdentifier: CategoryCollectionViewCell.identifier, for: indexPath) as? CategoryCollectionViewCell
+        cell?.setupCell(category: categories[indexPath.row], iconIsHidden: false)
+        return cell ?? UICollectionViewCell()
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let item = categories[indexPath.row].name
+        let itemSize = item.size(withAttributes: [
+            NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 12),
+        ])
+        return CGSize(width: itemSize.width + 50, height: itemSize.height + 20 > 40 ? itemSize.height + 20 : 40)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 4
     }
 }

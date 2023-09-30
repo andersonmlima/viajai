@@ -225,11 +225,26 @@
                                                                 <color key="textColor" red="0.55700099469999997" green="0.55656558280000001" blue="0.57647556069999994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
+                                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PjG-9S-W5b">
+                                                                <rect key="frame" x="20" y="30.333333333333378" width="289" height="105.66666666666669"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="u6y-9T-XdO">
+                                                                    <size key="itemSize" width="128" height="128"/>
+                                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                                </collectionViewFlowLayout>
+                                                                <cells/>
+                                                            </collectionView>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
                                                             <constraint firstItem="eyg-Mo-GZM" firstAttribute="top" secondItem="Uk2-i7-N1B" secondAttribute="top" constant="12" id="2b0-E3-aTc"/>
+                                                            <constraint firstAttribute="bottom" secondItem="PjG-9S-W5b" secondAttribute="bottom" constant="12" id="HC7-CC-6Dt"/>
+                                                            <constraint firstItem="PjG-9S-W5b" firstAttribute="leading" secondItem="eyg-Mo-GZM" secondAttribute="leading" id="aVw-1Y-WFY"/>
                                                             <constraint firstItem="eyg-Mo-GZM" firstAttribute="leading" secondItem="Uk2-i7-N1B" secondAttribute="leading" constant="20" id="b4t-KK-Ihu"/>
+                                                            <constraint firstItem="PjG-9S-W5b" firstAttribute="top" secondItem="eyg-Mo-GZM" secondAttribute="bottom" constant="4" id="jTB-83-TR9"/>
+                                                            <constraint firstAttribute="trailing" secondItem="PjG-9S-W5b" secondAttribute="trailing" constant="20" id="l9V-rk-QA2"/>
                                                             <constraint firstAttribute="height" constant="148" id="uhU-qr-Whv"/>
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
@@ -306,6 +321,7 @@
                         <outlet property="arriveDateView" destination="QwJ-HP-Gh2" id="jhd-Yz-yjJ"/>
                         <outlet property="budgetTextField" destination="DIt-lw-yho" id="Itg-Bb-J0N"/>
                         <outlet property="budgetView" destination="Tts-sr-Kin" id="nrF-ZR-mFS"/>
+                        <outlet property="categoriesCollectionView" destination="PjG-9S-W5b" id="e0A-xE-ayZ"/>
                         <outlet property="categoriesView" destination="Uk2-i7-N1B" id="nRd-Zd-sBA"/>
                         <outlet property="cityTextField" destination="hlQ-C7-Pln" id="MOb-AX-dkH"/>
                         <outlet property="cityView" destination="Fgl-d5-ORy" id="eNW-5Z-XKG"/>
@@ -318,7 +334,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="42" y="-27"/>
+            <point key="canvasLocation" x="41.984732824427482" y="-27.464788732394368"/>
         </scene>
     </scenes>
     <resources>
