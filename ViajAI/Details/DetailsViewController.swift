@@ -12,10 +12,14 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var titleLocalLabel: UILabel!
     @IBOutlet weak var descriptionLocalLabel: UILabel!
     @IBOutlet weak var imageLocalImageView: UIImageView!
+    @IBOutlet weak var searchMapChangeButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         elementsConfig()
+    }
+    
+    @IBAction func tappedSearchMapButton(_ sender: UIButton) {
     }
     
     func elementsConfig() {
@@ -31,6 +35,26 @@ class DetailsViewController: UIViewController {
         
         titleLocalLabel.text = "Praia de Copacabana"
         descriptionLocalLabel.text = "Copacabana é um bairro situado na Zona Sul do município do Rio de Janeiro, no Brasil. É considerado um dos bairros mais famosos e prestigiados do Brasil e um dos mais conhecidos do mundo. Tem o apelido de Princesinha do Mar e Coração da Zona Sul."
+        
+        searchMapChangeButton.setTitle("Entrar", for: .normal)
+        searchMapChangeButton.tintColor = UIColor.white
+        searchMapChangeButton.backgroundColor = UIColor.blue
+        searchMapChangeButton.layer.cornerRadius = 8.0
+        
+        func corHexadecimal(hex: String) -> UIColor? {
+                    var limpoHex = hex.trimmingCharacters(in: .whitespacesAndNewlines)
+                    limpoHex = limpoHex.replacingOccurrences(of: "#", with: "")
+
+                    var rgb: UInt64 = 0
+
+                    Scanner(string: limpoHex).scanHexInt64(&rgb)
+
+                    let vermelho = CGFloat((rgb & 0xFF0000) >> 16) / 255.0
+                    let verde = CGFloat((rgb & 0x00FF00) >> 8) / 255.0
+                    let azul = CGFloat(rgb & 0x0000FF) / 255.0
+
+                    return UIColor(red: vermelho, green: verde, blue: azul, alpha: 1.0)
+                }
         
     }
 }

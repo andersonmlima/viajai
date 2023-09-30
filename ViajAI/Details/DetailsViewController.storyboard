@@ -30,6 +30,9 @@
                                 <rect key="frame" x="20" y="743" width="353" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="tappedSearchMapButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="o4W-XV-C68"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zFV-GD-O3T">
                                 <rect key="frame" x="20" y="450" width="353" height="21"/>
@@ -56,6 +59,7 @@
                     <connections>
                         <outlet property="descriptionLocalLabel" destination="zFV-GD-O3T" id="wmH-e0-sP6"/>
                         <outlet property="imageLocalImageView" destination="CAS-i3-mCc" id="SdK-x6-EIC"/>
+                        <outlet property="searchMapChangeButton" destination="SXA-nu-vBU" id="b2V-Pv-41q"/>
                         <outlet property="titleLocalLabel" destination="8Y9-om-meQ" id="nzv-nO-lMG"/>
                     </connections>
                 </viewController>
