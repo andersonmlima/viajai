@@ -20,8 +20,14 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CAS-i3-mCc">
                                 <rect key="frame" x="0.0" y="59" width="393" height="300"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Y9-om-meQ">
+                                <rect key="frame" x="20" y="405" width="353" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zFV-GD-O3T">
-                                <rect key="frame" x="20" y="416" width="353" height="21"/>
+                                <rect key="frame" x="20" y="450" width="353" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -30,14 +36,19 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="zFV-GD-O3T" firstAttribute="top" secondItem="CAS-i3-mCc" secondAttribute="bottom" constant="10" id="Rn9-dU-Nxw"/>
-                            <constraint firstItem="zFV-GD-O3T" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="V8i-Yb-QDQ"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="zFV-GD-O3T" secondAttribute="trailing" constant="20" id="dRC-jQ-l1e"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="zFV-GD-O3T" secondAttribute="trailing" constant="20" id="1BC-o9-dm4"/>
+                            <constraint firstItem="zFV-GD-O3T" firstAttribute="top" secondItem="8Y9-om-meQ" secondAttribute="bottom" constant="10" id="6rf-VW-9Re"/>
+                            <constraint firstItem="zFV-GD-O3T" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="PDh-Lw-kMk"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="8Y9-om-meQ" secondAttribute="trailing" constant="20" id="ZXj-Ic-nZA"/>
+                            <constraint firstItem="8Y9-om-meQ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="kfp-5P-g8d"/>
                             <constraint firstItem="CAS-i3-mCc" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="oSs-of-Ey4"/>
+                            <constraint firstItem="8Y9-om-meQ" firstAttribute="top" secondItem="CAS-i3-mCc" secondAttribute="bottom" constant="10" id="xM6-eE-sNt"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="descriptionLocalLabel" destination="zFV-GD-O3T" id="wmH-e0-sP6"/>
                         <outlet property="imageLocalImageView" destination="CAS-i3-mCc" id="SdK-x6-EIC"/>
+                        <outlet property="titleLocalLabel" destination="8Y9-om-meQ" id="nzv-nO-lMG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
