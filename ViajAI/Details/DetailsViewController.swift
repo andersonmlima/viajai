@@ -14,6 +14,10 @@ class DetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         imageLocalImageView.image = UIImage(named: "rio")
-
+        imageLocalImageView.contentMode = .scaleAspectFill
+    }
+    
+    func elementsConfig() {
+        
     }
 }
