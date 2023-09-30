@@ -36,10 +36,13 @@ class DetailsViewController: UIViewController {
         titleLocalLabel.text = "Praia de Copacabana"
         descriptionLocalLabel.text = "Copacabana é um bairro situado na Zona Sul do município do Rio de Janeiro, no Brasil. É considerado um dos bairros mais famosos e prestigiados do Brasil e um dos mais conhecidos do mundo. Tem o apelido de Princesinha do Mar e Coração da Zona Sul."
         
-        searchMapChangeButton.setTitle("Entrar", for: .normal)
+        searchMapChangeButton.setTitle("Ver no Mapa", for: .normal)
         searchMapChangeButton.tintColor = UIColor.white
-        searchMapChangeButton.backgroundColor = UIColor.blue
         searchMapChangeButton.layer.cornerRadius = 8.0
+        
+        if let corDeFundo = corHexadecimal(hex: "#5BC0F8") { // Substitua pelo código de cor hexadecimal desejado
+            searchMapChangeButton.backgroundColor = corDeFundo
+                }
         
         func corHexadecimal(hex: String) -> UIColor? {
                     var limpoHex = hex.trimmingCharacters(in: .whitespacesAndNewlines)
