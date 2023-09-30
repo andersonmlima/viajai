@@ -21,10 +21,19 @@ class ViewController: UIViewController {
     
     @IBAction func tappedIrTelaHomeButton(_ sender: UIButton) {
         
-        let telaHome = UIStoryboard(name: "HomeViewController", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController
+//        let telaHome = UIStoryboard(name: "HomeViewController", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController
+//        
+//        
+//        navigationController?.pushViewController(telaHome ?? UIViewController(), animated: true)
         
+        title = ""
+//        title.center
         
-        navigationController?.pushViewController(telaHome ?? UIViewController(), animated: true)
+        let storyboard = UIStoryboard(name: "HomeViewController", bundle: nil) // Substitua "Main" pelo nome do seu storyboard
+        
+        if let tabBarController = storyboard.instantiateViewController(withIdentifier: "tabBarHome") as? UITabBarController {
+            navigationController?.pushViewController(tabBarController, animated: true)
+        }
         
     }
     
