@@ -30,7 +30,7 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
         configTextFields()
         configKeyboardPadding()
-//        configCategoryView()
+        configCategoryView()
         configCollectionView()
     }
 
@@ -139,16 +139,18 @@ extension SearchViewController: UITextFieldDelegate {
 }
 
 // MARK: - Configuring the category view to open the modal with the types of category
+extension SearchViewController: UIGestureRecognizerDelegate {
+    func configCategoryView() {
+        // FIXME: When tap to remove the collection view cell, is calling the openModal together
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(openModalCategories))
+        gesture.delegate = self
+        gesture.cancelsTouchesInView = false
+        categoriesView.addGestureRecognizer(gesture)
+    }
 
-extension SearchViewController {
-//    func configCategoryView() {
-//        let gesture = UITapGestureRecognizer(target: self, action: #selector(openModalCategories))
-//        categoriesView.addGestureRecognizer(gesture)
-//    }
-//
-//    @objc func openModalCategories() {
-//        print("openModalCategories")
-//    }
+    @objc func openModalCategories(_ sender: UIGestureRecognizer) {
+        print("openModalCategories")
+    }
 }
 
 // MARK: - Config collection view
@@ -178,7 +180,9 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let item = categories[indexPath.row].name
+        let idSelected = categoriesSelected[indexPath.row]
+        let categorySelected = categories.filter({$0.id == idSelected})
+        let item = categorySelected[0].name
         let itemSize = item.size(withAttributes: [
             NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 12),
         ])
