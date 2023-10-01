@@ -38,7 +38,7 @@ class CategoryCollectionViewCell: UICollectionViewCell {
         removeImage.image = UIImage(systemName: "xmark")
     }
     
-    func setupCell(category: Category, iconIsHidden: Bool? = true) {
+    func setupCell(category: Category, iconIsHidden: Bool? = true, isSelected: Bool? = false) {
         id = category.id
         nameLabel.text = category.name
         removeImage.isHidden = iconIsHidden ?? true

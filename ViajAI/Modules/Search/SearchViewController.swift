@@ -8,6 +8,7 @@
 import UIKit
 
 class SearchViewController: UIViewController {
+    
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var cityView: UIView!
     @IBOutlet var cityTextField: UITextField!
@@ -172,6 +173,11 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
             layout.minimumInteritemSpacing = 2
         }
     }
+    
+    func removeAndReloadCollectionView(id: String) {
+        categoriesSelected = categoriesSelected.filter({$0 != id})
+        categoriesCollectionView.reloadData()
+    }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return categoriesSelected.endIndex
@@ -198,8 +204,14 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cellOfInterest = collectionView.cellForItem(at: indexPath) as? CategoryCollectionViewCell
         if let id = cellOfInterest?.id {
-            categoriesSelected = categoriesSelected.filter({$0 != id})
-            categoriesCollectionView.reloadData()
+            removeAndReloadCollectionView(id: id)
         }
+    }
+}
+
+// MARK: - Protocol Category Selection
+extension SearchViewController: CategorySelection {
+    func didSelectCategory(category: Category) {
+        removeAndReloadCollectionView(id: category.id)
     }
 }
