@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol CategorySelection {
+protocol CategorySelectionDelegate {
     func didSelectCategory(category: Category, toRemove: Bool)
 }

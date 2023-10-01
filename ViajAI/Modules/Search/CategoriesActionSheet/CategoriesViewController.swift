@@ -15,11 +15,12 @@ class CategoriesViewController: UIViewController {
     
     var categoriesSelected : [String] = ["1", "2", "3", "8", "9"]
     
-    var delegate: CategorySelection?
+    var delegate: CategorySelectionDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configElements()
+        
     }
     
     func configElements() {
@@ -57,13 +58,14 @@ extension CategoriesViewController: UICollectionViewDelegate, UICollectionViewDa
             if(isSelected) {
                 categoriesSelected = categoriesSelected.filter({$0 != cellOfInterest.id})
                 if let category = categories.first(where: {$0.id == cellOfInterest.id}) {
-                    delegate?.didSelectCategory(category: category, toRemove: true)
+                    self.delegate?.didSelectCategory(category: category, toRemove: true)
+                    dismiss(animated: true)
                 }
                 collectionView.reloadData()
             } else {
                 categoriesSelected.append(cellOfInterest.id)
                 if let category = categories.first(where: {$0.id == cellOfInterest.id}) {
-                    delegate?.didSelectCategory(category: category, toRemove: false)
+                    self.delegate?.didSelectCategory(category: category, toRemove: false)
                 }
                 collectionView.reloadData()
             }

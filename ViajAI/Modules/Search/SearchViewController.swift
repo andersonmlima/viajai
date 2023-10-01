@@ -152,6 +152,7 @@ extension SearchViewController: UIGestureRecognizerDelegate {
     @objc func openModalCategories(_ sender: UIGestureRecognizer) {
         let identifier = String(describing: CategoriesViewController.self)
         let vc = UIStoryboard(name: identifier, bundle: nil).instantiateViewController(withIdentifier: identifier) as? CategoriesViewController
+        vc?.delegate = self
         vc?.modalPresentationStyle = .formSheet
         vc?.sheetPresentationController?.detents = [.medium()]
         vc?.sheetPresentationController?.prefersGrabberVisible = true
@@ -215,7 +216,7 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
 }
 
 // MARK: - Protocol Category Selection
-extension SearchViewController: CategorySelection {
+extension SearchViewController: CategorySelectionDelegate {
     func didSelectCategory(category: Category, toRemove: Bool) {
         if(toRemove) {
             removeAndReloadCollectionView(id: category.id)
