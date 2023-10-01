@@ -22,13 +22,15 @@ class SearchViewController: UIViewController {
     @IBOutlet var categoriesView: UIView!
     @IBOutlet var categoriesCollectionView: UICollectionView!
 
-    let categories: [Category] = [Category(id: "1", name: "Museus", slugifiedName: "museus"), Category(id: "2", name: "Praia", slugifiedName: "praia"), Category(id: "3", name: "Esportes Radicais", slugifiedName: "esportes-radicais"), Category(id: "1", name: "Museus", slugifiedName: "museus"), Category(id: "2", name: "Praia", slugifiedName: "praia"), Category(id: "3", name: "Esportes Radicais", slugifiedName: "esportes-radicais"), Category(id: "1", name: "Museus", slugifiedName: "museus"), Category(id: "2", name: "Praia", slugifiedName: "praia"), Category(id: "3", name: "Esportes Radicais", slugifiedName: "esportes-radicais")]
+    let categories: [Category] = [Category(id: "1", name: "Museus", slugifiedName: "museus"), Category(id: "2", name: "Praia", slugifiedName: "praia"), Category(id: "3", name: "Esportes Radicais", slugifiedName: "esportes-radicais"), Category(id: "4", name: "Gastronomia", slugifiedName: "gastronomia"), Category(id: "5", name: "Natureza", slugifiedName: "natureza"), Category(id: "6", name: "Ecoturismo", slugifiedName: "ecoturismo"), Category(id: "7", name: "Montanhas", slugifiedName: "montanhas"), Category(id: "8", name: "Eventos Culturais", slugifiedName: "eventos-culturais"), Category(id: "9", name: "Compras", slugifiedName: "compras"), Category(id: "10", name: "Vida Noturna", slugifiedName: "vida-noturna")]
+    
+    var categoriesSelected : [String] = ["1", "2", "3", "8", "9"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         configTextFields()
         configKeyboardPadding()
-        configCategoryView()
+//        configCategoryView()
         configCollectionView()
     }
 
@@ -139,14 +141,14 @@ extension SearchViewController: UITextFieldDelegate {
 // MARK: - Configuring the category view to open the modal with the types of category
 
 extension SearchViewController {
-    func configCategoryView() {
-        let gesture = UITapGestureRecognizer(target: self, action: #selector(openModalCategories))
-        categoriesView.addGestureRecognizer(gesture)
-    }
-
-    @objc func openModalCategories() {
-        print("openModalCategories")
-    }
+//    func configCategoryView() {
+//        let gesture = UITapGestureRecognizer(target: self, action: #selector(openModalCategories))
+//        categoriesView.addGestureRecognizer(gesture)
+//    }
+//
+//    @objc func openModalCategories() {
+//        print("openModalCategories")
+//    }
 }
 
 // MARK: - Config collection view
@@ -158,17 +160,20 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
         categoriesCollectionView.register(CategoryCollectionViewCell.nib(), forCellWithReuseIdentifier: CategoryCollectionViewCell.identifier)
         if let layout = categoriesCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             layout.estimatedItemSize = .zero
-            layout.scrollDirection = .horizontal
+            layout.minimumLineSpacing = 5
+            layout.minimumInteritemSpacing = 2
         }
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return categories.endIndex
+        return categoriesSelected.endIndex
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = categoriesCollectionView.dequeueReusableCell(withReuseIdentifier: CategoryCollectionViewCell.identifier, for: indexPath) as? CategoryCollectionViewCell
-        cell?.setupCell(category: categories[indexPath.row], iconIsHidden: false)
+        let idSelected = categoriesSelected[indexPath.row]
+        let categorySelected = categories.filter({$0.id == idSelected})
+        cell?.setupCell(category: categorySelected[0], iconIsHidden: false)
         return cell ?? UICollectionViewCell()
     }
 
@@ -179,8 +184,12 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
         ])
         return CGSize(width: itemSize.width + 50, height: itemSize.height + 20 > 40 ? itemSize.height + 20 : 40)
     }
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 4
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cellOfInterest = collectionView.cellForItem(at: indexPath) as? CategoryCollectionViewCell
+        if let id = cellOfInterest?.id {
+            categoriesSelected = categoriesSelected.filter({$0 != id})
+            categoriesCollectionView.reloadData()
+        }
     }
 }

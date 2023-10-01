@@ -19,6 +19,8 @@ class CategoryCollectionViewCell: UICollectionViewCell {
         return UINib(nibName: identifier, bundle: nil)
     }
     
+    private(set) var id: String = ""
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         configElements()
@@ -37,6 +39,7 @@ class CategoryCollectionViewCell: UICollectionViewCell {
     }
     
     func setupCell(category: Category, iconIsHidden: Bool? = true) {
+        id = category.id
         nameLabel.text = category.name
         removeImage.isHidden = iconIsHidden ?? true
     }
