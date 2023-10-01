@@ -13,9 +13,9 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var principalsExperiencesTableView: UITableView!
     
     var destinations: [Destination] = [
-        Destination(titleDestination: "Rio de Janeiro", listImages: ["rio_praia_copacabana", "rio_ipanema", "rio_urca"], listSubtitles: ["1", "2", "3"], listDescripition: ["12", "23", "45"]),
+        Destination(titleDestination: "Rio de Janeiro", listImages: ["rio_praia_copacabana", "rio_ipanema", "rio_urca"], listSubtitles: ["1", "2", "3"], listDescripition: ["11", "12", "13"]),
         
-        Destination(titleDestination: "Ceará", listImages: ["ceara_praia_futuro", "ceara_canoa_quebrada", "ceara_jeriquaquara"], listSubtitles: ["1", "2", "3"], listDescripition: ["12", "23", "45"]),
+        Destination(titleDestination: "Ceará", listImages: ["ceara_praia_futuro", "ceara_canoa_quebrada", "ceara_jeriquaquara"], listSubtitles: ["4", "5", "6"], listDescripition: ["21", "22", "23"]),
     ]
     
     override func viewDidLoad() {
