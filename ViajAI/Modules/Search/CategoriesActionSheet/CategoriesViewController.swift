@@ -37,9 +37,9 @@ extension CategoriesViewController: UICollectionViewDelegate, UICollectionViewDa
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCollectionViewCell.identifier, for: indexPath) as? CategoryCollectionViewCell
-//        let idSelected = categories[indexPath.row]
-//        let categorySelected = categories.filter({$0.id == idSelected})
-        cell?.setupCell(category: categories[indexPath.row])
+        let category = categories[indexPath.row]
+        let isSelected = categoriesSelected.contains(where: {$0 == category.id})
+        cell?.setupCell(category: category, isSelected: isSelected)
         return cell ?? UICollectionViewCell()
     }
     
