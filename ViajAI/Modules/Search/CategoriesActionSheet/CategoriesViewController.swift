@@ -67,7 +67,6 @@ extension CategoriesViewController: UICollectionViewDelegate, UICollectionViewDa
                 categoriesSelected = categoriesSelected.filter({$0 != cellOfInterest.id})
                 if let category = categories.first(where: {$0.id == cellOfInterest.id}) {
                     self.delegate?.didSelectCategory(category: category, toRemove: true)
-                    dismiss(animated: true)
                 }
                 collectionView.reloadData()
             } else {
