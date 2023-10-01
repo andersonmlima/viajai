@@ -28,18 +28,26 @@
                                     <action selector="tappedIrTelaHomeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bnQ-w5-82m"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PRc-wx-9jz">
+                                <rect key="frame" x="20" y="557.66666666666663" width="335" height="128.33333333333337"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="PRc-wx-9jz" firstAttribute="top" secondItem="ML0-I0-7IW" secondAttribute="bottom" constant="134.33000000000001" id="2bk-ee-Dpw"/>
                             <constraint firstItem="5MQ-YU-Qy7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3ns-Ge-6gC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PRc-wx-9jz" secondAttribute="bottom" constant="92" id="8lY-ZS-9XP"/>
                             <constraint firstItem="ML0-I0-7IW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="IkV-zC-Sn4"/>
+                            <constraint firstItem="PRc-wx-9jz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="O4C-ys-FQh"/>
                             <constraint firstItem="5MQ-YU-Qy7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="f4d-1F-8e9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PRc-wx-9jz" secondAttribute="trailing" constant="20" id="pWl-aV-EIS"/>
                             <constraint firstItem="ML0-I0-7IW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wMi-CM-uAN"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="y8x-Au-6ST"/>
                     <connections>
+                        <outlet property="imageTestImageView" destination="PRc-wx-9jz" id="oq7-Yc-q7h"/>
                         <outlet property="irTelaHomeChangeButton" destination="ML0-I0-7IW" id="M5o-XT-wHE"/>
                     </connections>
                 </viewController>

@@ -8,7 +8,8 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var imageTestImageView: UIImageView!
+    
     @IBOutlet weak var irTelaHomeChangeButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,6 +18,8 @@ class ViewController: UIViewController {
     
     func elementsConfig() {
         irTelaHomeChangeButton.setTitle("Ir para tela de Home", for: .normal)
+        
+        imageTestImageView.image = UIImage(named: "rio_urca")
     }
     
     @IBAction func tappedIrTelaHomeButton(_ sender: UIButton) {

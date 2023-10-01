@@ -8,6 +8,7 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    @IBOutlet weak var initialPhraseLabel: UILabel!
     
     @IBOutlet weak var principalsExperiencesTableView: UITableView!
     
@@ -19,6 +20,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        elementsConfig()
         configTableView()
     }
     
@@ -26,6 +28,12 @@ class HomeViewController: UIViewController {
         principalsExperiencesTableView.delegate = self
         principalsExperiencesTableView.dataSource = self
         principalsExperiencesTableView.register(HomeTableViewCell.nib(), forCellReuseIdentifier: HomeTableViewCell.identifier)
+    }
+    
+    func elementsConfig() {
+        initialPhraseLabel.text = "Principais experiências do ViajAÍ"
+        initialPhraseLabel.font = UIFont.boldSystemFont(ofSize: 20)
+        initialPhraseLabel.textColor = UIColor.black
     }
 }
 

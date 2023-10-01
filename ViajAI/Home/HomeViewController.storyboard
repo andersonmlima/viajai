@@ -55,27 +55,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="exA-6X-WHF">
-                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <rect key="frame" x="0.0" y="149" width="393" height="620"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7DQ-T9-afH">
+                                <rect key="frame" x="20" y="108" width="353" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2gn-XZ-5Ia"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="7DQ-T9-afH" firstAttribute="top" secondItem="2gn-XZ-5Ia" secondAttribute="top" constant="5" id="0jg-iX-Eo5"/>
+                            <constraint firstItem="2gn-XZ-5Ia" firstAttribute="trailing" secondItem="7DQ-T9-afH" secondAttribute="trailing" constant="20" id="4gf-EU-cde"/>
                             <constraint firstItem="2gn-XZ-5Ia" firstAttribute="bottom" secondItem="exA-6X-WHF" secondAttribute="bottom" id="FGy-mR-NXX"/>
                             <constraint firstItem="2gn-XZ-5Ia" firstAttribute="trailing" secondItem="exA-6X-WHF" secondAttribute="trailing" id="GBs-Fi-qGD"/>
                             <constraint firstItem="exA-6X-WHF" firstAttribute="leading" secondItem="2gn-XZ-5Ia" secondAttribute="leading" id="Lfo-VR-GJQ"/>
-                            <constraint firstItem="exA-6X-WHF" firstAttribute="top" secondItem="2gn-XZ-5Ia" secondAttribute="top" id="wY5-Ej-Q7q"/>
+                            <constraint firstItem="7DQ-T9-afH" firstAttribute="leading" secondItem="2gn-XZ-5Ia" secondAttribute="leading" constant="20" id="P22-xv-g2r"/>
+                            <constraint firstItem="exA-6X-WHF" firstAttribute="top" secondItem="7DQ-T9-afH" secondAttribute="bottom" constant="20" id="aD9-mv-5Xi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wVk-Pj-qiJ"/>
                     <connections>
+                        <outlet property="initialPhraseLabel" destination="7DQ-T9-afH" id="t8R-hC-KkV"/>
                         <outlet property="principalsExperiencesTableView" destination="exA-6X-WHF" id="NIs-m1-8ZT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H8G-0R-LWM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2972" y="1874"/>
+            <point key="canvasLocation" x="-2973.2824427480914" y="1873.943661971831"/>
         </scene>
         <!--Home-->
         <scene sceneID="gVg-a1-mtD">
