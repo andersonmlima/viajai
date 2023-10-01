@@ -52,8 +52,22 @@ extension CategoriesViewController: UICollectionViewDelegate, UICollectionViewDa
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cellOfInterest = collectionView.cellForItem(at: indexPath) as? CategoryCollectionViewCell
-        
+        if let cellOfInterest = collectionView.cellForItem(at: indexPath) as? CategoryCollectionViewCell {
+            let isSelected = categoriesSelected.contains(where: {$0 == cellOfInterest.id})
+            if(isSelected) {
+                categoriesSelected = categoriesSelected.filter({$0 != cellOfInterest.id})
+                if let category = categories.first(where: {$0.id == cellOfInterest.id}) {
+                    delegate?.didSelectCategory(category: category, toRemove: true)
+                }
+                collectionView.reloadData()
+            } else {
+                categoriesSelected.append(cellOfInterest.id)
+                if let category = categories.first(where: {$0.id == cellOfInterest.id}) {
+                    delegate?.didSelectCategory(category: category, toRemove: false)
+                }
+                collectionView.reloadData()
+            }
+        }
     }
     
 }

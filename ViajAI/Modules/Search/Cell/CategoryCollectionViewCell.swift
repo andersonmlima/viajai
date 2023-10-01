@@ -42,9 +42,13 @@ class CategoryCollectionViewCell: UICollectionViewCell {
         id = category.id
         nameLabel.text = category.name
         removeImage.isHidden = iconIsHidden ?? true
-        if (isSelected != nil && isSelected == true) {
+        let selected = isSelected ?? false
+        if (selected) {
             horizontalStackView.backgroundColor = UIColor(red: 0.129, green: 0.208, blue: 0.333, alpha: 1)
             nameLabel.textColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+        } else {
+            horizontalStackView.backgroundColor = .white
+            nameLabel.textColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
         }
     }
     

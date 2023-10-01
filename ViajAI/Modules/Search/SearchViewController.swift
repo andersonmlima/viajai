@@ -178,6 +178,11 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
         categoriesSelected = categoriesSelected.filter({$0 != id})
         categoriesCollectionView.reloadData()
     }
+    
+    func addSelectedAndReloadCollectionView(id: String) {
+        categoriesSelected.append(id)
+        categoriesCollectionView.reloadData()
+    }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return categoriesSelected.endIndex
@@ -211,7 +216,11 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
 
 // MARK: - Protocol Category Selection
 extension SearchViewController: CategorySelection {
-    func didSelectCategory(category: Category) {
-        removeAndReloadCollectionView(id: category.id)
+    func didSelectCategory(category: Category, toRemove: Bool) {
+        if(toRemove) {
+            removeAndReloadCollectionView(id: category.id)
+        } else {
+            addSelectedAndReloadCollectionView(id: category.id)
+        }
     }
 }

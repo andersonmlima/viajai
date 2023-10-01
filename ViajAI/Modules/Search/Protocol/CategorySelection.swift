@@ -8,5 +8,5 @@
 import Foundation
 
 protocol CategorySelection {
-    func didSelectCategory(category: Category)
+    func didSelectCategory(category: Category, toRemove: Bool)
 }
