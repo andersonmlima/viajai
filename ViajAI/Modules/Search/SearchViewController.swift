@@ -149,7 +149,13 @@ extension SearchViewController: UIGestureRecognizerDelegate {
     }
 
     @objc func openModalCategories(_ sender: UIGestureRecognizer) {
-        print("openModalCategories")
+        let identifier = String(describing: CategoriesViewController.self)
+        let vc = UIStoryboard(name: identifier, bundle: nil).instantiateViewController(withIdentifier: identifier) as? CategoriesViewController
+        vc?.modalPresentationStyle = .formSheet
+        vc?.sheetPresentationController?.detents = [.medium()]
+        vc?.sheetPresentationController?.prefersGrabberVisible = true
+        present(vc ?? UIViewController(), animated: true)
+        
     }
 }
 
