@@ -11,16 +11,24 @@ class CategoriesViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    let categories: [Category] = [Category(id: "1", name: "Museus", slugifiedName: "museus"), Category(id: "2", name: "Praia", slugifiedName: "praia"), Category(id: "3", name: "Esportes Radicais", slugifiedName: "esportes-radicais"), Category(id: "4", name: "Gastronomia", slugifiedName: "gastronomia"), Category(id: "5", name: "Natureza", slugifiedName: "natureza"), Category(id: "6", name: "Ecoturismo", slugifiedName: "ecoturismo"), Category(id: "7", name: "Montanhas", slugifiedName: "montanhas"), Category(id: "8", name: "Eventos Culturais", slugifiedName: "eventos-culturais"), Category(id: "9", name: "Compras", slugifiedName: "compras"), Category(id: "10", name: "Vida Noturna", slugifiedName: "vida-noturna")]
+    private var categories: [Category] = []
+    private var categoriesSelected : [String] = []
     
-    var categoriesSelected : [String] = ["1", "2", "3", "8", "9"]
+    required init?(coder: NSCoder, categories: [Category], categoriesSelected: [String]) {
+        self.categories = categories
+        self.categoriesSelected = categoriesSelected
+        super.init(coder: coder)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     var delegate: CategorySelectionDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configElements()
-        
     }
     
     func configElements() {
