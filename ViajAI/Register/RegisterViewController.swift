@@ -1,3 +1,11 @@
+//
+//  RegisterViewController.swift
+//  ViajAI
+//
+//  Created by Fábio Oliveira Alegre on 22/09/23.
+//
+
+
 import UIKit
 
 class RegisterViewController: UIViewController, UITextFieldDelegate {
