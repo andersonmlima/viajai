@@ -82,19 +82,24 @@
                                     <action selector="tappedRegisterButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="HYM-n7-HCn"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iRy-We-MW0">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ao clicar em Cadastrar, você concorda com nossos      regulamentação de                        " textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iRy-We-MW0">
                                 <rect key="frame" x="15" y="827.33333333333337" width="400" height="40.666666666666629"/>
-                                <string key="text">Ao clicar em Cadastrar, você concorda com nossos
-regulamentação de Termos e Privacidade</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" systemColor="systemGrayColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K8C-Ob-46v">
+                                <rect key="frame" x="152.66666666666663" y="840.66666666666663" width="187.33333333333337" height="34.333333333333371"/>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Termos e Privacidade"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6h1-GR-bid" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="0ab-nY-7ay"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="K8C-Ob-46v" secondAttribute="trailing" constant="90" id="0xe-bN-ykR"/>
                             <constraint firstItem="HfY-Ws-X52" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="6Z0-do-GlI"/>
                             <constraint firstItem="AAS-DL-sET" firstAttribute="top" secondItem="6h1-GR-bid" secondAttribute="bottom" constant="30" id="7oh-5z-6CB"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="OSg-0v-PLO" secondAttribute="trailing" constant="25" id="7yX-wB-wOa"/>
@@ -112,6 +117,7 @@ regulamentação de Termos e Privacidade</string>
                             <constraint firstItem="6h1-GR-bid" firstAttribute="top" secondItem="Aw7-4U-iNO" secondAttribute="bottom" constant="30" id="c9c-nF-GlE"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="AAS-DL-sET" secondAttribute="trailing" constant="25" id="dWR-2Y-MKS"/>
                             <constraint firstItem="JxZ-x9-QqV" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="jfn-wx-0Pm"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="K8C-Ob-46v" secondAttribute="bottom" constant="23" id="mpc-0r-0ft"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="6h1-GR-bid" secondAttribute="trailing" constant="25" id="msT-NW-LMU"/>
                             <constraint firstItem="iRy-We-MW0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="nZY-wb-Ix1"/>
                             <constraint firstItem="JqZ-8b-6l4" firstAttribute="top" secondItem="HfY-Ws-X52" secondAttribute="bottom" constant="30" id="pBB-Wx-Jkf"/>
@@ -129,6 +135,7 @@ regulamentação de Termos e Privacidade</string>
                         <outlet property="logoImageView" destination="Aw7-4U-iNO" id="QSV-uy-V69"/>
                         <outlet property="nameTextField" destination="OSg-0v-PLO" id="PpW-kK-U12"/>
                         <outlet property="passwordTextField" destination="JqZ-8b-6l4" id="nUd-sX-cI2"/>
+                        <outlet property="privacyButton" destination="K8C-Ob-46v" id="avK-FT-xC9"/>
                         <outlet property="registerButton" destination="B3f-bo-Jvz" id="9xl-kp-xCi"/>
                         <outlet property="titleLabel" destination="6h1-GR-bid" id="2In-T4-pwb"/>
                     </connections>
