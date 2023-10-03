@@ -8,7 +8,7 @@
 import UIKit
 
 class SplashScreenViewController: UIViewController {
-
+    
     
     @IBOutlet weak var logoLabel: UILabel!
     @IBOutlet weak var firstMessageLabel: UILabel!
@@ -19,20 +19,29 @@ class SplashScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        configElements()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    func configElements() {
+        logoLabel.text = "ViajAÍ"
+        logoLabel.textAlignment = .center
+        
+        firstMessageLabel.text = "Comece sua viagem com segurança e diversão"
+        firstMessageLabel.textAlignment = .center
+        firstMessageLabel.font = UIFont.boldSystemFont(ofSize: 20)
+        firstMessageLabel.textColor = UIColor.black
+        firstMessageLabel.numberOfLines = 0
+        firstMessageLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        secondMessageLabel.text = "A ideia do ViajAÍ é analisar as preferências do usuário, incluindo interesses em atrações turísticas, atividades culturais, gastronomia, orçamento, entre outros, para criar roteiros personalizados para cada viagem.                      Viaje sem medo!"
+        secondMessageLabel.textAlignment = .center
+        secondMessageLabel.font = UIFont.systemFont(ofSize: 15)
+        secondMessageLabel.textColor = UIColor.gray
+        secondMessageLabel.numberOfLines = 0
+        secondMessageLabel.translatesAutoresizingMaskIntoConstraints = false
+        photoImageView.image = UIImage(named: "Mask group")
+        
     }
-    */
-
+    
 }
-
