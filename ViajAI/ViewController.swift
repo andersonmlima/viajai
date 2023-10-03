@@ -9,13 +9,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+
     
     @IBAction func tappedShowScree02(_ sender: Any) {
-        let screen02 = UIStoryboard(name: "ListDestinationViewController", bundle: nil).instantiateViewController(withIdentifier: "ListDestinationViewController") as? ListDestinationViewController
+        let screen02 = UIStoryboard(name: "SplashScreenViewController", bundle: nil).instantiateViewController(withIdentifier: "SplashScreenViewController") as? SplashScreenViewController
         
         navigationController?.pushViewController(screen02 ?? UIViewController(), animated: true)
         
