@@ -30,7 +30,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o26-1G-42F">
-                        <rect key="frame" x="20" y="208" width="42" height="21"/>
+                        <rect key="frame" x="20" y="198" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -39,12 +39,12 @@
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="o26-1G-42F" secondAttribute="bottom" constant="30" id="7jZ-0M-MQt"/>
                 <constraint firstItem="xii-85-l12" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="8l6-WU-6rL"/>
                 <constraint firstItem="o26-1G-42F" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="M29-eP-hVf"/>
                 <constraint firstAttribute="trailing" secondItem="xii-85-l12" secondAttribute="trailing" id="R6q-Hr-Mxm"/>
                 <constraint firstItem="1e9-Kx-c0o" firstAttribute="top" secondItem="xii-85-l12" secondAttribute="bottom" constant="20" id="cxQ-gY-9MD"/>
                 <constraint firstItem="xii-85-l12" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="loj-m4-VF0"/>
+                <constraint firstAttribute="bottom" secondItem="o26-1G-42F" secondAttribute="bottom" constant="40" id="scq-gx-HPM"/>
                 <constraint firstItem="xii-85-l12" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ycc-UM-l4i"/>
                 <constraint firstItem="1e9-Kx-c0o" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="z45-6Y-7XA"/>
             </constraints>
@@ -54,7 +54,7 @@
                 <outlet property="nameSubDestinationLabel" destination="1e9-Kx-c0o" id="ohy-rJ-3Mb"/>
                 <outlet property="photoDestinationImageView" destination="xii-85-l12" id="fHZ-FS-68h"/>
             </connections>
-            <point key="canvasLocation" x="146.56488549618319" y="28.52112676056338"/>
+            <point key="canvasLocation" x="299" y="39"/>
         </collectionViewCell>
     </objects>
 </document>

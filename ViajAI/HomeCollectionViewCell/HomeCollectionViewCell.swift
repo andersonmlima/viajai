@@ -22,6 +22,16 @@ class HomeCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         photoDestinationImageView.contentMode = .scaleAspectFill
+        configElements()
+    }
+    
+    func configElements() {
+        nameSubDestinationLabel.font = UIFont.boldSystemFont(ofSize: 15)
+        nameSubDestinationLabel.textColor = UIColor.black
+        
+        descriptionDestinationLabel.font = UIFont.boldSystemFont(ofSize: 13)
+        descriptionDestinationLabel.textColor = UIColor.gray
+        
     }
     
     func setupCell(photoName: String, subTitles: String, description: String) {

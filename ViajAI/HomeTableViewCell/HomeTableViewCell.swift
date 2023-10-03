@@ -25,6 +25,7 @@ class HomeTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         configCollection()
+        configElements()
     }
 
     func configCollection() {
@@ -35,6 +36,10 @@ class HomeTableViewCell: UITableViewCell {
             layout.estimatedItemSize = .zero
         }
         listDestinationCollectionView.register(HomeCollectionViewCell.nib(), forCellWithReuseIdentifier: HomeCollectionViewCell.identifier)
+    }
+    
+    func configElements() {
+        titleDestinationLabel.font = UIFont.boldSystemFont(ofSize: 18)
     }
     
     func setupCell(destination: Destination) {
