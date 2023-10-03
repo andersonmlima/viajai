@@ -16,6 +16,13 @@
 		570276AA2A859ADE0097840C /* ViajAITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570276A92A859ADE0097840C /* ViajAITests.swift */; };
 		570276B42A859ADE0097840C /* ViajAIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570276B32A859ADE0097840C /* ViajAIUITests.swift */; };
 		570276B62A859ADE0097840C /* ViajAIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570276B52A859ADE0097840C /* ViajAIUITestsLaunchTests.swift */; };
+		644051C82AC8EEDB0090BDB6 /* ListDestinationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644051C72AC8EEDB0090BDB6 /* ListDestinationViewController.swift */; };
+		644051CA2AC8EF120090BDB6 /* ListDestinationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 644051C92AC8EF120090BDB6 /* ListDestinationViewController.storyboard */; };
+		6449A7E82ACB87E700427391 /* TilteListDesinationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6449A7E62ACB87E700427391 /* TilteListDesinationTableViewCell.swift */; };
+		6449A7E92ACB87E700427391 /* TilteListDesinationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6449A7E72ACB87E700427391 /* TilteListDesinationTableViewCell.xib */; };
+		64DA6C502AC9D87300D19434 /* ListDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DA6C4F2AC9D87300D19434 /* ListDestination.swift */; };
+		64EF70562AC8FA4000FBF6EE /* ListDestinationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EF70542AC8FA4000FBF6EE /* ListDestinationTableViewCell.swift */; };
+		64EF70572AC8FA4000FBF6EE /* ListDestinationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64EF70552AC8FA4000FBF6EE /* ListDestinationTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +56,13 @@
 		570276AF2A859ADE0097840C /* ViajAIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViajAIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		570276B32A859ADE0097840C /* ViajAIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViajAIUITests.swift; sourceTree = "<group>"; };
 		570276B52A859ADE0097840C /* ViajAIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViajAIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		644051C72AC8EEDB0090BDB6 /* ListDestinationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDestinationViewController.swift; sourceTree = "<group>"; };
+		644051C92AC8EF120090BDB6 /* ListDestinationViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListDestinationViewController.storyboard; sourceTree = "<group>"; };
+		6449A7E62ACB87E700427391 /* TilteListDesinationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TilteListDesinationTableViewCell.swift; sourceTree = "<group>"; };
+		6449A7E72ACB87E700427391 /* TilteListDesinationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TilteListDesinationTableViewCell.xib; sourceTree = "<group>"; };
+		64DA6C4F2AC9D87300D19434 /* ListDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDestination.swift; sourceTree = "<group>"; };
+		64EF70542AC8FA4000FBF6EE /* ListDestinationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDestinationTableViewCell.swift; sourceTree = "<group>"; };
+		64EF70552AC8FA4000FBF6EE /* ListDestinationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListDestinationTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +113,7 @@
 		570276912A859ADB0097840C /* ViajAI */ = {
 			isa = PBXGroup;
 			children = (
+				644051C52AC8EE890090BDB6 /* Modules */,
 				570276922A859ADB0097840C /* AppDelegate.swift */,
 				570276942A859ADB0097840C /* SceneDelegate.swift */,
 				570276962A859ADB0097840C /* ViewController.swift */,
@@ -125,6 +140,44 @@
 				570276B52A859ADE0097840C /* ViajAIUITestsLaunchTests.swift */,
 			);
 			path = ViajAIUITests;
+			sourceTree = "<group>";
+		};
+		644051C52AC8EE890090BDB6 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				644051C62AC8EEB60090BDB6 /* ListDestination */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		644051C62AC8EEB60090BDB6 /* ListDestination */ = {
+			isa = PBXGroup;
+			children = (
+				64DA6C4E2AC9D83800D19434 /* Model */,
+				64EF70532AC8F9D100FBF6EE /* Cells */,
+				644051C72AC8EEDB0090BDB6 /* ListDestinationViewController.swift */,
+				644051C92AC8EF120090BDB6 /* ListDestinationViewController.storyboard */,
+			);
+			path = ListDestination;
+			sourceTree = "<group>";
+		};
+		64DA6C4E2AC9D83800D19434 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				64DA6C4F2AC9D87300D19434 /* ListDestination.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		64EF70532AC8F9D100FBF6EE /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				64EF70542AC8FA4000FBF6EE /* ListDestinationTableViewCell.swift */,
+				64EF70552AC8FA4000FBF6EE /* ListDestinationTableViewCell.xib */,
+				6449A7E62ACB87E700427391 /* TilteListDesinationTableViewCell.swift */,
+				6449A7E72ACB87E700427391 /* TilteListDesinationTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,8 +284,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6449A7E92ACB87E700427391 /* TilteListDesinationTableViewCell.xib in Resources */,
+				644051CA2AC8EF120090BDB6 /* ListDestinationViewController.storyboard in Resources */,
 				5702769F2A859ADE0097840C /* LaunchScreen.storyboard in Resources */,
 				5702769C2A859ADE0097840C /* Assets.xcassets in Resources */,
+				64EF70572AC8FA4000FBF6EE /* ListDestinationTableViewCell.xib in Resources */,
 				5702769A2A859ADB0097840C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,9 +314,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64DA6C502AC9D87300D19434 /* ListDestination.swift in Sources */,
 				570276972A859ADB0097840C /* ViewController.swift in Sources */,
+				6449A7E82ACB87E700427391 /* TilteListDesinationTableViewCell.swift in Sources */,
 				570276932A859ADB0097840C /* AppDelegate.swift in Sources */,
 				570276952A859ADB0097840C /* SceneDelegate.swift in Sources */,
+				644051C82AC8EEDB0090BDB6 /* ListDestinationViewController.swift in Sources */,
+				64EF70562AC8FA4000FBF6EE /* ListDestinationTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
