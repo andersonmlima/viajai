@@ -103,7 +103,7 @@
 		570276912A859ADB0097840C /* ViajAI */ = {
 			isa = PBXGroup;
 			children = (
-				64C337E12AB153A3005278B5 /* SplashScreen */,
+				57E282772ACCC1F800D2AE19 /* Modules */,
 				570276922A859ADB0097840C /* AppDelegate.swift */,
 				570276942A859ADB0097840C /* SceneDelegate.swift */,
 				570276962A859ADB0097840C /* ViewController.swift */,
@@ -130,6 +130,14 @@
 				570276B52A859ADE0097840C /* ViajAIUITestsLaunchTests.swift */,
 			);
 			path = ViajAIUITests;
+			sourceTree = "<group>";
+		};
+		57E282772ACCC1F800D2AE19 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				64C337E12AB153A3005278B5 /* SplashScreen */,
+			);
+			path = Modules;
 			sourceTree = "<group>";
 		};
 		64C337E12AB153A3005278B5 /* SplashScreen */ = {
