@@ -16,6 +16,8 @@
 		570276AA2A859ADE0097840C /* ViajAITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570276A92A859ADE0097840C /* ViajAITests.swift */; };
 		570276B42A859ADE0097840C /* ViajAIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570276B32A859ADE0097840C /* ViajAIUITests.swift */; };
 		570276B62A859ADE0097840C /* ViajAIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570276B52A859ADE0097840C /* ViajAIUITestsLaunchTests.swift */; };
+		579C6A022ACBC92E009C5EDF /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 579C69FF2ACBC92E009C5EDF /* LoginViewController.storyboard */; };
+		579C6A032ACBC92E009C5EDF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579C6A012ACBC92E009C5EDF /* LoginViewController.swift */; };
 		644051C82AC8EEDB0090BDB6 /* ListDestinationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644051C72AC8EEDB0090BDB6 /* ListDestinationViewController.swift */; };
 		644051CA2AC8EF120090BDB6 /* ListDestinationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 644051C92AC8EF120090BDB6 /* ListDestinationViewController.storyboard */; };
 		6449A7E82ACB87E700427391 /* TilteListDesinationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6449A7E62ACB87E700427391 /* TilteListDesinationTableViewCell.swift */; };
@@ -56,6 +58,8 @@
 		570276AF2A859ADE0097840C /* ViajAIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViajAIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		570276B32A859ADE0097840C /* ViajAIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViajAIUITests.swift; sourceTree = "<group>"; };
 		570276B52A859ADE0097840C /* ViajAIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViajAIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		579C6A002ACBC92E009C5EDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LoginViewController.storyboard; sourceTree = "<group>"; };
+		579C6A012ACBC92E009C5EDF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		644051C72AC8EEDB0090BDB6 /* ListDestinationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDestinationViewController.swift; sourceTree = "<group>"; };
 		644051C92AC8EF120090BDB6 /* ListDestinationViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListDestinationViewController.storyboard; sourceTree = "<group>"; };
 		6449A7E62ACB87E700427391 /* TilteListDesinationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TilteListDesinationTableViewCell.swift; sourceTree = "<group>"; };
@@ -142,9 +146,20 @@
 			path = ViajAIUITests;
 			sourceTree = "<group>";
 		};
+		579C69FE2ACBC92E009C5EDF /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				579C69FF2ACBC92E009C5EDF /* LoginViewController.storyboard */,
+				579C6A012ACBC92E009C5EDF /* LoginViewController.swift */,
+			);
+			name = Login;
+			path = ../../../351BF/desafioNavigation/desafioNavigation/Login;
+			sourceTree = "<group>";
+		};
 		644051C52AC8EE890090BDB6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				579C69FE2ACBC92E009C5EDF /* Login */,
 				644051C62AC8EEB60090BDB6 /* ListDestination */,
 			);
 			path = Modules;
@@ -289,6 +304,7 @@
 				5702769F2A859ADE0097840C /* LaunchScreen.storyboard in Resources */,
 				5702769C2A859ADE0097840C /* Assets.xcassets in Resources */,
 				64EF70572AC8FA4000FBF6EE /* ListDestinationTableViewCell.xib in Resources */,
+				579C6A022ACBC92E009C5EDF /* LoginViewController.storyboard in Resources */,
 				5702769A2A859ADB0097840C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,6 +334,7 @@
 				570276972A859ADB0097840C /* ViewController.swift in Sources */,
 				6449A7E82ACB87E700427391 /* TilteListDesinationTableViewCell.swift in Sources */,
 				570276932A859ADB0097840C /* AppDelegate.swift in Sources */,
+				579C6A032ACBC92E009C5EDF /* LoginViewController.swift in Sources */,
 				570276952A859ADB0097840C /* SceneDelegate.swift in Sources */,
 				644051C82AC8EEDB0090BDB6 /* ListDestinationViewController.swift in Sources */,
 				64EF70562AC8FA4000FBF6EE /* ListDestinationTableViewCell.swift in Sources */,
@@ -371,6 +388,14 @@
 				5702769E2A859ADE0097840C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		579C69FF2ACBC92E009C5EDF /* LoginViewController.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				579C6A002ACBC92E009C5EDF /* Base */,
+			);
+			name = LoginViewController.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
