@@ -9,6 +9,14 @@ import UIKit
 
 class SplashScreenViewController: UIViewController {
 
+    
+    @IBOutlet weak var logoLabel: UILabel!
+    @IBOutlet weak var firstMessageLabel: UILabel!
+    @IBOutlet weak var secondMessageLabel: UILabel!
+    
+    @IBOutlet weak var photoImageView: UIImageView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
