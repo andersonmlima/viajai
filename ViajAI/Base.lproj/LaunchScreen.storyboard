@@ -29,6 +29,13 @@
                                 <color key="textColor" red="0.55700099469999997" green="0.55656558280000001" blue="0.57647556069999994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3nr-UF-nZm">
+                                <rect key="frame" x="0.0" y="812" width="393" height="40"/>
+                                <color key="backgroundColor" red="0.35657465459999999" green="0.75383418800000002" blue="0.97331482170000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="2tC-C1-J6i"/>
+                                </constraints>
+                            </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="woman-background" translatesAutoresizingMaskIntoConstraints="NO" id="lOJ-yU-fvH">
                                 <rect key="frame" x="0.0" y="418" width="393" height="400"/>
                                 <constraints>
@@ -51,18 +58,17 @@
                             <constraint firstItem="Lr3-eu-8g6" firstAttribute="top" secondItem="Kf1-3k-i3b" secondAttribute="bottom" constant="20" id="Dkm-wy-162"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="uvw-I8-eww" secondAttribute="trailing" id="IrV-Wi-r74"/>
                             <constraint firstItem="uvw-I8-eww" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="72" id="Jnh-dY-Yf7"/>
+                            <constraint firstItem="3nr-UF-nZm" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="P14-tA-Uyy"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="lOJ-yU-fvH" secondAttribute="bottom" id="ShA-At-uTv"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="lOJ-yU-fvH" secondAttribute="trailing" id="UXy-Ob-jTD"/>
                             <constraint firstItem="lOJ-yU-fvH" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="WJb-Dq-zKZ"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Lr3-eu-8g6" secondAttribute="trailing" constant="20" id="cpm-tJ-kPg"/>
                             <constraint firstItem="Lr3-eu-8g6" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="lRj-Ye-UdW"/>
+                            <constraint firstAttribute="bottom" secondItem="3nr-UF-nZm" secondAttribute="bottom" id="rFA-3F-Cea"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Kf1-3k-i3b" secondAttribute="trailing" constant="20" id="wU4-UK-xvs"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="3nr-UF-nZm" secondAttribute="trailing" id="wmU-vs-ub2"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="firstMessageLabel" destination="Kf1-3k-i3b" id="9cY-1O-0Xg"/>
-                        <outlet property="secondMessageLabel" destination="Lr3-eu-8g6" id="QAj-TL-Gs1"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
