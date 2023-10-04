@@ -18,6 +18,8 @@
 		570276B62A859ADE0097840C /* ViajAIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570276B52A859ADE0097840C /* ViajAIUITestsLaunchTests.swift */; };
 		573FC6172ACCE5790041EFAE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573FC6162ACCE5790041EFAE /* LoginViewController.swift */; };
 		573FC6192ACCE5D80041EFAE /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 573FC6182ACCE5D80041EFAE /* LoginViewController.storyboard */; };
+		573FC61C2ACCEE040041EFAE /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573FC61B2ACCEE040041EFAE /* TabBarController.swift */; };
+		573FC61E2ACCEE110041EFAE /* TabBarController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 573FC61D2ACCEE110041EFAE /* TabBarController.storyboard */; };
 		644051C82AC8EEDB0090BDB6 /* ListDestinationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644051C72AC8EEDB0090BDB6 /* ListDestinationViewController.swift */; };
 		644051CA2AC8EF120090BDB6 /* ListDestinationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 644051C92AC8EF120090BDB6 /* ListDestinationViewController.storyboard */; };
 		6449A7E82ACB87E700427391 /* TilteListDesinationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6449A7E62ACB87E700427391 /* TilteListDesinationTableViewCell.swift */; };
@@ -62,6 +64,8 @@
 		570276B52A859ADE0097840C /* ViajAIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViajAIUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		573FC6162ACCE5790041EFAE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		573FC6182ACCE5D80041EFAE /* LoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
+		573FC61B2ACCEE040041EFAE /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		573FC61D2ACCEE110041EFAE /* TabBarController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarController.storyboard; sourceTree = "<group>"; };
 		644051C72AC8EEDB0090BDB6 /* ListDestinationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDestinationViewController.swift; sourceTree = "<group>"; };
 		644051C92AC8EF120090BDB6 /* ListDestinationViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListDestinationViewController.storyboard; sourceTree = "<group>"; };
 		6449A7E62ACB87E700427391 /* TilteListDesinationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TilteListDesinationTableViewCell.swift; sourceTree = "<group>"; };
@@ -121,6 +125,7 @@
 		570276912A859ADB0097840C /* ViajAI */ = {
 			isa = PBXGroup;
 			children = (
+				573FC61A2ACCEDD30041EFAE /* TabBar */,
 				644051C52AC8EE890090BDB6 /* Modules */,
 				570276922A859ADB0097840C /* AppDelegate.swift */,
 				570276942A859ADB0097840C /* SceneDelegate.swift */,
@@ -157,6 +162,15 @@
 				573FC6182ACCE5D80041EFAE /* LoginViewController.storyboard */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		573FC61A2ACCEDD30041EFAE /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				573FC61B2ACCEE040041EFAE /* TabBarController.swift */,
+				573FC61D2ACCEE110041EFAE /* TabBarController.storyboard */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 		644051C52AC8EE890090BDB6 /* Modules */ = {
@@ -312,6 +326,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				573FC61E2ACCEE110041EFAE /* TabBarController.storyboard in Resources */,
 				573FC6192ACCE5D80041EFAE /* LoginViewController.storyboard in Resources */,
 				6449A7E92ACB87E700427391 /* TilteListDesinationTableViewCell.xib in Resources */,
 				644051CA2AC8EF120090BDB6 /* ListDestinationViewController.storyboard in Resources */,
@@ -347,6 +362,7 @@
 				64DA6C502AC9D87300D19434 /* ListDestination.swift in Sources */,
 				570276972A859ADB0097840C /* ViewController.swift in Sources */,
 				6449A7E82ACB87E700427391 /* TilteListDesinationTableViewCell.swift in Sources */,
+				573FC61C2ACCEE040041EFAE /* TabBarController.swift in Sources */,
 				570276932A859ADB0097840C /* AppDelegate.swift in Sources */,
 				64BB5F732AAFDDB000082423 /* SplashScreenViewController.swift in Sources */,
 				570276952A859ADB0097840C /* SceneDelegate.swift in Sources */,

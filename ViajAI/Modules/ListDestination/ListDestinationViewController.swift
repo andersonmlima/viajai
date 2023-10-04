@@ -18,7 +18,6 @@ class ListDestinationViewController: UIViewController {
                         [ListDestinationTitle(nameTitle: "Rio de Janeiro", id: "1"), ListDestination(place: "Rectangle 56", namePlace: "Raja Ampat", rating: "4.5/5.0", description: "Library device clip strikethrough move. Flows vector overflow style invite.", cityID: "1"),
                         ListDestination(place: "Rectangle 57", namePlace: "Sungai Baliem", rating: "4.5/5.0", description: "Library device clip strikethrough move. Flows vector overflow style invite.", cityID: "1")]
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         configDestinationTableView()
