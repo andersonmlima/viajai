@@ -18,6 +18,16 @@ class SplashScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configElements()
+        moveToLoginView()
+    }
+    
+    func moveToLoginView() {
+        let vcString = String(describing: LoginViewController.self)
+        let vc = UIStoryboard(name: vcString, bundle: nil).instantiateViewController(withIdentifier: vcString) as? LoginViewController
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
+            self.navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
+        })
     }
     
     
