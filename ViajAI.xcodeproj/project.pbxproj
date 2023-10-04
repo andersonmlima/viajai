@@ -109,8 +109,8 @@
 		DFCC46462ACCF8490096A64F /* HomeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		DFCC46482ACCF8490096A64F /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DFCC46492ACCF8490096A64F /* HomeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HomeViewController.storyboard; sourceTree = "<group>"; };
-		DFCC46502ACCF8750096A64F /* DetailsDestionation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailsDestionation.swift; path = ViajAI/Models/DetailsDestionation.swift; sourceTree = SOURCE_ROOT; };
-		DFCC46512ACCF8750096A64F /* Destination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Destination.swift; path = ViajAI/Models/Destination.swift; sourceTree = SOURCE_ROOT; };
+		DFCC46502ACCF8750096A64F /* DetailsDestionation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailsDestionation.swift; path = "ViajAI/New Group/DetailsDestionation.swift"; sourceTree = SOURCE_ROOT; };
+		DFCC46512ACCF8750096A64F /* Destination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Destination.swift; path = "ViajAI/New Group/Destination.swift"; sourceTree = SOURCE_ROOT; };
 		DFCC46552ACCFB2F0096A64F /* PerfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilViewController.swift; sourceTree = "<group>"; };
 		DFCC46572ACCFB420096A64F /* PerfilViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PerfilViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -163,9 +163,8 @@
 		570276912A859ADB0097840C /* ViajAI */ = {
 			isa = PBXGroup;
 			children = (
+				5725BC412ACD017B00270D9D /* Models */,
 				573FC6342ACCF2450041EFAE /* Utilities */,
-				573FC6312ACCF22D0041EFAE /* Model */,
-				573FC61F2ACCF2010041EFAE /* Search */,
 				573FC61A2ACCEDD30041EFAE /* TabBar */,
 				644051C52AC8EE890090BDB6 /* Modules */,
 				570276922A859ADB0097840C /* AppDelegate.swift */,
@@ -196,6 +195,16 @@
 			path = ViajAIUITests;
 			sourceTree = "<group>";
 		};
+		5725BC412ACD017B00270D9D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				573FC6322ACCF22D0041EFAE /* Category.swift */,
+				DFCC46502ACCF8750096A64F /* DetailsDestionation.swift */,
+				DFCC46512ACCF8750096A64F /* Destination.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		573FC6152ACCE55A0041EFAE /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,8 +232,7 @@
 				573FC6242ACCF2010041EFAE /* Cell */,
 				573FC6272ACCF2010041EFAE /* CategoriesActionSheet */,
 			);
-			name = Search;
-			path = Modules/Search;
+			path = Search;
 			sourceTree = "<group>";
 		};
 		573FC6222ACCF2010041EFAE /* Protocol */ = {
@@ -253,16 +261,6 @@
 			path = CategoriesActionSheet;
 			sourceTree = "<group>";
 		};
-		573FC6312ACCF22D0041EFAE /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				DFCC46512ACCF8750096A64F /* Destination.swift */,
-				DFCC46502ACCF8750096A64F /* DetailsDestionation.swift */,
-				573FC6322ACCF22D0041EFAE /* Category.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		573FC6342ACCF2450041EFAE /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -274,10 +272,9 @@
 		644051C52AC8EE890090BDB6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				573FC61F2ACCF2010041EFAE /* Search */,
 				DFCC46542ACCFB170096A64F /* Perfil */,
 				DFCC46472ACCF8490096A64F /* Home */,
-				DFCC46412ACCF8490096A64F /* HomeCollectionViewCell */,
-				DFCC46442ACCF8490096A64F /* HomeTableViewCell */,
 				573FC6152ACCE55A0041EFAE /* Login */,
 				64C337E12AB153A3005278B5 /* SplashScreen */,
 				644051C62AC8EEB60090BDB6 /* ListDestination */,
@@ -331,7 +328,7 @@
 				DFCC46432ACCF8490096A64F /* HomeCollectionViewCell.xib */,
 			);
 			name = HomeCollectionViewCell;
-			path = ViajAI/HomeCollectionViewCell;
+			path = ViajAI/Home/HomeCollectionViewCell;
 			sourceTree = SOURCE_ROOT;
 		};
 		DFCC46442ACCF8490096A64F /* HomeTableViewCell */ = {
@@ -341,12 +338,14 @@
 				DFCC46462ACCF8490096A64F /* HomeTableViewCell.xib */,
 			);
 			name = HomeTableViewCell;
-			path = ViajAI/HomeTableViewCell;
+			path = ViajAI/Home/HomeTableViewCell;
 			sourceTree = SOURCE_ROOT;
 		};
 		DFCC46472ACCF8490096A64F /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				DFCC46412ACCF8490096A64F /* HomeCollectionViewCell */,
+				DFCC46442ACCF8490096A64F /* HomeTableViewCell */,
 				DFCC46482ACCF8490096A64F /* HomeViewController.swift */,
 				DFCC46492ACCF8490096A64F /* HomeViewController.storyboard */,
 			);
