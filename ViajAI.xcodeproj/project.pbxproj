@@ -22,6 +22,8 @@
 		5725BC4C2ACD0C3100270D9D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5725BC4A2ACD0C3100270D9D /* RegisterViewController.swift */; };
 		5725BC502ACD0DF800270D9D /* DetailsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5725BC4E2ACD0DF800270D9D /* DetailsViewController.storyboard */; };
 		5725BC512ACD0DF800270D9D /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5725BC4F2ACD0DF800270D9D /* DetailsViewController.swift */; };
+		5725BC552ACD106000270D9D /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5725BC532ACD106000270D9D /* VerificationViewController.swift */; };
+		5725BC562ACD106000270D9D /* VerificationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5725BC542ACD106000270D9D /* VerificationViewController.storyboard */; };
 		573FC6172ACCE5790041EFAE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573FC6162ACCE5790041EFAE /* LoginViewController.swift */; };
 		573FC6192ACCE5D80041EFAE /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 573FC6182ACCE5D80041EFAE /* LoginViewController.storyboard */; };
 		573FC61C2ACCEE040041EFAE /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573FC61B2ACCEE040041EFAE /* TabBarController.swift */; };
@@ -91,6 +93,8 @@
 		5725BC4A2ACD0C3100270D9D /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		5725BC4E2ACD0DF800270D9D /* DetailsViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DetailsViewController.storyboard; sourceTree = "<group>"; };
 		5725BC4F2ACD0DF800270D9D /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		5725BC532ACD106000270D9D /* VerificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
+		5725BC542ACD106000270D9D /* VerificationViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VerificationViewController.storyboard; sourceTree = "<group>"; };
 		573FC6162ACCE5790041EFAE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		573FC6182ACCE5D80041EFAE /* LoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
 		573FC61B2ACCEE040041EFAE /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -233,6 +237,15 @@
 			path = ViajAI/Details;
 			sourceTree = SOURCE_ROOT;
 		};
+		5725BC522ACD106000270D9D /* Verification */ = {
+			isa = PBXGroup;
+			children = (
+				5725BC532ACD106000270D9D /* VerificationViewController.swift */,
+				5725BC542ACD106000270D9D /* VerificationViewController.storyboard */,
+			);
+			path = Verification;
+			sourceTree = "<group>";
+		};
 		573FC6152ACCE55A0041EFAE /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -300,6 +313,7 @@
 		644051C52AC8EE890090BDB6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				5725BC522ACD106000270D9D /* Verification */,
 				5725BC4D2ACD0DF800270D9D /* Details */,
 				5725BC482ACD0C3100270D9D /* Register */,
 				573FC61F2ACCF2010041EFAE /* Search */,
@@ -509,6 +523,7 @@
 				5702769C2A859ADE0097840C /* Assets.xcassets in Resources */,
 				573FC6302ACCF2010041EFAE /* CategoriesViewController.storyboard in Resources */,
 				DFCC464D2ACCF8490096A64F /* HomeTableViewCell.xib in Resources */,
+				5725BC562ACD106000270D9D /* VerificationViewController.storyboard in Resources */,
 				6449A7EB2ACBB10300427391 /* SplashScreenViewController.storyboard in Resources */,
 				64EF70572AC8FA4000FBF6EE /* ListDestinationTableViewCell.xib in Resources */,
 				573FC62E2ACCF2010041EFAE /* CategoryCollectionViewCell.xib in Resources */,
@@ -550,6 +565,7 @@
 				570276932A859ADB0097840C /* AppDelegate.swift in Sources */,
 				5725BC452ACD027500270D9D /* Destination.swift in Sources */,
 				5725BC512ACD0DF800270D9D /* DetailsViewController.swift in Sources */,
+				5725BC552ACD106000270D9D /* VerificationViewController.swift in Sources */,
 				573FC62D2ACCF2010041EFAE /* CategoryCollectionViewCell.swift in Sources */,
 				64BB5F732AAFDDB000082423 /* SplashScreenViewController.swift in Sources */,
 				570276952A859ADB0097840C /* SceneDelegate.swift in Sources */,
