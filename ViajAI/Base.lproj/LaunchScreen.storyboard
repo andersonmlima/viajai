@@ -1,8 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -10,16 +12,68 @@
         <scene sceneID="EHf-IW-A2E">
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comece sua viagem com segurança e diversão" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kf1-3k-i3b">
+                                <rect key="frame" x="20" y="119.99999999999999" width="353" height="57.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lr3-eu-8g6">
+                                <rect key="frame" x="20" y="197.33333333333334" width="353" height="77.666666666666657"/>
+                                <string key="text">A ideia do ViajAÍ é analisar as preferências do usuário, incluindo interesses em atrações turísticas, atividades culturais, gastronomia, orçamento, entre outros, para criar roteiros personalizados para cada viagem.Viaje sem medo!</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.55700099469999997" green="0.55656558280000001" blue="0.57647556069999994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="woman-background" translatesAutoresizingMaskIntoConstraints="NO" id="lOJ-yU-fvH">
+                                <rect key="frame" x="0.0" y="418" width="393" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="Ky7-kI-1bh"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SmallLogo" translatesAutoresizingMaskIntoConstraints="NO" id="uvw-I8-eww">
+                                <rect key="frame" x="0.0" y="72" width="393" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="Ksa-Q6-oSB"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uvw-I8-eww" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="2vW-1S-Lmc"/>
+                            <constraint firstItem="Kf1-3k-i3b" firstAttribute="top" secondItem="uvw-I8-eww" secondAttribute="bottom" constant="24" id="4km-fH-9bT"/>
+                            <constraint firstItem="Kf1-3k-i3b" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="Aun-wq-npz"/>
+                            <constraint firstItem="Lr3-eu-8g6" firstAttribute="top" secondItem="Kf1-3k-i3b" secondAttribute="bottom" constant="20" id="Dkm-wy-162"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="uvw-I8-eww" secondAttribute="trailing" id="IrV-Wi-r74"/>
+                            <constraint firstItem="uvw-I8-eww" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="72" id="Jnh-dY-Yf7"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="lOJ-yU-fvH" secondAttribute="bottom" id="ShA-At-uTv"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="lOJ-yU-fvH" secondAttribute="trailing" id="UXy-Ob-jTD"/>
+                            <constraint firstItem="lOJ-yU-fvH" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="WJb-Dq-zKZ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Lr3-eu-8g6" secondAttribute="trailing" constant="20" id="cpm-tJ-kPg"/>
+                            <constraint firstItem="Lr3-eu-8g6" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="lRj-Ye-UdW"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Kf1-3k-i3b" secondAttribute="trailing" constant="20" id="wU4-UK-xvs"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="firstMessageLabel" destination="Kf1-3k-i3b" id="9cY-1O-0Xg"/>
+                        <outlet property="secondMessageLabel" destination="Lr3-eu-8g6" id="QAj-TL-Gs1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="SmallLogo" width="92" height="21.333333969116211"/>
+        <image name="woman-background" width="1242" height="1341"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

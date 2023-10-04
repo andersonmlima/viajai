@@ -41,7 +41,7 @@ class SplashScreenViewController: UIViewController {
         secondMessageLabel.textColor = UIColor.gray
         secondMessageLabel.numberOfLines = 0
         secondMessageLabel.translatesAutoresizingMaskIntoConstraints = false
-        photoImageView.image = UIImage(named: "Mask group")
+        photoImageView.image = UIImage(named: "woman-background")
         
     }
     
