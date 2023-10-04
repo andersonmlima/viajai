@@ -18,6 +18,8 @@
 		570276B62A859ADE0097840C /* ViajAIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570276B52A859ADE0097840C /* ViajAIUITestsLaunchTests.swift */; };
 		5725BC432ACD024A00270D9D /* DetailsDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5725BC422ACD024A00270D9D /* DetailsDestination.swift */; };
 		5725BC452ACD027500270D9D /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5725BC442ACD027500270D9D /* Destination.swift */; };
+		5725BC4B2ACD0C3100270D9D /* RegisterViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5725BC492ACD0C3100270D9D /* RegisterViewController.storyboard */; };
+		5725BC4C2ACD0C3100270D9D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5725BC4A2ACD0C3100270D9D /* RegisterViewController.swift */; };
 		573FC6172ACCE5790041EFAE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573FC6162ACCE5790041EFAE /* LoginViewController.swift */; };
 		573FC6192ACCE5D80041EFAE /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 573FC6182ACCE5D80041EFAE /* LoginViewController.storyboard */; };
 		573FC61C2ACCEE040041EFAE /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573FC61B2ACCEE040041EFAE /* TabBarController.swift */; };
@@ -83,6 +85,8 @@
 		570276B52A859ADE0097840C /* ViajAIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViajAIUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5725BC422ACD024A00270D9D /* DetailsDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsDestination.swift; sourceTree = "<group>"; };
 		5725BC442ACD027500270D9D /* Destination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
+		5725BC492ACD0C3100270D9D /* RegisterViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RegisterViewController.storyboard; sourceTree = "<group>"; };
+		5725BC4A2ACD0C3100270D9D /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		573FC6162ACCE5790041EFAE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		573FC6182ACCE5D80041EFAE /* LoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
 		573FC61B2ACCEE040041EFAE /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -205,6 +209,16 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		5725BC482ACD0C3100270D9D /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				5725BC492ACD0C3100270D9D /* RegisterViewController.storyboard */,
+				5725BC4A2ACD0C3100270D9D /* RegisterViewController.swift */,
+			);
+			name = Register;
+			path = ViajAI/Register;
+			sourceTree = SOURCE_ROOT;
+		};
 		573FC6152ACCE55A0041EFAE /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -272,6 +286,7 @@
 		644051C52AC8EE890090BDB6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				5725BC482ACD0C3100270D9D /* Register */,
 				573FC61F2ACCF2010041EFAE /* Search */,
 				DFCC46542ACCFB170096A64F /* Perfil */,
 				DFCC46472ACCF8490096A64F /* Home */,
@@ -469,6 +484,7 @@
 				573FC61E2ACCEE110041EFAE /* TabBarController.storyboard in Resources */,
 				573FC6192ACCE5D80041EFAE /* LoginViewController.storyboard in Resources */,
 				6449A7E92ACB87E700427391 /* TilteListDesinationTableViewCell.xib in Resources */,
+				5725BC4B2ACD0C3100270D9D /* RegisterViewController.storyboard in Resources */,
 				573FC62B2ACCF2010041EFAE /* SearchViewController.storyboard in Resources */,
 				644051CA2AC8EF120090BDB6 /* ListDestinationViewController.storyboard in Resources */,
 				DFCC464F2ACCF8490096A64F /* HomeViewController.storyboard in Resources */,
@@ -520,6 +536,7 @@
 				573FC62D2ACCF2010041EFAE /* CategoryCollectionViewCell.swift in Sources */,
 				64BB5F732AAFDDB000082423 /* SplashScreenViewController.swift in Sources */,
 				570276952A859ADB0097840C /* SceneDelegate.swift in Sources */,
+				5725BC4C2ACD0C3100270D9D /* RegisterViewController.swift in Sources */,
 				DFCC464A2ACCF8490096A64F /* HomeCollectionViewCell.swift in Sources */,
 				644051C82AC8EEDB0090BDB6 /* ListDestinationViewController.swift in Sources */,
 				573FC6172ACCE5790041EFAE /* LoginViewController.swift in Sources */,
