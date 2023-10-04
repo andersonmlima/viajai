@@ -26,6 +26,8 @@
 		5725BC562ACD106000270D9D /* VerificationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5725BC542ACD106000270D9D /* VerificationViewController.storyboard */; };
 		5725BC592ACD11A200270D9D /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5725BC582ACD11A200270D9D /* FavoritesViewController.swift */; };
 		5725BC5B2ACD11B200270D9D /* FavoritesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5725BC5A2ACD11B200270D9D /* FavoritesViewController.storyboard */; };
+		5725BC5E2ACD125C00270D9D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5725BC5D2ACD125C00270D9D /* MapViewController.swift */; };
+		5725BC602ACD126800270D9D /* MapViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5725BC5F2ACD126800270D9D /* MapViewController.storyboard */; };
 		573FC6172ACCE5790041EFAE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573FC6162ACCE5790041EFAE /* LoginViewController.swift */; };
 		573FC6192ACCE5D80041EFAE /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 573FC6182ACCE5D80041EFAE /* LoginViewController.storyboard */; };
 		573FC61C2ACCEE040041EFAE /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573FC61B2ACCEE040041EFAE /* TabBarController.swift */; };
@@ -99,6 +101,8 @@
 		5725BC542ACD106000270D9D /* VerificationViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VerificationViewController.storyboard; sourceTree = "<group>"; };
 		5725BC582ACD11A200270D9D /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		5725BC5A2ACD11B200270D9D /* FavoritesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FavoritesViewController.storyboard; sourceTree = "<group>"; };
+		5725BC5D2ACD125C00270D9D /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		5725BC5F2ACD126800270D9D /* MapViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapViewController.storyboard; sourceTree = "<group>"; };
 		573FC6162ACCE5790041EFAE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		573FC6182ACCE5D80041EFAE /* LoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
 		573FC61B2ACCEE040041EFAE /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -259,6 +263,15 @@
 			path = Favorites;
 			sourceTree = "<group>";
 		};
+		5725BC5C2ACD124800270D9D /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				5725BC5D2ACD125C00270D9D /* MapViewController.swift */,
+				5725BC5F2ACD126800270D9D /* MapViewController.storyboard */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
 		573FC6152ACCE55A0041EFAE /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -326,6 +339,7 @@
 		644051C52AC8EE890090BDB6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				5725BC5C2ACD124800270D9D /* Map */,
 				5725BC572ACD11A200270D9D /* Favorites */,
 				5725BC522ACD106000270D9D /* Verification */,
 				5725BC4D2ACD0DF800270D9D /* Details */,
@@ -544,6 +558,7 @@
 				573FC62E2ACCF2010041EFAE /* CategoryCollectionViewCell.xib in Resources */,
 				DFCC464B2ACCF8490096A64F /* HomeCollectionViewCell.xib in Resources */,
 				5702769A2A859ADB0097840C /* Main.storyboard in Resources */,
+				5725BC602ACD126800270D9D /* MapViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,6 +605,7 @@
 				644051C82AC8EEDB0090BDB6 /* ListDestinationViewController.swift in Sources */,
 				573FC6172ACCE5790041EFAE /* LoginViewController.swift in Sources */,
 				573FC6332ACCF22D0041EFAE /* Category.swift in Sources */,
+				5725BC5E2ACD125C00270D9D /* MapViewController.swift in Sources */,
 				573FC62C2ACCF2010041EFAE /* CategorySelection.swift in Sources */,
 				573FC62F2ACCF2010041EFAE /* CategoriesViewController.swift in Sources */,
 				64EF70562AC8FA4000FBF6EE /* ListDestinationTableViewCell.swift in Sources */,
