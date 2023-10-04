@@ -38,6 +38,16 @@
 		64DA6C502AC9D87300D19434 /* ListDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DA6C4F2AC9D87300D19434 /* ListDestination.swift */; };
 		64EF70562AC8FA4000FBF6EE /* ListDestinationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EF70542AC8FA4000FBF6EE /* ListDestinationTableViewCell.swift */; };
 		64EF70572AC8FA4000FBF6EE /* ListDestinationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64EF70552AC8FA4000FBF6EE /* ListDestinationTableViewCell.xib */; };
+		DFCC464A2ACCF8490096A64F /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCC46422ACCF8490096A64F /* HomeCollectionViewCell.swift */; };
+		DFCC464B2ACCF8490096A64F /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFCC46432ACCF8490096A64F /* HomeCollectionViewCell.xib */; };
+		DFCC464C2ACCF8490096A64F /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCC46452ACCF8490096A64F /* HomeTableViewCell.swift */; };
+		DFCC464D2ACCF8490096A64F /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFCC46462ACCF8490096A64F /* HomeTableViewCell.xib */; };
+		DFCC464E2ACCF8490096A64F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCC46482ACCF8490096A64F /* HomeViewController.swift */; };
+		DFCC464F2ACCF8490096A64F /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFCC46492ACCF8490096A64F /* HomeViewController.storyboard */; };
+		DFCC46522ACCF8750096A64F /* DetailsDestionation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCC46502ACCF8750096A64F /* DetailsDestionation.swift */; };
+		DFCC46532ACCF8750096A64F /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCC46512ACCF8750096A64F /* Destination.swift */; };
+		DFCC46562ACCFB2F0096A64F /* PerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCC46552ACCFB2F0096A64F /* PerfilViewController.swift */; };
+		DFCC46582ACCFB420096A64F /* PerfilViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFCC46572ACCFB420096A64F /* PerfilViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +103,16 @@
 		64DA6C4F2AC9D87300D19434 /* ListDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDestination.swift; sourceTree = "<group>"; };
 		64EF70542AC8FA4000FBF6EE /* ListDestinationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDestinationTableViewCell.swift; sourceTree = "<group>"; };
 		64EF70552AC8FA4000FBF6EE /* ListDestinationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListDestinationTableViewCell.xib; sourceTree = "<group>"; };
+		DFCC46422ACCF8490096A64F /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		DFCC46432ACCF8490096A64F /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
+		DFCC46452ACCF8490096A64F /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		DFCC46462ACCF8490096A64F /* HomeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
+		DFCC46482ACCF8490096A64F /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		DFCC46492ACCF8490096A64F /* HomeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HomeViewController.storyboard; sourceTree = "<group>"; };
+		DFCC46502ACCF8750096A64F /* DetailsDestionation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailsDestionation.swift; path = ViajAI/Models/DetailsDestionation.swift; sourceTree = SOURCE_ROOT; };
+		DFCC46512ACCF8750096A64F /* Destination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Destination.swift; path = ViajAI/Models/Destination.swift; sourceTree = SOURCE_ROOT; };
+		DFCC46552ACCFB2F0096A64F /* PerfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilViewController.swift; sourceTree = "<group>"; };
+		DFCC46572ACCFB420096A64F /* PerfilViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PerfilViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,6 +256,8 @@
 		573FC6312ACCF22D0041EFAE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DFCC46512ACCF8750096A64F /* Destination.swift */,
+				DFCC46502ACCF8750096A64F /* DetailsDestionation.swift */,
 				573FC6322ACCF22D0041EFAE /* Category.swift */,
 			);
 			path = Model;
@@ -252,6 +274,10 @@
 		644051C52AC8EE890090BDB6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				DFCC46542ACCFB170096A64F /* Perfil */,
+				DFCC46472ACCF8490096A64F /* Home */,
+				DFCC46412ACCF8490096A64F /* HomeCollectionViewCell */,
+				DFCC46442ACCF8490096A64F /* HomeTableViewCell */,
 				573FC6152ACCE55A0041EFAE /* Login */,
 				64C337E12AB153A3005278B5 /* SplashScreen */,
 				644051C62AC8EEB60090BDB6 /* ListDestination */,
@@ -296,6 +322,45 @@
 				6449A7E72ACB87E700427391 /* TilteListDesinationTableViewCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		DFCC46412ACCF8490096A64F /* HomeCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				DFCC46422ACCF8490096A64F /* HomeCollectionViewCell.swift */,
+				DFCC46432ACCF8490096A64F /* HomeCollectionViewCell.xib */,
+			);
+			name = HomeCollectionViewCell;
+			path = ViajAI/HomeCollectionViewCell;
+			sourceTree = SOURCE_ROOT;
+		};
+		DFCC46442ACCF8490096A64F /* HomeTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				DFCC46452ACCF8490096A64F /* HomeTableViewCell.swift */,
+				DFCC46462ACCF8490096A64F /* HomeTableViewCell.xib */,
+			);
+			name = HomeTableViewCell;
+			path = ViajAI/HomeTableViewCell;
+			sourceTree = SOURCE_ROOT;
+		};
+		DFCC46472ACCF8490096A64F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				DFCC46482ACCF8490096A64F /* HomeViewController.swift */,
+				DFCC46492ACCF8490096A64F /* HomeViewController.storyboard */,
+			);
+			name = Home;
+			path = ViajAI/Home;
+			sourceTree = SOURCE_ROOT;
+		};
+		DFCC46542ACCFB170096A64F /* Perfil */ = {
+			isa = PBXGroup;
+			children = (
+				DFCC46552ACCFB2F0096A64F /* PerfilViewController.swift */,
+				DFCC46572ACCFB420096A64F /* PerfilViewController.storyboard */,
+			);
+			path = Perfil;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -407,12 +472,16 @@
 				6449A7E92ACB87E700427391 /* TilteListDesinationTableViewCell.xib in Resources */,
 				573FC62B2ACCF2010041EFAE /* SearchViewController.storyboard in Resources */,
 				644051CA2AC8EF120090BDB6 /* ListDestinationViewController.storyboard in Resources */,
+				DFCC464F2ACCF8490096A64F /* HomeViewController.storyboard in Resources */,
 				5702769F2A859ADE0097840C /* LaunchScreen.storyboard in Resources */,
+				DFCC46582ACCFB420096A64F /* PerfilViewController.storyboard in Resources */,
 				5702769C2A859ADE0097840C /* Assets.xcassets in Resources */,
 				573FC6302ACCF2010041EFAE /* CategoriesViewController.storyboard in Resources */,
+				DFCC464D2ACCF8490096A64F /* HomeTableViewCell.xib in Resources */,
 				6449A7EB2ACBB10300427391 /* SplashScreenViewController.storyboard in Resources */,
 				64EF70572AC8FA4000FBF6EE /* ListDestinationTableViewCell.xib in Resources */,
 				573FC62E2ACCF2010041EFAE /* CategoryCollectionViewCell.xib in Resources */,
+				DFCC464B2ACCF8490096A64F /* HomeCollectionViewCell.xib in Resources */,
 				5702769A2A859ADB0097840C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -440,20 +509,26 @@
 			files = (
 				573FC6362ACCF2450041EFAE /* AddDoneButtonToTextField.swift in Sources */,
 				64DA6C502AC9D87300D19434 /* ListDestination.swift in Sources */,
+				DFCC464E2ACCF8490096A64F /* HomeViewController.swift in Sources */,
 				573FC62A2ACCF2010041EFAE /* SearchViewController.swift in Sources */,
 				570276972A859ADB0097840C /* ViewController.swift in Sources */,
 				6449A7E82ACB87E700427391 /* TilteListDesinationTableViewCell.swift in Sources */,
+				DFCC46562ACCFB2F0096A64F /* PerfilViewController.swift in Sources */,
 				573FC61C2ACCEE040041EFAE /* TabBarController.swift in Sources */,
+				DFCC464C2ACCF8490096A64F /* HomeTableViewCell.swift in Sources */,
 				570276932A859ADB0097840C /* AppDelegate.swift in Sources */,
 				573FC62D2ACCF2010041EFAE /* CategoryCollectionViewCell.swift in Sources */,
 				64BB5F732AAFDDB000082423 /* SplashScreenViewController.swift in Sources */,
 				570276952A859ADB0097840C /* SceneDelegate.swift in Sources */,
+				DFCC464A2ACCF8490096A64F /* HomeCollectionViewCell.swift in Sources */,
 				644051C82AC8EEDB0090BDB6 /* ListDestinationViewController.swift in Sources */,
 				573FC6172ACCE5790041EFAE /* LoginViewController.swift in Sources */,
 				573FC6332ACCF22D0041EFAE /* Category.swift in Sources */,
 				573FC62C2ACCF2010041EFAE /* CategorySelection.swift in Sources */,
 				573FC62F2ACCF2010041EFAE /* CategoriesViewController.swift in Sources */,
 				64EF70562AC8FA4000FBF6EE /* ListDestinationTableViewCell.swift in Sources */,
+				DFCC46522ACCF8750096A64F /* DetailsDestionation.swift in Sources */,
+				DFCC46532ACCF8750096A64F /* Destination.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
