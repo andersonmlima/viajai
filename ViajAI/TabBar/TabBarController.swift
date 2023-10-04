@@ -28,8 +28,15 @@ class TabBarController: UITabBarController {
             nav.tabBarItem = UITabBarItem(title: "Favoritos", image: UIImage(systemName: "pencil.circle.fill"), tag: 0)
             return nav
         }()
+        let secondVC: UINavigationController = {
+            let vcString = String(describing: SearchViewController.self)
+            let vc = UIStoryboard(name: vcString, bundle: nil).instantiateViewController(withIdentifier: vcString) as? SearchViewController
+            let nav = UINavigationController(rootViewController: vc ?? UIViewController())
+            nav.tabBarItem = UITabBarItem(title: "Busca", image: UIImage(systemName: "pencil.circle.fill"), tag: 1)
+            return nav
+        }()
         
-        viewControllers = [firstVC]
+        viewControllers = [firstVC, secondVC]
     }
     
     func configLayout() {
