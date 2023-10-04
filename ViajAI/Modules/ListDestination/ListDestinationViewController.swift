@@ -8,29 +8,27 @@
 import UIKit
 
 class ListDestinationViewController: UIViewController {
-    
-    
-    @IBOutlet weak var presentationLabel: UILabel!
-    @IBOutlet weak var userImageView: UIImageView!
-    @IBOutlet weak var destinationTableView: UITableView!
-    
+    @IBOutlet var presentationLabel: UILabel!
+    @IBOutlet var userImageView: UIImageView!
+    @IBOutlet var destinationTableView: UITableView!
+
     var destinationList: [Any] =
-                        [ListDestinationTitle(nameTitle: "Rio de Janeiro", id: "1"), ListDestination(place: "Rectangle 56", namePlace: "Raja Ampat", rating: "4.5/5.0", description: "Library device clip strikethrough move. Flows vector overflow style invite.", cityID: "1"),
-                        ListDestination(place: "Rectangle 57", namePlace: "Sungai Baliem", rating: "4.5/5.0", description: "Library device clip strikethrough move. Flows vector overflow style invite.", cityID: "1")]
-    
+        [ListDestinationTitle(nameTitle: "Rio de Janeiro", id: "1"), ListDestination(place: "Rectangle 56", namePlace: "Raja Ampat", rating: "4.5/5.0", description: "Library device clip strikethrough move. Flows vector overflow style invite.", cityID: "1"),
+         ListDestination(place: "Rectangle 57", namePlace: "Sungai Baliem", rating: "4.5/5.0", description: "Library device clip strikethrough move. Flows vector overflow style invite.", cityID: "1")]
+
     override func viewDidLoad() {
         super.viewDidLoad()
         configDestinationTableView()
         configElements()
     }
-    
+
     func configDestinationTableView() {
         destinationTableView.delegate = self
         destinationTableView.dataSource = self
         destinationTableView.register(ListDestinationTableViewCell.nib(), forCellReuseIdentifier: ListDestinationTableViewCell.identifier)
         destinationTableView.register(TilteListDesinationTableViewCell.nib(), forCellReuseIdentifier: TilteListDesinationTableViewCell.identifier)
     }
-    
+
     func configElements() {
         presentationLabel.text = "Meus Favoritos"
         presentationLabel.font = UIFont.systemFont(ofSize: 24, weight: .semibold)
@@ -38,16 +36,13 @@ class ListDestinationViewController: UIViewController {
         userImageView.image = UIImage(named: "Group 1930")
         userImageView.frame = CGRect(x: 50, y: 50, width: 48, height: 49)
     }
-
-
 }
-
 
 extension ListDestinationViewController: UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegateFlowLayout {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return destinationList.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             guard let cell = destinationTableView.dequeueReusableCell(withIdentifier: TilteListDesinationTableViewCell.identifier, for: indexPath) as? TilteListDesinationTableViewCell else {
@@ -59,16 +54,19 @@ extension ListDestinationViewController: UITableViewDelegate, UITableViewDataSou
             guard let cell = destinationTableView.dequeueReusableCell(withIdentifier: ListDestinationTableViewCell.identifier, for: indexPath) as? ListDestinationTableViewCell else {
                 return UITableViewCell()
             }
-                cell.setupCell(listDestination: destinationList[indexPath.row] as! ListDestination)
-                return cell
+            cell.setupCell(listDestination: destinationList[indexPath.row] as! ListDestination)
+            return cell
         }
-
-
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // TODO: - Passar os valores corretos para a tela de details como mostrado na aula, usando o require init lá em DetailsViewController
+        let vcString = String(describing: DetailsViewController.self)
+        let vc = UIStoryboard(name: vcString, bundle: nil).instantiateViewController(withIdentifier: vcString) as? DetailsViewController
+        navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
+    }
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 300
     }
-    
-    
 }

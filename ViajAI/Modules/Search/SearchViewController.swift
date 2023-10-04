@@ -87,6 +87,13 @@ class SearchViewController: UIViewController {
     @objc func exitDateDoneAction() {
         budgetTextField.becomeFirstResponder()
     }
+    
+    @IBAction func tappedSearch(_ sender: Any) {
+        let vcString = String(describing: MapViewController.self)
+        let vc = UIStoryboard(name: vcString, bundle: nil).instantiateViewController(withIdentifier: vcString) as? MapViewController
+        navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
+    }
+    
 }
 
 // MARK: - Text field

@@ -22,6 +22,16 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var invalidEmailLabel: UILabel!
     @IBOutlet weak var invalidPasswordLabel: UILabel!
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configElements()
@@ -31,13 +41,18 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func tappedLoginButton(_ sender: UIButton) {
-        
+        let vcString = String(describing: TabBarController.self)
+        let vc = UIStoryboard(name: vcString, bundle: nil).instantiateViewController(withIdentifier: vcString) as? TabBarController
+        navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
     }
     @IBAction func tappedGoogleButton(_ sender: UIButton) {
     }
     @IBAction func tappedFacebbokButton(_ sender: UIButton) {
     }
     @IBAction func tappedRegisterButton(_ sender: UIButton) {
+        let vcString = String(describing: RegisterViewController.self)
+        let vc = UIStoryboard(name: vcString, bundle: nil).instantiateViewController(withIdentifier: vcString) as? RegisterViewController
+        navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
     }
     
     @IBOutlet weak var textRegisterLabel: UILabel!
