@@ -17,7 +17,7 @@ class ViewController: UIViewController {
 
     
     @IBAction func tappedShowScree02(_ sender: Any) {
-        let screen02 = UIStoryboard(name: "TabBarController", bundle: nil).instantiateViewController(withIdentifier: "TabBarController") as? TabBarController
+        let screen02 = UIStoryboard(name: "DetailsViewController", bundle: nil).instantiateViewController(withIdentifier: "DetailsViewController") as? DetailsViewController
         
         navigationController?.pushViewController(screen02 ?? UIViewController(), animated: true)
         
