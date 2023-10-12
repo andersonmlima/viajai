@@ -9,17 +9,33 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
+    @IBOutlet weak var loginScrollView: UIScrollView!
+    
+    @IBOutlet weak var loginView: UIView!
+    
     @IBOutlet weak var wellcomeAppLabel: UILabel!
+    
     @IBOutlet weak var textWellcomeAppLabel: UILabel!
+    
     @IBOutlet weak var emailTextField: UITextField!
+    
     @IBOutlet weak var passwordTextField: UITextField!
+    
     @IBOutlet weak var recoverPasswordChangeButton: UIButton!
+    
     @IBOutlet weak var loginChangeButton: UIButton!
+    
     @IBOutlet weak var orLabel: UILabel!
+    
     @IBOutlet weak var loginGoogleChangeButton: UIButton!
+    
     @IBOutlet weak var loginFacebookChangeButton: UIButton!
+    
+    @IBOutlet weak var textRegisterLabel: UILabel!
+    
+    
     @IBOutlet weak var registerChangeButton: UIButton!
-    @IBOutlet weak var invalidEmailLabel: UILabel!
+    
     @IBOutlet weak var invalidPasswordLabel: UILabel!
     
     override func viewWillAppear(_ animated: Bool) {
@@ -36,45 +52,63 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func tappedLoginButton(_ sender: UIButton) {
+        
         let vcString = String(describing: TabBarController.self)
         let vc = UIStoryboard(name: vcString, bundle: nil).instantiateViewController(withIdentifier: vcString) as? TabBarController
         navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
     }
+    
     @IBAction func tappedGoogleButton(_ sender: UIButton) {
     }
+    
+    
     @IBAction func tappedFacebbokButton(_ sender: UIButton) {
     }
+    
     @IBAction func tappedRegisterButton(_ sender: UIButton) {
+        
         let vcString = String(describing: RegisterViewController.self)
         let vc = UIStoryboard(name: vcString, bundle: nil).instantiateViewController(withIdentifier: vcString) as? RegisterViewController
         navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
     }
     
-    @IBOutlet weak var textRegisterLabel: UILabel!
-    
     
     func configElements() {
+        
+        loginScrollView.contentSize = CGSize(width: view.frame.width, height: 1000)
+        
+        emailTextField.borderStyle = .roundedRect
+        passwordTextField.borderStyle = .roundedRect
+
         wellcomeAppLabel.font = UIFont.boldSystemFont(ofSize: 25)
         textWellcomeAppLabel.font = UIFont.systemFont(ofSize: 15)
         wellcomeAppLabel.textColor = UIColor.black
         textWellcomeAppLabel.textColor = UIColor.gray
         textWellcomeAppLabel.numberOfLines = 4
         textWellcomeAppLabel.textAlignment = .justified
-        wellcomeAppLabel.textAlignment = .center
-        
+//        wellcomeAppLabel.textAlignment = .center
         wellcomeAppLabel.text = "Bem Vindo Viajante"
         textWellcomeAppLabel.text = "Estamos ansiosos para ajudar você a planejar a viagem perfeita. Faça login ou cadastre-se agora mesmo e embarque nesta jornada conosco."
-        emailTextField.placeholder = "Digite seu e-mail"
-        passwordTextField.placeholder = "Digite sua senha"
-        emailTextField.layer.borderWidth = 1.0
         
+        emailTextField.placeholder = "Digite seu e-mail"
+        emailTextField.layer.borderWidth = 1.0
+        emailTextField.layer.cornerRadius = 8.0
+        
+        passwordTextField.placeholder = "Digite sua senha"
         passwordTextField.isSecureTextEntry = true
         passwordTextField.layer.borderWidth = 1.0
+        passwordTextField.layer.cornerRadius = 8.0
         emailTextField.layer.borderColor = UIColor.lightGray.cgColor
         passwordTextField.layer.borderColor = UIColor.lightGray.cgColor
         
         
-        recoverPasswordChangeButton.setTitle("Esqueceu a senha?", for: .normal)
+        let buttonText = "Esqueceu a senha?"
+
+        let attributedText = NSAttributedString(string: buttonText, attributes: [NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue])
+
+        recoverPasswordChangeButton.setAttributedTitle(attributedText, for: .normal)
+        
+//        recoverPasswordChangeButton.setTitle("Esqueceu a senha?", for: .normal)
         recoverPasswordChangeButton.tintColor = UIColor.gray
         recoverPasswordChangeButton.configuration?.titleTextAttributesTransformer =
            UIConfigurationTextAttributesTransformer { incoming in
@@ -114,13 +148,12 @@ class LoginViewController: UIViewController {
         // Opcional: Arredondar as bordas do botão
         loginFacebookChangeButton.layer.cornerRadius = 8.0
         
-        registerChangeButton.setTitle("Sign Up", for: .normal)
+        registerChangeButton.setTitle("Cadastrar", for: .normal)
         
         textRegisterLabel.text = "Não tem cadastro?"
         textRegisterLabel.font = UIFont.systemFont(ofSize: 15)
         textRegisterLabel.textColor = UIColor.gray
         
-        invalidEmailLabel.text = ""
         invalidPasswordLabel.text = ""
         emailTextField.delegate = self
         passwordTextField.delegate = self
@@ -164,12 +197,8 @@ extension LoginViewController: UITextFieldDelegate {
             if textField == emailTextField && !textField.isFirstResponder {
                 if textField.text == "" {
                     textField.layer.borderColor = UIColor.red.cgColor
-                    invalidEmailLabel.font = UIFont.systemFont(ofSize: 15)
-                    invalidEmailLabel.textColor = UIColor.red
-                    invalidEmailLabel.text = "E-mail inválido"
                 } else {
                     textField.layer.borderColor = UIColor.lightGray.cgColor
-                    invalidEmailLabel.text = ""
                 }
             }
 
