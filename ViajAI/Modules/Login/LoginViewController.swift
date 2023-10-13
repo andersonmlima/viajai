@@ -33,7 +33,6 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var textRegisterLabel: UILabel!
     
-    
     @IBOutlet weak var registerChangeButton: UIButton!
     
     @IBOutlet weak var invalidPasswordLabel: UILabel!
@@ -80,8 +79,8 @@ class LoginViewController: UIViewController {
         emailTextField.borderStyle = .roundedRect
         passwordTextField.borderStyle = .roundedRect
 
-        wellcomeAppLabel.font = UIFont.boldSystemFont(ofSize: 25)
-        textWellcomeAppLabel.font = UIFont.systemFont(ofSize: 15)
+        wellcomeAppLabel.font = UIFont.boldSystemFont(ofSize: 24)
+        textWellcomeAppLabel.font = UIFont.systemFont(ofSize: 12)
         wellcomeAppLabel.textColor = UIColor.black
         textWellcomeAppLabel.textColor = UIColor.gray
         textWellcomeAppLabel.numberOfLines = 4
@@ -113,18 +112,17 @@ class LoginViewController: UIViewController {
         recoverPasswordChangeButton.configuration?.titleTextAttributesTransformer =
            UIConfigurationTextAttributesTransformer { incoming in
              var outgoing = incoming
-             outgoing.font = UIFont.systemFont(ofSize: 14)
+             outgoing.font = UIFont.systemFont(ofSize: 12)
              return outgoing
          }
         
         
         loginChangeButton.setTitle("Entrar", for: .normal)
         loginChangeButton.tintColor = UIColor.white
-        loginChangeButton.backgroundColor = UIColor.blue
         loginChangeButton.layer.cornerRadius = 8.0
         
-        if let corDeFundo = corHexadecimal(hex: "#5BC0F8") { // Substitua pelo código de cor hexadecimal desejado
-            loginChangeButton.backgroundColor = corDeFundo
+        if let backgroudColor = corHexadecimal(hex: "#5BC0F8") { // Substitua pelo código de cor hexadecimal desejado
+            loginChangeButton.backgroundColor = backgroudColor
                 }
         
         orLabel.text = "ou"
@@ -145,13 +143,16 @@ class LoginViewController: UIViewController {
         loginFacebookChangeButton.layer.borderWidth = 1.0 // Largura da borda em pontos
         loginFacebookChangeButton.layer.borderColor = UIColor.black.cgColor // Cor da borda
 
-        // Opcional: Arredondar as bordas do botão
         loginFacebookChangeButton.layer.cornerRadius = 8.0
         
-        registerChangeButton.setTitle("Cadastrar", for: .normal)
         
+        registerChangeButton.setTitle("Sign UP", for: .normal)
+        if let textColor = corHexadecimal(hex: "#5BC0F8") {
+            registerChangeButton.setTitleColor(textColor, for: .normal)
+                }
+
         textRegisterLabel.text = "Não tem cadastro?"
-        textRegisterLabel.font = UIFont.systemFont(ofSize: 15)
+        textRegisterLabel.font = UIFont.systemFont(ofSize: 14)
         textRegisterLabel.textColor = UIColor.gray
         
         invalidPasswordLabel.text = ""
