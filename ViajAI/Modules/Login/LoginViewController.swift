@@ -45,13 +45,9 @@ class LoginViewController: UIViewController {
         let password = passwordTextField.text ?? ""
 
         Auth.auth().signIn(withEmail: email, password: password) { result, error in
-            if let error = error {
-                print("Deu ruim no login emm -> \(error.localizedDescription)")
-                let alert = UIAlertController(title: "Alerta", message: "E-mail ou senha inválidos", preferredStyle: UIAlertController.Style.alert)
-                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
-                self.present(alert, animated: true, completion: nil)
+            if error != nil {
+                Alert().setNewAlert(target: self, title: "Alerta", message: "E-mail ou senha inválidos")
             } else {
-                print(result)
                 let vcString = String(describing: TabBarController.self)
                 let vc = UIStoryboard(name: vcString, bundle: nil).instantiateViewController(withIdentifier: vcString) as? TabBarController
                 self.navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
