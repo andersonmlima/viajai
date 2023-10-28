@@ -7,6 +7,7 @@
 
 import Firebase
 import UIKit
+import GoogleSignIn
 
 class LoginViewController: UIViewController {
     @IBOutlet var wellcomeAppLabel: UILabel!
@@ -51,6 +52,21 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func tappedGoogleButton(_ sender: UIButton) {
+        guard let clientID = FirebaseApp.app()?.options.clientID else { return }
+        // Create Google Sign In configuration object.
+        let config = GIDConfiguration(clientID: clientID)
+        GIDSignIn.sharedInstance.configuration = config
+
+        // Start the sign in flow!
+        GIDSignIn.sharedInstance.signIn(withPresenting: self) { signInResult, error in
+            guard signInResult != nil else {
+                Alert().setNewAlert(target: self, title: "Alerta", message: "Error: \(error?.localizedDescription ?? "Usuário inválido")")
+                return
+            }
+            let vcString = String(describing: TabBarController.self)
+            let vc = UIStoryboard(name: vcString, bundle: nil).instantiateViewController(withIdentifier: vcString) as? TabBarController
+            self.navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
+        }
     }
 
     @IBAction func tappedFacebbokButton(_ sender: UIButton) {
