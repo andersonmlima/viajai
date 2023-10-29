@@ -13,6 +13,7 @@ struct ListDestination {
     var rating: String
     var description: String
     var cityID: String
+    var ratingImage: String
 }
 
 
