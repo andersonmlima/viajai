@@ -17,30 +17,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hF2-hc-Swn">
-                                <rect key="frame" x="20" y="163" width="42" height="21"/>
+                                <rect key="frame" x="20" y="127" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bus-VE-Du3">
-                                <rect key="frame" x="162" y="153" width="199" height="41"/>
+                                <rect key="frame" x="162" y="127" width="199" height="21"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="pVz-DX-4n9">
-                                <rect key="frame" x="20" y="254" width="353" height="544"/>
+                                <rect key="frame" x="20" y="172" width="353" height="626"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="hF2-hc-Swn" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="60" id="26w-MS-ESv"/>
+                            <constraint firstItem="hF2-hc-Swn" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="24" id="26w-MS-ESv"/>
                             <constraint firstItem="hF2-hc-Swn" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="3yu-Sj-tID"/>
                             <constraint firstItem="bus-VE-Du3" firstAttribute="leading" secondItem="hF2-hc-Swn" secondAttribute="trailing" constant="100" id="BdI-oq-7WT"/>
-                            <constraint firstItem="pVz-DX-4n9" firstAttribute="top" secondItem="bus-VE-Du3" secondAttribute="bottom" constant="60" id="CHM-j3-jUa"/>
+                            <constraint firstItem="pVz-DX-4n9" firstAttribute="top" secondItem="bus-VE-Du3" secondAttribute="bottom" constant="24" id="CHM-j3-jUa"/>
                             <constraint firstItem="pVz-DX-4n9" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="LE6-rR-x7P"/>
                             <constraint firstItem="bus-VE-Du3" firstAttribute="centerY" secondItem="hF2-hc-Swn" secondAttribute="centerY" id="NBB-4I-W8l"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="pVz-DX-4n9" secondAttribute="bottom" constant="20" id="YUG-j8-533"/>
-                            <constraint firstItem="bus-VE-Du3" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="50" id="ZpX-Ul-1Sz"/>
+                            <constraint firstItem="bus-VE-Du3" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="24" id="ZpX-Ul-1Sz"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="bus-VE-Du3" secondAttribute="trailing" constant="32" id="aOH-TM-4Sp"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="pVz-DX-4n9" secondAttribute="trailing" constant="20" id="bo0-bk-MOe"/>
                         </constraints>

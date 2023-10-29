@@ -66,7 +66,4 @@ extension ListDestinationViewController: UITableViewDelegate, UITableViewDataSou
         navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
     }
 
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 300
-//    }
 }
