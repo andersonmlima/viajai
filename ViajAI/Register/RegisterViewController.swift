@@ -60,6 +60,10 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    @IBAction func tappedLogin(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
     // Configura os elementos de interface do usuário.
     func configElements() {
         view.backgroundColor = .systemBackground
