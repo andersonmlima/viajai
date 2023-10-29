@@ -13,6 +13,21 @@
 			</array>
 		</dict>
 	</array>
+    <key>CFBundleURLTypes</key>
+    <array>
+      <dict>
+      <key>CFBundleURLSchemes</key>
+      <array>
+        <string>fb293852930233610</string>
+      </array>
+      </dict>
+    </array>
+    <key>FacebookAppID</key>
+    <string>293852930233610</string>
+    <key>FacebookClientToken</key>
+    <string>3a9c88bb106a938a36d384c6e1d0a67b</string>
+    <key>FacebookDisplayName</key>
+    <string>viajai</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

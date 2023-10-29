@@ -8,6 +8,7 @@
 import Firebase
 import UIKit
 import GoogleSignIn
+import FacebookLogin
 
 class LoginViewController: UIViewController {
     @IBOutlet var wellcomeAppLabel: UILabel!
@@ -31,6 +32,10 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configElements()
+        
+        let loginButton = FBLoginButton()
+                loginButton.center = view.center
+                view.addSubview(loginButton)
     }
 
     @IBAction func tappedRecoverPasswordButton(_ sender: UIButton) {
