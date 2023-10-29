@@ -9,13 +9,18 @@ import UIKit
 
 class PerfilViewController: UIViewController {
 
+    @IBOutlet weak var logoutButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        logoutButton.setTitle("Logout", for: .normal)
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func tappedLogout(_ sender: Any) {
+        RootNavigationController.shared.logout()
+    }
+    
     /*
     // MARK: - Navigation
 
