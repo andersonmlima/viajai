@@ -5,9 +5,7 @@
 //  Created by Reinaldo Neto on 10/08/23.
 //
 
-import Firebase
 import UIKit
-import GoogleSignIn
 import FacebookLogin
 
 class LoginViewController: UIViewController {
@@ -27,6 +25,8 @@ class LoginViewController: UIViewController {
     
     let facebookLoginButton = FBLoginButton(frame: .zero)
 
+    var viewModel: LoginViewModel?
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
@@ -34,6 +34,7 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.viewModel = LoginViewModel(viewController: self)
         configElements()
     }
 
@@ -43,34 +44,11 @@ class LoginViewController: UIViewController {
     @IBAction func tappedLoginButton(_ sender: UIButton) {
         let email = emailTextField.text ?? ""
         let password = passwordTextField.text ?? ""
-
-        Auth.auth().signIn(withEmail: email, password: password) { result, error in
-            if error != nil {
-                Alert().setNewAlert(target: self, title: "Alerta", message: "E-mail ou senha inválidos")
-            } else {
-                let vcString = String(describing: TabBarController.self)
-                let vc = UIStoryboard(name: vcString, bundle: nil).instantiateViewController(withIdentifier: vcString) as? TabBarController
-                self.navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
-            }
-        }
+        viewModel?.loginWithEmail(email: email, password: password)
     }
 
     @IBAction func tappedGoogleButton(_ sender: UIButton) {
-        guard let clientID = FirebaseApp.app()?.options.clientID else { return }
-        // Create Google Sign In configuration object.
-        let config = GIDConfiguration(clientID: clientID)
-        GIDSignIn.sharedInstance.configuration = config
-
-        // Start the sign in flow!
-        GIDSignIn.sharedInstance.signIn(withPresenting: self) { signInResult, error in
-            guard signInResult != nil else {
-                Alert().setNewAlert(target: self, title: "Alerta", message: "Error: \(error?.localizedDescription ?? "Usuário inválido")")
-                return
-            }
-            let vcString = String(describing: TabBarController.self)
-            let vc = UIStoryboard(name: vcString, bundle: nil).instantiateViewController(withIdentifier: vcString) as? TabBarController
-            self.navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
-        }
+        viewModel?.loginWithGoogle()
     }
 
     @IBAction func tappedFacebookButton(_ sender: UIButton) {
@@ -78,9 +56,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func tappedRegisterButton(_ sender: UIButton) {
-        let vcString = String(describing: RegisterViewController.self)
-        let vc = UIStoryboard(name: vcString, bundle: nil).instantiateViewController(withIdentifier: vcString) as? RegisterViewController
-        navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
+        viewModel?.navigateToRegisterController()
     }
 
     @IBOutlet var textRegisterLabel: UILabel!
@@ -146,7 +122,7 @@ class LoginViewController: UIViewController {
         // Opcional: Arredondar as bordas do botão
         loginFacebookChangeButton.layer.cornerRadius = 8.0
 
-        registerChangeButton.setTitle("Sign Up", for: .normal)
+        registerChangeButton.setTitle("Cadastrar", for: .normal)
 
         textRegisterLabel.text = "Não tem cadastro?"
         textRegisterLabel.font = UIFont.systemFont(ofSize: 15)
@@ -224,16 +200,7 @@ extension LoginViewController: UITextFieldDelegate {
 
 extension LoginViewController: LoginButtonDelegate {
     func loginButton(_ loginButton: FBSDKLoginKit.FBLoginButton, didCompleteWith result: FBSDKLoginKit.LoginManagerLoginResult?, error: Error?) {
-        if let error = error {
-            Alert().setNewAlert(target: self, title: "Error Facebook login", message: "Error: \(error.localizedDescription)")
-            return
-        }
-        if (result?.isCancelled) == true || (result?.token) == nil {
-            return
-        }
-        let vcString = String(describing: TabBarController.self)
-        let vc = UIStoryboard(name: vcString, bundle: nil).instantiateViewController(withIdentifier: vcString) as? TabBarController
-        self.navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
+        viewModel?.loginWithFacebook(result: result, error: error)
     }
     
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginKit.FBLoginButton) {

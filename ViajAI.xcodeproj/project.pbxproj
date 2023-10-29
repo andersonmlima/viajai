@@ -45,6 +45,7 @@
 		5748E6992AEDD9EE00A93BB3 /* FacebookBasics in Frameworks */ = {isa = PBXBuildFile; productRef = 5748E6982AEDD9EE00A93BB3 /* FacebookBasics */; };
 		5748E69B2AEDD9EE00A93BB3 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = 5748E69A2AEDD9EE00A93BB3 /* FacebookCore */; };
 		5748E69D2AEDD9EE00A93BB3 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 5748E69C2AEDD9EE00A93BB3 /* FacebookLogin */; };
+		5799F4812AEEB35B0073FEEC /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5799F4802AEEB35B0073FEEC /* LoginViewModel.swift */; };
 		57F645C52AE4140300E571DB /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 57F645C42AE4140300E571DB /* FirebaseAuth */; };
 		57F645C82AE4206B00E571DB /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F645C72AE4206B00E571DB /* Alert.swift */; };
 		644051C82AC8EEDB0090BDB6 /* ListDestinationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644051C72AC8EEDB0090BDB6 /* ListDestinationViewController.swift */; };
@@ -121,6 +122,7 @@
 		573FC6292ACCF2010041EFAE /* CategoriesViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CategoriesViewController.storyboard; sourceTree = "<group>"; };
 		573FC6322ACCF22D0041EFAE /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		573FC6352ACCF2450041EFAE /* AddDoneButtonToTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDoneButtonToTextField.swift; sourceTree = "<group>"; };
+		5799F4802AEEB35B0073FEEC /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		57F645C72AE4206B00E571DB /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		644051C72AC8EEDB0090BDB6 /* ListDestinationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDestinationViewController.swift; sourceTree = "<group>"; };
 		644051C92AC8EF120090BDB6 /* ListDestinationViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListDestinationViewController.storyboard; sourceTree = "<group>"; };
@@ -286,6 +288,7 @@
 		573FC6152ACCE55A0041EFAE /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				5799F47F2AEEB3410073FEEC /* ViewModel */,
 				573FC6162ACCE5790041EFAE /* LoginViewController.swift */,
 				573FC6182ACCE5D80041EFAE /* LoginViewController.storyboard */,
 			);
@@ -346,6 +349,14 @@
 				57F645C72AE4206B00E571DB /* Alert.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		5799F47F2AEEB3410073FEEC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5799F4802AEEB35B0073FEEC /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		644051C52AC8EE890090BDB6 /* Modules */ = {
@@ -628,6 +639,7 @@
 				5725BC4C2ACD0C3100270D9D /* RegisterViewController.swift in Sources */,
 				DFCC464A2ACCF8490096A64F /* HomeCollectionViewCell.swift in Sources */,
 				644051C82AC8EEDB0090BDB6 /* ListDestinationViewController.swift in Sources */,
+				5799F4812AEEB35B0073FEEC /* LoginViewModel.swift in Sources */,
 				573FC6172ACCE5790041EFAE /* LoginViewController.swift in Sources */,
 				573FC6332ACCF22D0041EFAE /* Category.swift in Sources */,
 				5725BC5E2ACD125C00270D9D /* MapViewController.swift in Sources */,
