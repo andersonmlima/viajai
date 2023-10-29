@@ -72,7 +72,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
-                                    <action selector="tappedFacebbokButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2FA-8S-qLl"/>
+                                    <action selector="tappedFacebookButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hOz-EA-dbK"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lIC-s3-8jN">
@@ -160,7 +160,7 @@
                         <outlet property="invalidEmailLabel" destination="z6f-iT-ZAJ" id="6NC-Ml-6Qx"/>
                         <outlet property="invalidPasswordLabel" destination="tpN-9a-ZxY" id="m5w-D1-PUZ"/>
                         <outlet property="loginChangeButton" destination="qUm-zu-Ywt" id="x5C-fp-Wbw"/>
-                        <outlet property="loginFacebookChangeButton" destination="WP1-C8-hE4" id="9v9-wB-6Qy"/>
+                        <outlet property="loginFacebookChangeButton" destination="WP1-C8-hE4" id="aZ1-Yk-97z"/>
                         <outlet property="loginGoogleChangeButton" destination="70P-fs-7dX" id="rPP-w9-AG1"/>
                         <outlet property="orLabel" destination="k3y-Yk-KYY" id="tKm-FC-vWD"/>
                         <outlet property="passwordTextField" destination="ffN-aS-ms0" id="fQb-ZR-U7H"/>
