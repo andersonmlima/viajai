@@ -225,7 +225,10 @@ extension LoginViewController: UITextFieldDelegate {
 extension LoginViewController: LoginButtonDelegate {
     func loginButton(_ loginButton: FBSDKLoginKit.FBLoginButton, didCompleteWith result: FBSDKLoginKit.LoginManagerLoginResult?, error: Error?) {
         if let error = error {
-            print(error.localizedDescription)
+            Alert().setNewAlert(target: self, title: "Error Facebook login", message: "Error: \(error.localizedDescription)")
+            return
+        }
+        if (result?.isCancelled) == true || (result?.token) == nil {
             return
         }
         let vcString = String(describing: TabBarController.self)
