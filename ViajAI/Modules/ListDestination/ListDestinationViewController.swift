@@ -13,8 +13,8 @@ class ListDestinationViewController: UIViewController {
     @IBOutlet var destinationTableView: UITableView!
 
     var destinationList: [Any] =
-        [ListDestinationTitle(nameTitle: "Rio de Janeiro", id: "1"), ListDestination(place: "Rectangle 56", namePlace: "Raja Ampat", rating: "4.5/5.0", description: "Library device clip strikethrough move. Flows vector overflow style invite.", cityID: "1"),
-         ListDestination(place: "Rectangle 57", namePlace: "Sungai Baliem", rating: "4.5/5.0", description: "Library device clip strikethrough move. Flows vector overflow style invite.", cityID: "1")]
+        [ListDestinationTitle(nameTitle: "Rio de Janeiro", id: "1"), ListDestination(place: "Rectangle 56", namePlace: "Raja Ampat", rating: "4.5/5.0", description: "Library device clip strikethrough move. Flows vector overflow style invite.", cityID: "1", ratingImage: "star.leadinghalf.filled"),
+         ListDestination(place: "Rectangle 57", namePlace: "Sungai Baliem", rating: "4.5/5.0", description: "Library device clip strikethrough move. Flows vector overflow style invite.", cityID: "1", ratingImage: "star.leadinghalf.filled")]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,7 +66,7 @@ extension ListDestinationViewController: UITableViewDelegate, UITableViewDataSou
         navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
     }
 
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 300
-    }
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 300
+//    }
 }

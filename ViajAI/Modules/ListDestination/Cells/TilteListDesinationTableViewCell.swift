@@ -19,7 +19,12 @@ class TilteListDesinationTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+//        selectionStyle = .none
+        configElements()
+    }
+    
+    func configElements() {
+        TitleNameLabel.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
     }
     
     func setupCell(listDestination: ListDestinationTitle) {
