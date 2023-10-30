@@ -19,6 +19,7 @@ class SplashScreenViewController: UIViewController {
         super.viewDidLoad()
         configElements()
         moveToLoginView()
+        RootNavigationController.shared.setNavigationController(navigationController: self.navigationController)
     }
     
     func moveToLoginView() {

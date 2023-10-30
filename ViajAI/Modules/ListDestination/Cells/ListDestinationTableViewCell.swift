@@ -14,7 +14,8 @@ class ListDestinationTableViewCell: UITableViewCell {
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var namePlaceLabel: UILabel!
     @IBOutlet weak var descriptionPlaceLabel: UILabel!
-    
+    @IBOutlet weak var ratingImageView: UIImageView!
+    @IBOutlet weak var subView: UIView!
     
     static let identifier: String = "ListDestinationTableViewCell"
     
@@ -25,15 +26,17 @@ class ListDestinationTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         configElements()
+        selectionStyle = .none
     }
     
     func configElements() {
+        subView.backgroundColor = .white
         ratingLabel.font = UIFont.systemFont(ofSize: 13, weight: .regular)
         namePlaceLabel.font = UIFont.systemFont(ofSize: 14, weight: .semibold)
         descriptionPlaceLabel.frame = CGRect(x: 0, y: 25, width: 241, height: 44)
         descriptionPlaceLabel.font = UIFont.systemFont(ofSize: 12, weight: .regular)
         descriptionPlaceLabel.lineBreakMode = .byWordWrapping
-        placeImageView.frame = CGRect(x: 0, y: 25, width: 241, height: 44)
+//        placeImageView.frame = CGRect(x: 0, y: 25, width: 241, height: 44)
 //        cityLabel.font = UIFont.systemFont(ofSize: 24, weight: .semibold)
     }
     
@@ -42,6 +45,7 @@ class ListDestinationTableViewCell: UITableViewCell {
         ratingLabel.text = listDestination.rating
         namePlaceLabel.text = listDestination.namePlace
         descriptionPlaceLabel.text = listDestination.description
+        ratingImageView.image = UIImage(systemName: listDestination.ratingImage)
 //        cityLabel.text = listDestination.cityID
     }
 

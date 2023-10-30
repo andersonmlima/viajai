@@ -1,4 +1,5 @@
 import UIKit
+import Firebase
 
 class RegisterViewController: UIViewController, UITextFieldDelegate {
     
@@ -51,11 +52,16 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             displayPasswordError(password) // Exibe uma mensagem de erro.
             anyFieldEmpty = true
         }
+    
         
         // Se nenhum campo estiver vazio e a senha for válida, execute a lógica de registro.
         if !anyFieldEmpty {
-            validateTextField()
+            registerUser()
         }
+    }
+    
+    @IBAction func tappedLogin(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
     }
     
     // Configura os elementos de interface do usuário.
@@ -71,11 +77,21 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         registerButton.setTitle("Cadastrar", for: .normal)
     }
     
-    // Lógica de validação e registro.
-    func validateTextField() {
-        print(nameTextField.text ?? "")
-        print(emailTextField.text ?? "")
-        print(passwordTextField.text ?? "")
+    // Lógica de registro.
+    func registerUser() {
+//        let name = nameTextField.text ?? ""
+        let email = emailTextField.text ?? ""
+        let password = passwordTextField.text ?? ""
+        
+        Auth.auth().createUser(withEmail: email, password: password) { result, error in
+            if let error = error {
+                Alert().setNewAlert(target: self, title: "Alerta", message: "Deu ruim em -> \(error.localizedDescription)")
+            } else {
+                let vcString = String(describing: TabBarController.self)
+                let vc = UIStoryboard(name: vcString, bundle: nil).instantiateViewController(withIdentifier: vcString) as? TabBarController
+                self.navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
+            }
+        }
         
         // Implemente a lógica de registro aqui.
     }
