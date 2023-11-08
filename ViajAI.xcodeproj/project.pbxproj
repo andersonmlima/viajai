@@ -23,8 +23,6 @@
 		5725BC4C2ACD0C3100270D9D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5725BC4A2ACD0C3100270D9D /* RegisterViewController.swift */; };
 		5725BC502ACD0DF800270D9D /* DetailsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5725BC4E2ACD0DF800270D9D /* DetailsViewController.storyboard */; };
 		5725BC512ACD0DF800270D9D /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5725BC4F2ACD0DF800270D9D /* DetailsViewController.swift */; };
-		5725BC552ACD106000270D9D /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5725BC532ACD106000270D9D /* VerificationViewController.swift */; };
-		5725BC562ACD106000270D9D /* VerificationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5725BC542ACD106000270D9D /* VerificationViewController.storyboard */; };
 		5725BC592ACD11A200270D9D /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5725BC582ACD11A200270D9D /* FavoritesViewController.swift */; };
 		5725BC5B2ACD11B200270D9D /* FavoritesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5725BC5A2ACD11B200270D9D /* FavoritesViewController.storyboard */; };
 		5725BC5E2ACD125C00270D9D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5725BC5D2ACD125C00270D9D /* MapViewController.swift */; };
@@ -56,6 +54,10 @@
 		6449A7EB2ACBB10300427391 /* SplashScreenViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6449A7EA2ACBB10300427391 /* SplashScreenViewController.storyboard */; };
 		64BB5F732AAFDDB000082423 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB5F722AAFDDB000082423 /* SplashScreenViewController.swift */; };
 		64DA6C502AC9D87300D19434 /* ListDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DA6C4F2AC9D87300D19434 /* ListDestination.swift */; };
+		64EA904F2AFC0987006C666E /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EA904C2AFC0987006C666E /* VerificationViewController.swift */; };
+		64EA90502AFC0987006C666E /* VerificationViewStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64EA904D2AFC0987006C666E /* VerificationViewStoryboard.storyboard */; };
+		64EA90532AFC0A65006C666E /* VerificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EA90522AFC0A65006C666E /* VerificationViewModel.swift */; };
+		64EA90552AFC0B4D006C666E /* VerificationCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EA90542AFC0B4D006C666E /* VerificationCode.swift */; };
 		64EF70562AC8FA4000FBF6EE /* ListDestinationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EF70542AC8FA4000FBF6EE /* ListDestinationTableViewCell.swift */; };
 		64EF70572AC8FA4000FBF6EE /* ListDestinationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64EF70552AC8FA4000FBF6EE /* ListDestinationTableViewCell.xib */; };
 		DFCC464A2ACCF8490096A64F /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCC46422ACCF8490096A64F /* HomeCollectionViewCell.swift */; };
@@ -104,8 +106,6 @@
 		5725BC4A2ACD0C3100270D9D /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		5725BC4E2ACD0DF800270D9D /* DetailsViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DetailsViewController.storyboard; sourceTree = "<group>"; };
 		5725BC4F2ACD0DF800270D9D /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
-		5725BC532ACD106000270D9D /* VerificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
-		5725BC542ACD106000270D9D /* VerificationViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VerificationViewController.storyboard; sourceTree = "<group>"; };
 		5725BC582ACD11A200270D9D /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		5725BC5A2ACD11B200270D9D /* FavoritesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FavoritesViewController.storyboard; sourceTree = "<group>"; };
 		5725BC5D2ACD125C00270D9D /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +133,10 @@
 		6449A7EA2ACBB10300427391 /* SplashScreenViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashScreenViewController.storyboard; sourceTree = "<group>"; };
 		64BB5F722AAFDDB000082423 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
 		64DA6C4F2AC9D87300D19434 /* ListDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDestination.swift; sourceTree = "<group>"; };
+		64EA904C2AFC0987006C666E /* VerificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
+		64EA904D2AFC0987006C666E /* VerificationViewStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VerificationViewStoryboard.storyboard; sourceTree = "<group>"; };
+		64EA90522AFC0A65006C666E /* VerificationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationViewModel.swift; sourceTree = "<group>"; };
+		64EA90542AFC0B4D006C666E /* VerificationCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationCode.swift; sourceTree = "<group>"; };
 		64EF70542AC8FA4000FBF6EE /* ListDestinationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDestinationTableViewCell.swift; sourceTree = "<group>"; };
 		64EF70552AC8FA4000FBF6EE /* ListDestinationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListDestinationTableViewCell.xib; sourceTree = "<group>"; };
 		DFCC46422ACCF8490096A64F /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -236,6 +240,7 @@
 				573FC6322ACCF22D0041EFAE /* Category.swift */,
 				5725BC442ACD027500270D9D /* Destination.swift */,
 				5725BC422ACD024A00270D9D /* DetailsDestination.swift */,
+				64EA90542AFC0B4D006C666E /* VerificationCode.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -263,8 +268,9 @@
 		5725BC522ACD106000270D9D /* Verification */ = {
 			isa = PBXGroup;
 			children = (
-				5725BC532ACD106000270D9D /* VerificationViewController.swift */,
-				5725BC542ACD106000270D9D /* VerificationViewController.storyboard */,
+				64EA90512AFC0A65006C666E /* ViewModel */,
+				64EA904C2AFC0987006C666E /* VerificationViewController.swift */,
+				64EA904D2AFC0987006C666E /* VerificationViewStoryboard.storyboard */,
 			);
 			path = Verification;
 			sourceTree = "<group>";
@@ -406,6 +412,14 @@
 				64DA6C4F2AC9D87300D19434 /* ListDestination.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		64EA90512AFC0A65006C666E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				64EA90522AFC0A65006C666E /* VerificationViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		64EF70532AC8F9D100FBF6EE /* Cells */ = {
@@ -577,6 +591,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64EA90502AFC0987006C666E /* VerificationViewStoryboard.storyboard in Resources */,
 				5725BC502ACD0DF800270D9D /* DetailsViewController.storyboard in Resources */,
 				573FC61E2ACCEE110041EFAE /* TabBarController.storyboard in Resources */,
 				573FC6192ACCE5D80041EFAE /* LoginViewController.storyboard in Resources */,
@@ -591,7 +606,6 @@
 				5702769C2A859ADE0097840C /* Assets.xcassets in Resources */,
 				573FC6302ACCF2010041EFAE /* CategoriesViewController.storyboard in Resources */,
 				DFCC464D2ACCF8490096A64F /* HomeTableViewCell.xib in Resources */,
-				5725BC562ACD106000270D9D /* VerificationViewController.storyboard in Resources */,
 				6449A7EB2ACBB10300427391 /* SplashScreenViewController.storyboard in Resources */,
 				64EF70572AC8FA4000FBF6EE /* ListDestinationTableViewCell.xib in Resources */,
 				573FC62E2ACCF2010041EFAE /* CategoryCollectionViewCell.xib in Resources */,
@@ -625,6 +639,7 @@
 				5725BC592ACD11A200270D9D /* FavoritesViewController.swift in Sources */,
 				573FC6362ACCF2450041EFAE /* AddDoneButtonToTextField.swift in Sources */,
 				64DA6C502AC9D87300D19434 /* ListDestination.swift in Sources */,
+				64EA90532AFC0A65006C666E /* VerificationViewModel.swift in Sources */,
 				DFCC464E2ACCF8490096A64F /* HomeViewController.swift in Sources */,
 				573FC62A2ACCF2010041EFAE /* SearchViewController.swift in Sources */,
 				6449A7E82ACB87E700427391 /* TilteListDesinationTableViewCell.swift in Sources */,
@@ -634,9 +649,10 @@
 				57AE3CC02AEEE82800102948 /* RootNavigationController.swift in Sources */,
 				570276932A859ADB0097840C /* AppDelegate.swift in Sources */,
 				5725BC452ACD027500270D9D /* Destination.swift in Sources */,
+				64EA904F2AFC0987006C666E /* VerificationViewController.swift in Sources */,
+				64EA90552AFC0B4D006C666E /* VerificationCode.swift in Sources */,
 				57F645C82AE4206B00E571DB /* Alert.swift in Sources */,
 				5725BC512ACD0DF800270D9D /* DetailsViewController.swift in Sources */,
-				5725BC552ACD106000270D9D /* VerificationViewController.swift in Sources */,
 				573FC62D2ACCF2010041EFAE /* CategoryCollectionViewCell.swift in Sources */,
 				64BB5F732AAFDDB000082423 /* SplashScreenViewController.swift in Sources */,
 				570276952A859ADB0097840C /* SceneDelegate.swift in Sources */,
