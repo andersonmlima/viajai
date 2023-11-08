@@ -5,10 +5,11 @@
 //  Created by Reinaldo Neto on 10/08/23.
 //
 
-import Firebase
 import UIKit
+import FacebookLogin
 
 class LoginViewController: UIViewController {
+    
     @IBOutlet var wellcomeAppLabel: UILabel!
     @IBOutlet var textWellcomeAppLabel: UILabel!
     @IBOutlet var emailTextField: UITextField!
@@ -21,6 +22,10 @@ class LoginViewController: UIViewController {
     @IBOutlet var registerChangeButton: UIButton!
     @IBOutlet var invalidEmailLabel: UILabel!
     @IBOutlet var invalidPasswordLabel: UILabel!
+    
+    let facebookLoginButton = FBLoginButton(frame: .zero)
+
+    var viewModel: LoginViewModel?
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -29,6 +34,7 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.viewModel = LoginViewModel(viewController: self)
         configElements()
     }
 
@@ -38,28 +44,19 @@ class LoginViewController: UIViewController {
     @IBAction func tappedLoginButton(_ sender: UIButton) {
         let email = emailTextField.text ?? ""
         let password = passwordTextField.text ?? ""
-
-        Auth.auth().signIn(withEmail: email, password: password) { result, error in
-            if error != nil {
-                Alert().setNewAlert(target: self, title: "Alerta", message: "E-mail ou senha inválidos")
-            } else {
-                let vcString = String(describing: TabBarController.self)
-                let vc = UIStoryboard(name: vcString, bundle: nil).instantiateViewController(withIdentifier: vcString) as? TabBarController
-                self.navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
-            }
-        }
+        viewModel?.loginWithEmail(email: email, password: password)
     }
 
     @IBAction func tappedGoogleButton(_ sender: UIButton) {
+        viewModel?.loginWithGoogle()
     }
 
-    @IBAction func tappedFacebbokButton(_ sender: UIButton) {
+    @IBAction func tappedFacebookButton(_ sender: UIButton) {
+        facebookLoginButton.sendActions(for: .touchUpInside)
     }
-
+    
     @IBAction func tappedRegisterButton(_ sender: UIButton) {
-        let vcString = String(describing: RegisterViewController.self)
-        let vc = UIStoryboard(name: vcString, bundle: nil).instantiateViewController(withIdentifier: vcString) as? RegisterViewController
-        navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
+        viewModel?.navigateToRegisterController()
     }
 
     @IBOutlet var textRegisterLabel: UILabel!
@@ -118,11 +115,14 @@ class LoginViewController: UIViewController {
         loginFacebookChangeButton.tintColor = UIColor.black
         loginFacebookChangeButton.layer.borderWidth = 1.0 // Largura da borda em pontos
         loginFacebookChangeButton.layer.borderColor = UIColor.black.cgColor // Cor da borda
+        
+        facebookLoginButton.delegate = self
+        facebookLoginButton.isHidden = true
 
         // Opcional: Arredondar as bordas do botão
         loginFacebookChangeButton.layer.cornerRadius = 8.0
 
-        registerChangeButton.setTitle("Sign Up", for: .normal)
+        registerChangeButton.setTitle("Cadastrar", for: .normal)
 
         textRegisterLabel.text = "Não tem cadastro?"
         textRegisterLabel.font = UIFont.systemFont(ofSize: 15)
@@ -195,5 +195,15 @@ extension LoginViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+}
+
+extension LoginViewController: LoginButtonDelegate {
+    func loginButton(_ loginButton: FBSDKLoginKit.FBLoginButton, didCompleteWith result: FBSDKLoginKit.LoginManagerLoginResult?, error: Error?) {
+        viewModel?.loginWithFacebook(result: result, error: error)
+    }
+    
+    func loginButtonDidLogOut(_ loginButton: FBSDKLoginKit.FBLoginButton) {
+        //
     }
 }

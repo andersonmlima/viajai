@@ -22,6 +22,8 @@ class SearchViewController: UIViewController {
     @IBOutlet var budgetTextField: UITextField!
     @IBOutlet var categoriesView: UIView!
     @IBOutlet var categoriesCollectionView: UICollectionView!
+    @IBOutlet weak var openActionSheetContainerView: UIView!
+    @IBOutlet weak var openActionSheetImageView: UIImageView!
 
     let categories: [Category] = [Category(id: "1", name: "Museus", slugifiedName: "museus"), Category(id: "2", name: "Praia", slugifiedName: "praia"), Category(id: "3", name: "Esportes Radicais", slugifiedName: "esportes-radicais"), Category(id: "4", name: "Gastronomia", slugifiedName: "gastronomia"), Category(id: "5", name: "Natureza", slugifiedName: "natureza"), Category(id: "6", name: "Ecoturismo", slugifiedName: "ecoturismo"), Category(id: "7", name: "Montanhas", slugifiedName: "montanhas"), Category(id: "8", name: "Eventos Culturais", slugifiedName: "eventos-culturais"), Category(id: "9", name: "Compras", slugifiedName: "compras"), Category(id: "10", name: "Vida Noturna", slugifiedName: "vida-noturna")]
     
@@ -153,7 +155,10 @@ extension SearchViewController: UIGestureRecognizerDelegate {
         let gesture = UITapGestureRecognizer(target: self, action: #selector(openModalCategories))
         gesture.delegate = self
         gesture.cancelsTouchesInView = false
-        categoriesView.addGestureRecognizer(gesture)
+        openActionSheetContainerView.addGestureRecognizer(gesture)
+        openActionSheetContainerView.backgroundColor = .white
+        openActionSheetImageView.image = UIImage(systemName: "chevron.down")
+        openActionSheetImageView.tintColor = .gray
     }
 
     @objc func openModalCategories(_ sender: UIGestureRecognizer) {
@@ -179,7 +184,7 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
         categoriesCollectionView.register(CategoryCollectionViewCell.nib(), forCellWithReuseIdentifier: CategoryCollectionViewCell.identifier)
         if let layout = categoriesCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             layout.estimatedItemSize = .zero
-            layout.minimumLineSpacing = 5
+            layout.minimumLineSpacing = 2
             layout.minimumInteritemSpacing = 2
         }
     }
@@ -213,7 +218,7 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
         let itemSize = item.size(withAttributes: [
             NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 12),
         ])
-        return CGSize(width: itemSize.width + 50, height: itemSize.height + 20 > 40 ? itemSize.height + 20 : 40)
+        return CGSize(width: itemSize.width + 60, height: itemSize.height + 20 > 40 ? itemSize.height + 20 : 40)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
