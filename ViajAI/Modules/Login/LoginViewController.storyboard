@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -76,7 +77,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lIC-s3-8jN">
-                                <rect key="frame" x="200" y="645" width="143" height="35"/>
+                                <rect key="frame" x="200" y="630" width="143" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
@@ -84,7 +85,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EuA-ND-Pcz">
-                                <rect key="frame" x="50" y="654" width="145" height="21"/>
+                                <rect key="frame" x="50" y="630" width="145" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -123,6 +124,7 @@
                             <constraint firstItem="Oj3-Q6-Ccg" firstAttribute="top" secondItem="ffN-aS-ms0" secondAttribute="bottom" constant="10" id="Bg1-W3-p5r"/>
                             <constraint firstItem="z6f-iT-ZAJ" firstAttribute="top" secondItem="JuN-K6-X29" secondAttribute="bottom" constant="1" id="F4L-eH-XOZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JuN-K6-X29" secondAttribute="trailing" constant="20" id="Fw0-QL-lsH"/>
+                            <constraint firstItem="lIC-s3-8jN" firstAttribute="top" secondItem="WP1-C8-hE4" secondAttribute="bottom" constant="20" id="Jfo-0M-oUM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Aoe-bx-U1N" secondAttribute="trailing" constant="20" id="K4o-3r-AWu"/>
                             <constraint firstItem="ALo-DP-MPj" firstAttribute="top" secondItem="5MQ-YU-Qy7" secondAttribute="bottom" constant="50" id="L04-rN-T0c"/>
                             <constraint firstItem="Oj3-Q6-Ccg" firstAttribute="leading" secondItem="tpN-9a-ZxY" secondAttribute="trailing" constant="20" id="NFJ-wu-Gi4"/>
@@ -132,15 +134,15 @@
                             <constraint firstItem="Aoe-bx-U1N" firstAttribute="top" secondItem="ALo-DP-MPj" secondAttribute="bottom" constant="20" id="YR0-xy-44Q"/>
                             <constraint firstItem="qUm-zu-Ywt" firstAttribute="top" secondItem="ffN-aS-ms0" secondAttribute="bottom" constant="70" id="YVv-3s-cCJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ffN-aS-ms0" secondAttribute="trailing" constant="20" id="Zic-Js-3kw"/>
+                            <constraint firstItem="EuA-ND-Pcz" firstAttribute="top" secondItem="WP1-C8-hE4" secondAttribute="bottom" constant="20" id="a9W-bL-k3d"/>
                             <constraint firstItem="WP1-C8-hE4" firstAttribute="top" secondItem="70P-fs-7dX" secondAttribute="bottom" constant="30" id="aBy-fp-Th3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="70P-fs-7dX" secondAttribute="trailing" constant="20" id="adD-n6-u3G"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="k3y-Yk-KYY" secondAttribute="trailing" constant="20" id="bLD-r3-cGv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qUm-zu-Ywt" secondAttribute="trailing" constant="20" id="bsV-Nb-S9V"/>
                             <constraint firstItem="qUm-zu-Ywt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="dVs-uP-8jO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Oj3-Q6-Ccg" secondAttribute="trailing" constant="20" id="hJY-Kk-nqk"/>
-                            <constraint firstItem="EuA-ND-Pcz" firstAttribute="top" secondItem="WP1-C8-hE4" secondAttribute="bottom" constant="44" id="iHK-xB-0jC"/>
+                            <constraint firstItem="lIC-s3-8jN" firstAttribute="centerY" secondItem="EuA-ND-Pcz" secondAttribute="centerY" id="iFo-HQ-G9b"/>
                             <constraint firstItem="Aoe-bx-U1N" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="jJG-dg-lDG"/>
-                            <constraint firstItem="lIC-s3-8jN" firstAttribute="top" secondItem="WP1-C8-hE4" secondAttribute="bottom" constant="35" id="kcq-vj-JLN"/>
                             <constraint firstItem="ALo-DP-MPj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="kyn-R7-r99"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lIC-s3-8jN" secondAttribute="trailing" constant="50" id="oCC-wF-mp2"/>
                             <constraint firstItem="tpN-9a-ZxY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="qEg-xS-Ihe"/>
