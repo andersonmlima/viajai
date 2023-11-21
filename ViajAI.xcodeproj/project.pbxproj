@@ -55,7 +55,7 @@
 		64BB5F732AAFDDB000082423 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB5F722AAFDDB000082423 /* SplashScreenViewController.swift */; };
 		64DA6C502AC9D87300D19434 /* ListDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DA6C4F2AC9D87300D19434 /* ListDestination.swift */; };
 		64EA904F2AFC0987006C666E /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EA904C2AFC0987006C666E /* VerificationViewController.swift */; };
-		64EA90502AFC0987006C666E /* VerificationViewStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64EA904D2AFC0987006C666E /* VerificationViewStoryboard.storyboard */; };
+		64EA90502AFC0987006C666E /* VerificationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64EA904D2AFC0987006C666E /* VerificationViewController.storyboard */; };
 		64EA90532AFC0A65006C666E /* VerificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EA90522AFC0A65006C666E /* VerificationViewModel.swift */; };
 		64EA90552AFC0B4D006C666E /* VerificationCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EA90542AFC0B4D006C666E /* VerificationCode.swift */; };
 		64EF70562AC8FA4000FBF6EE /* ListDestinationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EF70542AC8FA4000FBF6EE /* ListDestinationTableViewCell.swift */; };
@@ -134,7 +134,7 @@
 		64BB5F722AAFDDB000082423 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
 		64DA6C4F2AC9D87300D19434 /* ListDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDestination.swift; sourceTree = "<group>"; };
 		64EA904C2AFC0987006C666E /* VerificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
-		64EA904D2AFC0987006C666E /* VerificationViewStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VerificationViewStoryboard.storyboard; sourceTree = "<group>"; };
+		64EA904D2AFC0987006C666E /* VerificationViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VerificationViewController.storyboard; sourceTree = "<group>"; };
 		64EA90522AFC0A65006C666E /* VerificationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationViewModel.swift; sourceTree = "<group>"; };
 		64EA90542AFC0B4D006C666E /* VerificationCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationCode.swift; sourceTree = "<group>"; };
 		64EF70542AC8FA4000FBF6EE /* ListDestinationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDestinationTableViewCell.swift; sourceTree = "<group>"; };
@@ -270,7 +270,7 @@
 			children = (
 				64EA90512AFC0A65006C666E /* ViewModel */,
 				64EA904C2AFC0987006C666E /* VerificationViewController.swift */,
-				64EA904D2AFC0987006C666E /* VerificationViewStoryboard.storyboard */,
+				64EA904D2AFC0987006C666E /* VerificationViewController.storyboard */,
 			);
 			path = Verification;
 			sourceTree = "<group>";
@@ -591,7 +591,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64EA90502AFC0987006C666E /* VerificationViewStoryboard.storyboard in Resources */,
+				64EA90502AFC0987006C666E /* VerificationViewController.storyboard in Resources */,
 				5725BC502ACD0DF800270D9D /* DetailsViewController.storyboard in Resources */,
 				573FC61E2ACCEE110041EFAE /* TabBarController.storyboard in Resources */,
 				573FC6192ACCE5D80041EFAE /* LoginViewController.storyboard in Resources */,
@@ -851,9 +851,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = app.backfront.ViajAI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -878,9 +881,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = app.backfront.ViajAI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

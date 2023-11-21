@@ -52,7 +52,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             displayPasswordError(password) // Exibe uma mensagem de erro.
             anyFieldEmpty = true
         }
-    
+        
         
         // Se nenhum campo estiver vazio e a senha for válida, execute a lógica de registro.
         if !anyFieldEmpty {
@@ -79,21 +79,25 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     
     // Lógica de registro.
     func registerUser() {
-//        let name = nameTextField.text ?? ""
+        //        let name = nameTextField.text ?? ""
         let email = emailTextField.text ?? ""
         let password = passwordTextField.text ?? ""
         
         Auth.auth().createUser(withEmail: email, password: password) { result, error in
             if let error = error {
-                Alert().setNewAlert(target: self, title: "Alerta", message: "Deu ruim em -> \(error.localizedDescription)")
+                // Exibir alerta de erro
+                let alertController = UIAlertController(title: "Erro no registro", message: "Ocorreu um erro durante o registro: \(error.localizedDescription)", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alertController.addAction(okAction)
+                
+                // Certifique-se de estar chamando 'present' em um contexto apropriado
+                self.present(alertController, animated: true, completion: nil)
             } else {
-                let vcString = String(describing: TabBarController.self)
-                let vc = UIStoryboard(name: vcString, bundle: nil).instantiateViewController(withIdentifier: vcString) as? TabBarController
-                self.navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
+                // Registro bem-sucedido, navegar para a tela de verificação
+                let verificationViewController = self.storyboard?.instantiateViewController(withIdentifier: String(describing: VerificationViewController.self)) as? VerificationViewController
+                self.navigationController?.pushViewController(verificationViewController ?? UIViewController(), animated: true)
             }
         }
-        
-        // Implemente a lógica de registro aqui.
     }
     
     // Função chamada quando o usuário encerra a edição de um campo de texto.
@@ -177,4 +181,3 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         present(alertController, animated: true, completion: nil)
     }
 }
-
