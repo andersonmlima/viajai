@@ -94,8 +94,9 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                 self.present(alertController, animated: true, completion: nil)
             } else {
                 // Registro bem-sucedido, navegar para a tela de verificação
-                let verificationViewController = self.storyboard?.instantiateViewController(withIdentifier: String(describing: VerificationViewController.self)) as? VerificationViewController
-                self.navigationController?.pushViewController(verificationViewController ?? UIViewController(), animated: true)
+                let vcString = String(describing: VerificationViewController.self)
+                let vc = UIStoryboard(name: vcString, bundle: nil).instantiateViewController(withIdentifier: vcString) as? VerificationViewController
+                self.navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
             }
         }
     }
