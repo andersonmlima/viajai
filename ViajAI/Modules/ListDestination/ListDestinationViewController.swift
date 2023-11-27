@@ -13,8 +13,9 @@ class ListDestinationViewController: UIViewController {
     @IBOutlet var destinationTableView: UITableView!
 
     var destinationList: [Any] =
-        [ListDestinationTitle(nameTitle: "Rio de Janeiro", id: "1"), ListDestination(place: "Rectangle 56", namePlace: "Raja Ampat", rating: "4.5/5.0", description: "Library device clip strikethrough move. Flows vector overflow style invite.", cityID: "1", ratingImage: "star.leadinghalf.filled"),
-         ListDestination(place: "Rectangle 57", namePlace: "Sungai Baliem", rating: "4.5/5.0", description: "Library device clip strikethrough move. Flows vector overflow style invite.", cityID: "1", ratingImage: "star.leadinghalf.filled")]
+    [ListDestinationTitle(nameTitle: "Rio de Janeiro", id: "1"), ListDestination(place: "Rectangle 56", namePlace: "Raja Ampat", rating: "4.5/5.0", description: "Library device clip strikethrough move. Flows vector overflow style invite.", cityID: "1", ratingImage: "star.leadinghalf.filled"),
+     ListDestination(place: "Rectangle 57", namePlace: "Sungai Baliem", rating: "4.5/5.0", description: "Library device clip strikethrough move. Flows vector overflow style invite.", cityID: "1", ratingImage: "star.leadinghalf.filled"), ListDestinationTitle(nameTitle: "Recife", id: "1"), ListDestination(place: "Rectangle 56", namePlace: "Raja Ampat", rating: "4.6/5.0", description: "Library device clip strikethrough move. Flows vector overflow style invite.", cityID: "1", ratingImage: "star.leadinghalf.filled"),
+     ListDestination(place: "Rectangle 57", namePlace: "Sungai Baliem", rating: "4.5/5.0", description: "Library device clip strikethrough move. Flows vector overflow style invite.", cityID: "1", ratingImage: "star.leadinghalf.filled")]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,25 +43,24 @@ extension ListDestinationViewController: UITableViewDelegate, UITableViewDataSou
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return destinationList.count
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == 0 {
-            guard let cell = destinationTableView.dequeueReusableCell(withIdentifier: TilteListDesinationTableViewCell.identifier, for: indexPath) as? TilteListDesinationTableViewCell else {
-                return UITableViewCell()
-            }
-            cell.setupCell(listDestination: destinationList[indexPath.row] as! ListDestinationTitle)
+        let destination = destinationList[indexPath.row]
+
+        if let titleDestination = destination as? ListDestinationTitle {
+            let cell = tableView.dequeueReusableCell(withIdentifier: TilteListDesinationTableViewCell.identifier, for: indexPath) as! TilteListDesinationTableViewCell
+            cell.setupCell(listDestination: titleDestination)
             return cell
-        } else {
-            guard let cell = destinationTableView.dequeueReusableCell(withIdentifier: ListDestinationTableViewCell.identifier, for: indexPath) as? ListDestinationTableViewCell else {
-                return UITableViewCell()
-            }
-            cell.setupCell(listDestination: destinationList[indexPath.row] as! ListDestination)
+        } else if let regularDestination = destination as? ListDestination {
+            let cell = tableView.dequeueReusableCell(withIdentifier: ListDestinationTableViewCell.identifier, for: indexPath) as! ListDestinationTableViewCell
+            cell.setupCell(listDestination: regularDestination)
             return cell
         }
+
+        return UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // TODO: - Passar os valores corretos para a tela de details como mostrado na aula, usando o require init lá em DetailsViewController
         let vcString = String(describing: DetailsViewController.self)
         let vc = UIStoryboard(name: vcString, bundle: nil).instantiateViewController(withIdentifier: vcString) as? DetailsViewController
         navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
